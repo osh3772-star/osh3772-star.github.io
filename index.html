@@ -407,6 +407,14 @@
     .mock-c { align-items: center; justify-content: center; gap: 7px; }
     .m-ring { background: radial-gradient(circle at 50% 50%, #133150 0%, #060f1c 85%); }
     .m-wizard { background: radial-gradient(circle at 50% 42%, #3d1f74 0%, #0f0820 85%); }
+    .m-chiikawa { background: radial-gradient(circle at 50% 45%, #fff0f5 0%, #ffe4ec 55%, #fbcfe8 100%); color: #4c1d95; }
+    [data-theme="dark"] .m-chiikawa { background: radial-gradient(circle at 50% 45%, #34122d 0%, #1d0919 60%, #0c030b 100%); color: #fbcfe8; }
+    .m-chiikawa .m-title { color: #db2777; }
+    [data-theme="dark"] .m-chiikawa .m-title { color: #f472b6; }
+    .m-chiikawa .m-tags span { border-color: rgba(219, 39, 119, 0.28); background: rgba(219, 39, 119, 0.08); color: inherit; }
+    .m-chii-icons { display: flex; gap: 8px; font-size: 26px; z-index: 1; position: relative; animation: bob 2.4s ease-in-out infinite; }
+    .m-chii-icons span:nth-child(2) { animation: bob 2.4s ease-in-out infinite; animation-delay: 0.25s; }
+    .m-chii-icons span:nth-child(3) { animation: bob 2.4s ease-in-out infinite; animation-delay: 0.5s; }
     .m-agyko { background: linear-gradient(160deg, #0f172a 0%, #070b14 100%); }
     .m-asideko { background: linear-gradient(160deg, #1c1c21 0%, #08080a 100%); }
     .radar { position: absolute; width: 120px; height: 120px; border-radius: 50%; border: 1.5px solid rgba(56,189,248,.4); animation: radar 2.8s ease-out infinite; }
@@ -720,6 +728,16 @@
         features:['REA 기반 원작 구조 분석','게임 로직·화면 흐름 복원','브라우저 실행 환경 재구성','웹 배포'],
         url:'https://wizard-arcana-lab-eric.osh3772.chatgpt.site',
         theme:'wizard',featured:false, realScreenshot:false
+      },
+      {
+        id:'chiikawa', title:'치이카와 JLPT 단어장', category:'인터랙티브', number:'10',
+        overline:'INTERACTIVE VOCABULARY COMPANIONS',
+        description:'7,180개 JLPT 어휘와 6종의 자율행동 치이카와 캐릭터 컴패니언이 함께하는 브라우저 단어장.',
+        detail:'N5부터 N1까지 7,180개 어휘(독음·한국어 뜻·예문·번역)를 키보드 방향키와 모바일 제스처로 복습하는 학습 웹앱입니다. 치이카와·하치와레·우사기 등 6종의 캐릭터가 독자적인 자율행동, 드래그/낙하 물리, 정답·오답 리액션을 보이며 화면 안에서 함께 학습합니다. 로컬스토리지 진도 저장과 단일 파일 오프라인 실행을 지원합니다.',
+        tech:['Vanilla JS','Interactive Canvas','Python','GitHub Pages'],
+        features:['7,180개 N5~N1 어휘·예문 DB','방향키·터치 제스처 복습','6종 캐릭터 자율행동·물리 반응','오프라인 단일 파일 & 로컬 저장'],
+        url:'https://osh3772-star.github.io/chiikawa-jlpt-vocab/',
+        theme:'chiikawa',featured:false, realScreenshot:false
       }
     ];
 
@@ -761,6 +779,7 @@
     ========================================================== */
     const previewFor = (p) => {
       if (p.theme === 'ring') return '<div class="mock mock-c m-ring"><span class="radar"></span><span class="radar b"></span><div class="m-ico">🥊</div><div class="m-title">RING VISION</div><div class="m-tags"><span>Webcam AI</span><span>3 Boss Stages</span></div></div>';
+      if (p.theme === 'chiikawa') return '<div class="mock mock-c m-chiikawa"><div class="m-chii-icons"><span>🌸</span><span>🐱</span><span>🐰</span></div><div class="m-title">CHIIKAWA JLPT</div><div class="m-tags"><span>7,180 Words</span><span>6 Companions</span></div></div>';
       if (p.theme === 'wizard') return '<div class="mock mock-c m-wizard"><span class="orbit"></span><span class="orbit b"></span><div class="m-ico">🔮</div><div class="m-title">ARCANA LAB</div><div class="m-tags"><span>REA Restored</span><span>Web Game</span></div></div>';
       if (p.theme === 'agyko' || p.theme === 'asideko') {
         const isAg = p.theme === 'agyko';
@@ -815,7 +834,7 @@
       '</button>'
     ).join('');
 
-    const MQ = ['Claude Artifact', 'REA Reverse Engineering', 'Node.js', 'PowerShell', 'Electron ASAR / CDP', 'Webcam AI', 'Astro', 'Supabase', 'Cloudflare Workers', 'NH PLUG Data', 'MCP Automation', 'Zero-Jank Motion'];
+    const MQ = ['Claude Artifact', 'Chiikawa JLPT Vocab', 'REA Reverse Engineering', 'Node.js', 'PowerShell', 'Electron ASAR / CDP', 'Webcam AI', 'Astro', 'Supabase', 'Cloudflare Workers', 'NH PLUG Data', 'MCP Automation', 'Zero-Jank Motion'];
     const mqHtml = MQ.map(t => '<span>' + escapeHtml(t) + '</span>').join('');
     $('mq1').innerHTML = mqHtml; $('mq2').innerHTML = mqHtml;
 
