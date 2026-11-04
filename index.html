@@ -407,6 +407,11 @@
     /* ---------- Mockups (animated, transform/opacity only) ---------- */
     .mock { position: relative; width: 100%; height: 100%; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; padding: 16px 18px; color: #f1f5f9; user-select: none; }
     .mock-c { align-items: center; justify-content: center; gap: 7px; }
+    .m-fubuki { background: linear-gradient(145deg, #172d47 0%, #080f20 100%); gap: 14px; }
+    .m-fubuki .m-title { color: #d5e9ff; font-size: 20px; letter-spacing: .12em; }
+    .m-fubuki .m-tags { flex-wrap: wrap; justify-content: center; }
+    .m-fubuki .preview-label { font-family: var(--mono); font-size: 9px; letter-spacing: .12em; color: #91adc9; }
+    .project-status { font-size: 12px; color: var(--muted); }
     .m-debate { background: linear-gradient(145deg, #143a3a 0%, #071b22 100%); }
     .m-debate .m-title { color: #99f6e4; }
     .m-debate .m-tags { flex-wrap: wrap; justify-content: center; }
@@ -753,6 +758,16 @@
         features:['여러 AI의 독립 분석·교차 검토','분류별 연구 요약','근거·오류 검토와 토론 원문','저장된 연구 읽기 전용 공개'],
         url:'https://osh3772-star.github.io/ai-debate/',
         theme:'debate',featured:false, realScreenshot:false
+      },
+      {
+        id:'fubuki', title:'Fubuki Pet · フブキ', category:'인터랙티브', number:'12',
+        overline:'DESKTOP & CHATGPT WORK COMPANION',
+        description:'Python·PySide6로 만든 Windows 데스크톱 펫과 ChatGPT Work용 펫을 함께 제작한 캐릭터 컴패니언 프로젝트.',
+        detail:'Windows용 휴대용 빌드와 설치본을 제작하고, ChatGPT Work 펫을 9개 상태·16개 시선 방향으로 등록·활성화했습니다. Windows에서의 실제 마우스 상호작용과 Work 앱 내 시각 결과는 아직 사용자 검증 전입니다. 이 페이지는 프로젝트 소개이며 공개 다운로드를 제공하지 않습니다.',
+        tech:['Python','PySide6','Windows','ChatGPT Work'],
+        features:['Windows 휴대용 빌드·설치본 제작','PySide6 기반 데스크톱 펫','Work 펫 9개 상태·16개 시선 방향','Windows 실제 상호작용 검증 대기'],
+        url:'',
+        theme:'fubuki',featured:false, realScreenshot:false
       }
     ];
 
@@ -795,6 +810,7 @@
        Previews (built once per card)
     ========================================================== */
     const previewFor = (p) => {
+      if (p.theme === 'fubuki') return '<div class="mock mock-c m-fubuki"><span class="preview-label">PROJECT OVERVIEW</span><div class="m-title">FUBUKI PET</div><div class="m-tags"><span>Windows · PySide6</span><span>ChatGPT Work</span></div></div>';
       if (p.theme === 'debate') return '<div class="mock mock-c m-debate"><div class="m-ico" aria-hidden="true">⚖</div><div class="m-title">ACCOUNTING ETHICS × AI</div><div class="m-tags"><span>독립 분석</span><span>교차 검토</span><span>연구 기록</span></div></div>';
       if (p.theme === 'ring') return '<div class="mock mock-c m-ring"><span class="radar"></span><span class="radar b"></span><div class="m-ico">🥊</div><div class="m-title">RING VISION</div><div class="m-tags"><span>Webcam AI</span><span>3 Boss Stages</span></div></div>';
       if (p.theme === 'agyko' || p.theme === 'asideko') {
@@ -833,7 +849,7 @@
     /* ---------- Static hero bits ---------- */
     const STATS = {
       total,
-      live: PROJECTS.filter(p => !isGit(p)).length,
+      live: PROJECTS.filter(p => p.url && !isGit(p)).length,
       oss: PROJECTS.filter(p => p.category === '오픈소스·도구').length
     };
     $('liveCount').textContent = pad(total) + ' projects';
@@ -895,6 +911,7 @@
         const el = document.createElement('article');
         el.className = 'card wait';
         el.dataset.id = p.id;
+        el.id = 'project-' + p.id;
         el.dataset.size = 'md';
         const chips = (p.tech || []).map(t => '<span class="chip">' + escapeHtml(t) + '</span>').join('');
         el.innerHTML =
@@ -909,7 +926,7 @@
               '<div class="chips">' + chips + '</div>' +
             '</div>' +
             '<div class="actions">' +
-              '<a class="link" href="' + escapeHtml(p.url) + '" target="_blank" rel="noopener noreferrer">' + (isGit(p) ? 'GitHub' : '사이트 열기') + ' <span class="arr">↗</span></a>' +
+              (p.url ? '<a class="link" href="' + escapeHtml(p.url) + '" target="_blank" rel="noopener noreferrer">' + (isGit(p) ? 'GitHub' : '사이트 열기') + ' <span class="arr">↗</span></a>' : '<span class="project-status">프로젝트 소개 · 공개 다운로드 없음</span>') +
               '<button type="button" class="more" data-detail="' + escapeHtml(p.id) + '">상세 보기</button>' +
             '</div></div>' +
           '</div>';
@@ -987,7 +1004,9 @@
       $('dFeat').innerHTML = p.features.map(x => '<li>' + escapeHtml(x) + '</li>').join('');
       $('dTech').innerHTML = p.tech.map(x => '<li>' + escapeHtml(x) + '</li>').join('');
       const a = $('dLink');
-      a.href = p.url;
+      a.hidden = !p.url;
+      a.href = p.url || '#project-' + p.id;
+      $('dCopy').textContent = p.url ? '링크 복사' : '소개 링크 복사';
       a.textContent = isGit(p) ? 'GitHub 저장소 열기 ↗' : '사이트 열기 ↗';
       const was = dlg.open;
       if (!was) dlg.showModal();
@@ -1055,7 +1074,8 @@
     dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
     $('dCopy').addEventListener('click', () => {
       const p = PROJECTS[modalIdx];
-      if (navigator.clipboard) navigator.clipboard.writeText(p.url).then(() => toast('링크가 복사되었습니다.'));
+      const shareUrl = p.url || location.href.split('#')[0] + '#project-' + p.id;
+      if (navigator.clipboard) navigator.clipboard.writeText(shareUrl).then(() => toast('링크가 복사되었습니다.'));
     });
 
     /* ---------- Theme ---------- */
