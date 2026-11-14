@@ -53,3 +53,26 @@ footer { border-top: 1px solid var(--line); padding-top: 24px; display: flex; ju
   .note { display: block; }
   .time { display: inline-flex; gap: 8px; align-items: baseline; margin-bottom: 16px; }
 }
+
+/* Shared rhythm for the profile index and the reading column. */
+:root { --paper: #faf9f6; --ink: #2a3036; --blue: #284f90; }
+header { border-top: 3px solid var(--ink); padding-top: 18px; }
+h1 { font-weight: 700; }
+nav a { text-decoration: underline; text-decoration-color: transparent; }
+nav a:hover, nav a:focus-visible { color: var(--blue); text-decoration-color: currentColor; }
+main { min-width: 0; }
+section:target h2 { color: var(--blue); }
+.books { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 20px 0 9px; }
+.book { position: relative; display: flex; flex-direction: column; justify-content: space-between; min-height: 174px; padding: 17px 18px 15px 24px; border: 1px solid #b7c1d0; border-inline-start: 6px double currentColor; color: #264579; text-decoration: none; background-color: #f1f3f7; }
+.book.practice { background-color: #284570; color: #fff; border-color: #7689a5; }
+.book strong { font-family: "Batang", "AppleMyungjo", serif; font-size: clamp(24px,3vw,34px); font-weight: 700; letter-spacing: -.045em; }
+.book small, .book span, .access { font-size: 13px; }
+.book span { border-top: 1px solid currentColor; padding-top: 9px; }
+.book:hover { text-decoration: none; }
+.book:hover strong, .book:focus-visible strong { text-decoration: underline; text-underline-offset: 4px; }
+.access { color: var(--muted); }
+@media (max-width: 480px) {
+  .books { gap: 8px; }
+  .book { padding: 11px; min-height: 144px; }
+  .book small, .book span { font-size: 12px; }
+}
