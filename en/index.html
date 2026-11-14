@@ -31,8 +31,8 @@
     </header>
     <main>
       <section id="intro" aria-label="About">
-        <p class="lead">I’m <strong>Kim Sanghyeok</strong>. I study accounting and taxation alongside Japanese language and literature.</p>
-        <p>To study for my financial management exam, I built a set of <a href="#finance-study">concept notes and practice problems</a>. Outside class, I help at my mother’s real estate office, where I built a <a href="#estate">property search tool for Hyangnam</a>.</p>
+        <p class="lead">I’m <strong>Kim Sanghyeok</strong>. I’m studying for a double major in Accounting and Taxation and Japanese Language and Literature.</p>
+        <p>I turned my financial management coursework into <a href="#finance-study">concept notes and a practice workbook</a>. For my mother’s real estate office, I built a <a href="#estate">searchable directory of Hyangnam properties</a>.</p>
       </section>
       <section id="work">
         <h2>Accounting</h2>
@@ -41,21 +41,21 @@
           <p>I hold Korean qualifications in financial management and accounting, computerized accounting (Level 1), and computerized taxation (Level 2). <a href="#resume">All qualifications and language scores</a></p>
         </article>
         <article class="study" id="finance-study">
-          <h3>Studying for my financial management midterm</h3>
-          <p>How does an annuity calculation change when the first payment arrives today instead of a year from now? I collected questions like this in my notes. In the workbook, I can mark a problem with a star and return to it later.</p>
+          <h3>Financial management study tools</h3>
+          <p>I turned chapters 3–9, the material for my midterm, into two study guides. The notes explain eight recurring questions, including how the timing of the first payment affects an annuity’s value. The workbook groups 95 problems by topic, includes worked solutions, and lets me save problems for review.</p>
           <div class="books" aria-label="Financial management study sites">
-            <a class="book concept" href="https://claude.ai/artifact/LwPtp9A5DPK2k8vTVn2WAL"><small>Financial management · Chapters 3–9</small><strong>Concept notes</strong><span>8 questions I kept coming back to ↗</span></a>
+            <a class="book concept" href="https://claude.ai/artifact/LwPtp9A5DPK2k8vTVn2WAL"><small>Financial management · Chapters 3–9</small><strong>Concept notes</strong><span>8 key questions ↗</span></a>
             <a class="book practice" href="https://claude.ai/artifact/7F24hGEVFYis9CiTzjHPvu"><small>Financial management · Chapters 3–9</small><strong>Practice workbook</strong><span>95 problems by topic ↗</span></a>
           </div>
           <p class="access">Both study sites require you to sign in to Claude.</p>
         </article>
         <article>
-          <h3><a href="https://ledgerflow-public-reference-gateway.eric5833.workers.dev/">Accounting automation <span aria-hidden="true">↗</span></a></h3>
-          <p>I wanted to follow a journal entry from the classroom exercise to the general ledger. I built a practice environment where I can review and approve entries for Hanbit Trading, a fictional wholesaler.</p>
+          <h3><a href="https://ledgerflow-public-reference-gateway.eric5833.workers.dev/">Hanbit Trading accounting lab <span aria-hidden="true">↗</span></a></h3>
+          <p>I built a practice ledger for a fictional wholesaler. Learners follow a sale from its invoice and delivery record through approval and posting, so they can see how the evidence supports each journal entry.</p>
           <details class="mechanism">
             <summary>How a sale reaches the ledger</summary>
-            <p>An AI app uses the Model Context Protocol (MCP) to retrieve a transaction and its supporting documents. The accounting engine drafts the entry and calculates cost of goods sold from the quantity shipped and its unit cost.</p>
-            <p>A reviewer checks the debits, credits, and supporting documents before approving the entry. The engine posts the entry only if it still matches the approved version.</p>
+            <p>An AI client retrieves the sale and its supporting documents through the Model Context Protocol (MCP). The accounting engine uses the quantity shipped and the unit cost to calculate cost of goods sold. It checks the tax invoice against the delivery record and drafts entries for the sale and the decrease in inventory.</p>
+            <p>The engine checks the debit and credit totals and the supporting documents. The learner can then approve or reject the entry. At posting, the engine verifies that the entry matches the approved version.</p>
             <a href="vibe-coding.html#ledger">How I built the Hanbit Trading lab</a>
           </details>
           <details><summary>View the accounting lab</summary><img loading="lazy" src="../portfolio-images/ledger.webp" alt="LedgerFlow interface for reviewing a journal entry"></details>
@@ -64,16 +64,16 @@
       <section id="estate">
         <h2>Real estate</h2>
         <article>
-          <h3><a href="https://hyangnam-realestate.store/">Property search for my mother’s real estate office <span aria-hidden="true">↗</span></a></h3>
-          <p>I built a search page for the properties my mother’s office lists in Hyangnam. She tried it, told me what to change, and I revised the interface.</p>
+          <h3><a href="https://hyangnam-realestate.store/">Shinyoung Gwell’s Hyangnam property search <span aria-hidden="true">↗</span></a></h3>
+          <p>I built a website for my mother’s brokerage so clients can search its public listings by transaction type and property type. During a consultation, staff can share a link and review the same results with the client.</p>
           <figure class="estate-screen">
             <img loading="lazy" width="1000" height="666" src="../portfolio-images/estate.webp" alt="Quick search on the Hyangnam Shinyoung Gwell real estate website, with selectors for transaction type and property type.">
             <figcaption>Choose a sale, a deposit-based lease (jeonse), or a monthly rental, then narrow the results by property type.</figcaption>
           </figure>
           <details class="mechanism">
-            <summary>What happens when someone searches for a jeonse apartment?</summary>
-            <p>I connected the office domain to Cloudflare Workers. Selecting “jeonse” and “apartment” puts both filters in the URL. Astro reads them and retrieves the matching public listings from Supabase.</p>
-            <p>Reopening the URL shows the listings currently on the market. For jeonse and monthly rentals, the price filter uses the deposit amount.</p>
+            <summary>How listing searches work</summary>
+            <p>I connected the office’s domain to Cloudflare Workers. The Astro site reads the search filters from the URL and queries Supabase for matching public listings.</p>
+            <p>A client can share or reopen a search and see the listings that match at that time. The price filter uses the asking price for sales and the deposit for jeonse and monthly rentals.</p>
             <a href="https://hyangnam-realestate.store/properties?transaction=%EC%A0%84%EC%84%B8&amp;category=%EC%95%84%ED%8C%8C%ED%8A%B8">Search for jeonse apartments</a>
           </details>
         </article>
@@ -82,21 +82,21 @@
         <h2>Japanese</h2>
         <article>
           <h3><a href="https://osh3772-star.github.io/chiikawa-jlpt-vocab/">Chiikawa JLPT vocabulary <span aria-hidden="true">↗</span></a></h3>
-          <p>After passing the JLPT N2, I wanted an easier way to revisit the words I missed. The vocabulary app lets me flag unfamiliar words and pick up where I left off.</p>
+          <p>I built a vocabulary app to study words by JLPT level. It saves the ones I mark as unfamiliar for review and remembers where I left off.</p>
           <details><summary>View the vocabulary app</summary><img loading="lazy" src="../portfolio-images/chiikawa.webp" alt="The study view in the Chiikawa JLPT vocabulary app"></details>
         </article>
       </section>
       <section id="notes">
         <h2>Automation notes</h2>
         <article>
-          <h3>Reviewing tools with AI agents in Slack</h3>
-          <p>I set up a review process in which the agents discuss each other’s proposals, record their decisions, and designate one agent to report the result.</p>
-          <p>We used it to review a tool that finds similar customer or supplier names. The tool flags possible typos and a person decides whether two names refer to the same business.</p>
+          <h3>Coordinating AI reviews in Slack</h3>
+          <p>I designed a review process for several AI agents in Slack. Each agent checks the others’ proposals against examples and records its findings. One agent consolidates the final report.</p>
+          <p>For a tool that compares business names, the team reviewed whether a close spelling match was enough to identify a duplicate. We kept the match as a suggestion and left the decision to the person reviewing the records.</p>
         </article>
         <article>
         <div class="note"><p class="time">Mondays <strong>08:00</strong></p>
-        <div><h3>Finding internships I can apply for</h3>
-        <p>Each Monday morning, a scheduled search collects paid internships in Korea that involve either accounting and finance or Japanese. It lists the location, requirements, and deadline in the same order so I can compare openings.</p></div></div>
+        <div><h3>Weekly internship search</h3>
+        <p>I set up a weekly search for paid internships in Korea in accounting, finance, or roles that use Japanese. Each result lists the location, requirements, and deadline so I can compare openings.</p></div></div>
         </article>
       </section>
       <section id="resume" class="resume" aria-labelledby="resume-title">
@@ -104,7 +104,7 @@
           <h2 id="resume-title">Résumé</h2>
           <a class="resume-pdf" href="resume.pdf" download="Kim_Sanghyeok_Resume.pdf">Download PDF</a>
         </div>
-        <p class="resume-summary">I study accounting and taxation alongside Japanese language and literature. I’ve built tools for checking source documents and journal entries, and automated property listings and consultation records at my mother’s real estate office.</p>
+        <p class="resume-summary">My accounting projects cover source document review and payment approvals. For my family’s real estate office, I built a listing search website and automated the process of turning recorded client calls into consultation notes.</p>
         <h3>Education and exchange</h3>
         <dl class="resume-list">
           <div><dt>Mar 2022–present</dt><dd><strong>Kyonggi University · Accounting and Taxation, School of Business</strong><p>Second major in Japanese Language and Literature</p><p>Cumulative GPA 4.3/4.5 <span class="resume-asof">(as of October 2026)</span></p></dd></div>
@@ -119,18 +119,18 @@
         <h3>Experience and projects</h3>
         <dl class="resume-list">
           <div><dt>Apr–Jul 2026</dt><dd><strong>Don Quijote · Mizonokuchi Station store, Japan</strong><p>Stocked fresh food displays and managed inventory.</p></dd></div>
-          <div><dt>Real estate operations</dt><dd><strong><a href="#estate">Property search and consultation records</a></strong><p>I built a listing search site and a consultation log for my mother’s office. On November 9, I reviewed 291 advertisements across three apartment complexes in Hyangnam and reported new listings and price changes in PDF and Excel.</p></dd></div>
-          <div><dt>Accounting practice</dt><dd><strong><a href="vibe-coding.html#ledger">Hanbit Trading accounting lab</a></strong><p>I built a journal-entry exercise for a fictional wholesaler. Learners retrieve transaction documents through MCP, review and approve draft entries, and post them to the ledger.</p></dd></div>
-          <div><dt>Cash planning</dt><dd><strong><a href="vibe-coding.html#work-finance">Sales rebate approval</a></strong><p>I analyzed a roster of 50 fictional dealers and 240 settlement records. Three related dealers exceeded the ₩2 million approval limit in all six months when their payments were combined. I used this rule in a payment review app that also lets staff plan funding for shortfalls.</p></dd></div>
-          <div><dt>Study tools</dt><dd><strong><a href="#finance-study">Financial management notes and 95 practice problems</a> · <a href="#japanese">JLPT vocabulary</a></strong><p>I organized the financial management workbook so I could revisit problems by topic. The Japanese vocabulary app supports both study by JLPT level and review of words I missed.</p></dd></div>
-          <div><dt>Collaboration</dt><dd><strong><a href="#notes">AI agent reviews in Slack</a></strong><p>I assigned several agents to review the same proposal and look for counterexamples. I kept their agreed decisions in a shared work log.</p></dd></div>
+          <div><dt>Real estate operations</dt><dd><strong><a href="#estate">Property search and consultation records</a></strong><p>Built a listing search website and connected call transcription and summaries to the brokerage’s consultation log in Notion. On November 9, I surveyed 291 listing ads across three apartment complexes in Hyangnam and reported new ads and price changes in PDF and Excel.</p></dd></div>
+          <div><dt>Accounting practice</dt><dd><strong><a href="vibe-coding.html#ledger">Hanbit Trading accounting lab</a></strong><p>Built an accounting lab for a fictional wholesaler. Learners retrieve source documents through MCP, review draft entries, and approve them for posting to the ledger.</p></dd></div>
+          <div><dt>Cash planning</dt><dd><strong><a href="vibe-coding.html#work-finance">Sales rebate approval</a></strong><p>Analyzed 240 settlement records for 50 simulated dealers. One group of three related dealers exceeded the ₩2 million approval threshold for six consecutive months when their monthly payments were combined. I built an app that applies the approval rule and assigns funding tasks when cash is short.</p></dd></div>
+          <div><dt>Study tools</dt><dd><strong><a href="#finance-study">Financial management notes and 95 practice problems</a> · <a href="#japanese">JLPT vocabulary</a></strong><p>Created concept notes, a workbook with 95 worked problems, and a Japanese vocabulary app with level-based study and a personal review list.</p></dd></div>
+          <div><dt>Collaboration</dt><dd><strong><a href="#notes">AI agent reviews in Slack</a></strong><p>Set up cross-reviews, a decision log, and a single reporting role. We used the process to decide when a business-name match needed human review.</p></dd></div>
         </dl>
         <h3>Coursework, leadership, and military service</h3>
         <dl class="resume-list">
-          <div><dt>Fall 2026</dt><dd><strong><a href="https://osh3772-star.github.io/ai-debate/">Accounting ethics case debates</a></strong><p>I built a debate tool to compare the reasoning and counterarguments of four AI models on accounting cases, including whether research and development costs qualify as assets.</p></dd></div>
-          <div><dt>Fall 2026</dt><dd><strong>Japanese-to-Korean translation project</strong><p>For a team presentation, I placed my assigned Japanese passage alongside its Korean translation and explained why I revised the first draft.</p></dd></div>
-          <div><dt>Oct 2026</dt><dd><strong>Interviews in Japanese</strong><p>I interviewed three Japanese tourists in Myeongdong, Seoul, in Japanese and organized their responses by question in a report.</p></dd></div>
-          <div><dt>High school · 1 year</dt><dd><strong>President, Economics and Business Club</strong><p>I grouped members’ ideas about trade, stocks, and financial management by shared interests and used them to plan the club’s activities.</p></dd></div>
+          <div><dt>Fall 2026</dt><dd><strong><a href="https://osh3772-star.github.io/ai-debate/">Accounting ethics case debates</a></strong><p>Built a debate tool to compare how four AI models support and challenge positions on accounting cases, including the capitalization of research and development costs.</p></dd></div>
+          <div><dt>Fall 2026</dt><dd><strong>Japanese-to-Korean translation project</strong><p>Edited the Korean translation of my assigned Japanese passage and presented the original text, revised translation, and reasons for my changes.</p></dd></div>
+          <div><dt>Oct 2026</dt><dd><strong>Interviews in Japanese</strong><p>Conducted interviews in Japanese with three visitors from Japan in Seoul’s Myeongdong district and organized their responses by question in a report.</p></dd></div>
+          <div><dt>High school · 1 year</dt><dd><strong>President, Economics and Business Club</strong><p>Planned club activities around members’ interests in trade, stocks, and financial management.</p></dd></div>
           <div><dt>Aug 2023–May 2025</dt><dd><strong>Administrative clerk, Republic of Korea Air Force · Completed service as a sergeant</strong></dd></div>
         </dl>
       </section>
@@ -139,9 +139,9 @@
         <p class="now-date"><time datetime="2026-11">November 2026</time></p>
         <dl class="resume-list now-list">
           <div><dt>Strength training</dt><dd>I’ve lifted at least 500 kg in total across the squat, bench press and deadlift. I’ve benched 140 kg for one rep, done 10 dips with 40 kg added and done 5 pull-ups with 30 kg added. My next goal is a 600 kg total.</dd></div>
-          <div><dt>Japanese</dt><dd>I’m preparing for the December JLPT N1. I’m going back through words I used to know to see which ones still trip me up. <a href="https://osh3772-star.github.io/chiikawa-jlpt-vocab/">My vocabulary app</a></dd></div>
+          <div><dt>Japanese</dt><dd>I’m preparing for JLPT N1 in December and reviewing unfamiliar words with the vocabulary app I built. <a href="https://osh3772-star.github.io/chiikawa-jlpt-vocab/">My vocabulary app</a></dd></div>
           <div><dt>Exam prep</dt><dd>I’m preparing for the Korean History Proficiency Test and OPIc, a speaking proficiency test.</dd></div>
-          <div><dt>Running and climbing</dt><dd>My 10 km personal best is 43 minutes. I’m working toward a sub-40-minute finish and also enjoy climbing.</dd></div>
+          <div><dt>Running and climbing</dt><dd>My 10 km personal best is 43 minutes. I’m aiming to break 40 minutes and also enjoy indoor climbing.</dd></div>
         </dl>
       </section>
       <footer><a href="#resume">View résumé</a><a href="#intro">Back to top ↑</a></footer>

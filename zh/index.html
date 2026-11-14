@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="金相赫的个人作品集。我学习会计和日语，为房产中介门店和自己的学习需要开发工具。">
+  <meta name="description" content="金相赫的个人作品集，收录会计实训平台、房源管理工具、日语学习应用及个人简历。">
   <title>金相赫 · 个人作品集</title>
   <link rel="stylesheet" href="../portfolio.css?v=now-gym-1">
   <link rel="alternate" hreflang="ko" href="https://osh3772-star.github.io/">
@@ -17,7 +17,7 @@
   <div class="layout">
     <header>
       <a class="name" href="#intro"><h1>金相赫</h1></a>
-      <p class="major">主修会计与税务<br>第二专业为日语</p>
+      <p class="major">会计与税务专业<br>第二专业为日语语言文学</p>
       <nav class="language-nav" aria-label="选择语言">
         <a lang="ko" hreflang="ko" href="/">한국어</a>
         <a lang="ja" hreflang="ja" href="/ja/">日本語</a>
@@ -31,31 +31,31 @@
     </header>
     <main>
       <section id="intro" aria-label="自我介绍">
-        <p class="lead">我是<strong>金相赫</strong>，主修会计与税务，第二专业为日语。</p>
-        <p>备考财务管理时，我做了一套<a href="#finance-study">概念笔记和习题集</a>。课余帮母亲打理房产中介业务时，我又为她做了一个<a href="#estate">乡南（Hyangnam）房源搜索网站</a>。</p>
+        <p class="lead">我是<strong>金相赫</strong>，主修会计与税务，同时修读日语语言文学。</p>
+        <p>为了复习大学课程，我把考点和习题整理成在线<a href="#finance-study">财务管理笔记与题库</a>。在母亲的房产中介门店，我开发了<a href="#estate">乡南（Hyangnam）房源搜索网站</a>，方便经纪人向客户推荐符合条件的房子。</p>
       </section>
       <section id="work">
         <h2>会计学习</h2>
         <article>
-          <h3>备考韩国会计资格考试</h3>
+          <h3>会计与税务资格</h3>
           <p>我已取得韩国财务管理师、计算机会计一级和计算机税务二级资格。<a href="#resume">查看全部资格与语言成绩</a></p>
         </article>
         <article class="study" id="finance-study">
-          <h3>准备财务管理期中考试</h3>
-          <p>如果第一笔年金在今天领取，而不是一年后领取，现值该怎么算？我把课堂上容易混淆的问题整理成概念笔记，又给习题加上星标，方便复习时只做选中的题。</p>
+          <h3>财务管理复习工具</h3>
+          <p>备考期中考试时，我把考试范围内的第 3 至 9 章整理成概念笔记和习题集。笔记用年金首次支付时间等例子解释现值计算，习题集则按题型收录课堂例题和历年试题，共 95 道，可收藏后重做。</p>
           <div class="books" aria-label="两个财务管理学习网站">
-            <a class="book concept" href="https://claude.ai/artifact/LwPtp9A5DPK2k8vTVn2WAL"><small>财务管理 · 第 3–9 章</small><strong>概念笔记</strong><span>8 个易混问题 ↗</span></a>
+            <a class="book concept" href="https://claude.ai/artifact/LwPtp9A5DPK2k8vTVn2WAL"><small>财务管理 · 第 3–9 章</small><strong>概念笔记</strong><span>8 个核心问题 ↗</span></a>
             <a class="book practice" href="https://claude.ai/artifact/7F24hGEVFYis9CiTzjHPvu"><small>财务管理 · 第 3–9 章</small><strong>习题集</strong><span>按题型整理的 95 道题 ↗</span></a>
           </div>
           <p class="access">访问这两个学习网站需要登录 Claude。</p>
         </article>
         <article>
-          <h3><a href="https://ledgerflow-public-reference-gateway.eric5833.workers.dev/">会计自动化实训 <span aria-hidden="true">↗</span></a></h3>
-          <p>我学分录时，想看看一笔交易从原始凭证到记入总账的全过程。我以虚构的批发企业 Hanbit 为例，做了一套审核记账凭证并批准入账的练习。</p>
+          <h3><a href="https://ledgerflow-public-reference-gateway.eric5833.workers.dev/">Hanbit 批发企业会计实训平台 <span aria-hidden="true">↗</span></a></h3>
+          <p>我以虚构的批发企业 Hanbit 为背景，设计了一套会计实训平台。学习者从一笔销售的原始凭证入手，核对分录，再查看经审核批准的记账凭证如何记入总账。</p>
           <details class="mechanism">
-            <summary>一笔销售如何记入总账？</summary>
-            <p>AI 应用通过 MCP 查询交易和原始凭证，再由会计引擎生成分录草稿。记录销售时，引擎还会用出库数量乘以单位成本，算出销售成本。</p>
-            <p>核对借贷双方和原始凭证后，由人审批记账凭证。只有与已批准版本一致的内容才会记入总账。</p>
+            <summary>从销售凭据到总账</summary>
+            <p>我通过 MCP 将 AI 应用接入会计引擎。选定一笔销售后，引擎核对税务发票和交货记录，生成记账凭证草稿，并按出库数量和单位成本计算销售成本。</p>
+            <p>引擎检查借贷平衡并核对原始凭证，学习者决定批准或退回。过账时，系统核对审批版本，确保入账内容与批准的凭证一致。</p>
             <a href="vibe-coding.html#ledger">阅读 Hanbit 实训平台的开发记录</a>
           </details>
           <details><summary>查看会计实训界面</summary><img loading="lazy" src="../portfolio-images/ledger.webp" alt="LedgerFlow 会计实训平台的凭证审核界面"></details>
@@ -64,16 +64,16 @@
       <section id="estate">
         <h2>房产中介实务</h2>
         <article>
-          <h3><a href="https://hyangnam-realestate.store/">为母亲的中介门店做房源搜索 <span aria-hidden="true">↗</span></a></h3>
-          <p>我为母亲工作的房产中介门店做了一个乡南（Hyangnam）地区的房源搜索网站。她亲自试用后提出了需求，我根据她的反馈修改了界面。</p>
+          <h3><a href="https://hyangnam-realestate.store/">乡南房源搜索 · 新荣 G-Well 房产中介门店 <span aria-hidden="true">↗</span></a></h3>
+          <p>在帮母亲处理门店业务时，我开发了一个可按交易方式和房型筛选公开房源的网站。经纪人可以把选定条件的链接发给客户，双方一起查看同一份房源列表。</p>
           <figure class="estate-screen">
             <img loading="lazy" width="1000" height="666" src="../portfolio-images/estate.webp" alt="乡南（Hyangnam）房产中介门店的快速房源搜索界面，可分别选择交易类型和房源类型。">
-            <figcaption>先选出售、全租或月租，再按住宅类型缩小搜索范围。全租是韩国以大额保证金代替月租的租赁方式。</figcaption>
+            <figcaption>客户可按出售、全租或月租及房型筛选房源。在韩国，全租指支付大额保证金、租期内不付月租的租赁方式。</figcaption>
           </figure>
           <details class="mechanism">
-            <summary>搜索全租公寓后，网站如何返回房源？</summary>
-            <p>我把门店域名接入 Cloudflare Workers。访客选择“全租”和“公寓”后，这两个条件会写入网址。Astro 读取条件，从 Supabase 查询已公开的房源并显示列表。</p>
-            <p>再次打开同一网址，就能看到当时公开的匹配房源。筛选全租和月租的价格时，网站按保证金金额匹配。</p>
+            <summary>域名、筛选条件与房源数据库</summary>
+            <p>我把门店的独立域名接入 Cloudflare Workers。Astro 读取网址中的交易方式和房型，从 Supabase 查询符合条件的公开房源。</p>
+            <p>重新打开链接时，筛选条件保持不变，结果则以当时公开的房源为准。房屋出售按售价筛选，全租和月租按保证金筛选。</p>
             <a href="https://hyangnam-realestate.store/properties?transaction=%EC%A0%84%EC%84%B8&amp;category=%EC%95%84%ED%8C%8C%ED%8A%B8">搜索全租公寓</a>
           </details>
         </article>
@@ -82,21 +82,21 @@
         <h2>日语</h2>
         <article>
           <h3><a href="https://osh3772-star.github.io/chiikawa-jlpt-vocab/">吉伊卡哇 JLPT 词汇本 <span aria-hidden="true">↗</span></a></h3>
-          <p>通过 JLPT N2 后，我想把做错的单词收集起来再练习。词汇本可以标记生词，并从上次停下的位置继续学习。</p>
+          <p>为了按 JLPT 级别复习日语词汇，我开发了这款词汇本。它按考试级别整理词汇，记住学习进度，并把标记为生词的词条集中起来供下次复习。</p>
           <details><summary>查看词汇本界面</summary><img loading="lazy" src="../portfolio-images/chiikawa.webp" alt="吉伊卡哇 JLPT 词汇本的学习界面"></details>
         </article>
       </section>
       <section id="notes">
         <h2>自动化笔记</h2>
         <article>
-          <h3>在 Slack 里让 AI 智能体共同评估工具</h3>
-          <p>我让几个智能体在 Slack 讨论串中互评方案。达成共识后，各自更新工作文档，由其中一个汇总结果。</p>
-          <p>我们用这个流程评估过识别相似客户名称的工具。它可以找出疑似拼写错误，再由人查看候选名单，判断是否为同一家企业。</p>
+          <h3>在 Slack 上组织多智能体评审</h3>
+          <p>我设计了多智能体评审流程。各智能体在同一讨论串中提交依据、提出反例，把达成共识的判断写入工作记录，再由一名智能体统一汇报。</p>
+          <p>评估往来单位名称匹配工具时，我们把相似名称列为待核对项，交由经办人判断是否指同一家公司。</p>
         </article>
         <article>
         <div class="note"><p class="time">周一 <strong>08:00</strong></p>
-        <div><h3>查找适合我的实习机会</h3>
-        <p>我既学会计也学日语，所以把带薪实习的搜索条件设为两类：韩国境内的会计或财务岗位，以及需要使用日语的岗位。每周一早上汇总工作地点、申请条件和截止日期，方便比较。</p></div></div>
+        <div><h3>每周实习职位简报</h3>
+        <p>我为求职设定了两类筛选条件，分别是韩国境内的会计与财务岗位，以及需要使用日语的岗位。每周自动整理带薪实习的地点、申请条件和截止日期，方便逐项比较。</p></div></div>
         </article>
       </section>
       <section id="resume" class="resume" aria-labelledby="resume-title">
@@ -104,7 +104,7 @@
           <h2 id="resume-title">简历</h2>
           <a class="resume-pdf" href="resume.pdf" download="金相赫_简历.pdf">下载 PDF</a>
         </div>
-        <p class="resume-summary">我主修会计与税务，第二专业为日语语言文学。学习会计时，我开发了处理交易凭证和分录的工具。我也帮母亲的房产中介门店实现了房源管理和咨询记录整理的自动化。</p>
+        <p class="resume-summary">我主修会计与税务，同时修读日语语言文学。在会计项目中，我把原始凭证审核和销售返利审批做成了可以操作的流程。在家里的房产中介门店，我开发了房源搜索网站，并将咨询录音自动整理成日志。</p>
         <h3>教育与交换经历</h3>
         <dl class="resume-list">
           <div><dt>2022 年 3 月入学 · 在读</dt><dd><strong>韩国京畿大学工商管理学部 · 会计与税务专业</strong><p>第二专业：日语语言文学</p><p>累计平均绩点 4.3/4.5 <span class="resume-asof">（截至 2026 年 10 月）</span></p></dd></div>
@@ -119,18 +119,18 @@
         <h3>实务与项目经验</h3>
         <dl class="resume-list">
           <div><dt>2026.04–07</dt><dd><strong>日本唐吉诃德 · 沟之口站前店</strong><p>在生鲜部门负责商品陈列和库存管理。</p></dd></div>
-          <div><dt>房产中介业务支持</dt><dd><strong><a href="#estate">乡南（Hyangnam）房源搜索与咨询记录自动化</a></strong><p>我为母亲的门店做了房源搜索网站和咨询日志。11 月 9 日，我调查了乡南（Hyangnam）三个住宅小区的 291 条房源广告，将新增广告和价格变化整理成 PDF 和 Excel 报告。</p></dd></div>
-          <div><dt>会计实训</dt><dd><strong><a href="vibe-coding.html#ledger">Hanbit 会计实训平台</a></strong><p>我为虚构的批发企业设计了分录练习：通过 MCP 查询交易凭证，审核分录草稿，批准后记入总账。</p></dd></div>
-          <div><dt>资金计划</dt><dd><strong><a href="vibe-coding.html#work-finance">销售返利付款审批</a></strong><p>我分析了 50 家虚构经销商的名册和 240 条结算记录。按关联方合并三家经销商的月付款额后，连续六个月都超过了 200 万韩元的授权审批限额。我把这个标准写入付款审核流程，并加入了资金不足时制定筹资计划的功能。</p></dd></div>
+          <div><dt>房产中介业务支持</dt><dd><strong><a href="#estate">乡南（Hyangnam）房源搜索与咨询记录自动化</a></strong><p>我开发了房源搜索网站，并将咨询录音转写、提炼要点后存入 Notion。11 月 9 日，我核查了乡南三个小区的 291 条房源广告，将新增广告和价格变动汇总成 PDF 和 Excel 报告。</p></dd></div>
+          <div><dt>会计实训</dt><dd><strong><a href="vibe-coding.html#ledger">Hanbit 会计实训平台</a></strong><p>我设计了虚构批发企业的账务实训流程。学习者通过 MCP 查询原始凭证，在网页上审核分录，批准后记入总账。</p></dd></div>
+          <div><dt>资金计划</dt><dd><strong><a href="vibe-coding.html#work-finance">销售返利审批与资金计划</a></strong><p>我分析了 50 家虚构经销商的 240 条结算记录，发现三家关联经销商的月度付款合计连续六个月超过 200 万韩元的审批限额。我据此开发了模拟审批应用，按汇总金额确定审批人，并将资金不足时选定的筹款任务分派给相关部门。</p></dd></div>
           <div><dt>学习工具开发</dt><dd><strong><a href="#finance-study">财务管理概念笔记与 95 道习题</a> · <a href="#japanese">JLPT 词汇本</a></strong><p>财务管理习题集可以按题型重做。日语词汇本支持按 JLPT 级别学习，也可以只复习标记过的生词。</p></dd></div>
-          <div><dt>团队协作</dt><dd><strong><a href="#notes">Slack 多智能体评审</a></strong><p>我为多个 AI 智能体分配任务，让它们审阅同一方案并提出反例，再将达成共识的结果写入共同工作记录。</p></dd></div>
+          <div><dt>团队协作</dt><dd><strong><a href="#notes">Slack 多智能体评审</a></strong><p>我设计了交叉评审、决策记录和统一汇报的流程，并用它确定往来单位名称匹配工具的适用范围。</p></dd></div>
         </dl>
         <h3>课程、社团与兵役经历</h3>
         <dl class="resume-list">
-          <div><dt>2026 年秋季学期</dt><dd><strong><a href="https://osh3772-star.github.io/ai-debate/">会计职业道德案例讨论</a></strong><p>我做了一个讨论工具，让四个 AI 分析研发费用能否资本化等会计问题，读者可以对照各方的判断依据和反驳意见。</p></dd></div>
-          <div><dt>2026 年秋季学期</dt><dd><strong>日译韩课程小组项目</strong><p>我把负责段落的日语原文与韩语译文并列整理，在汇报材料中说明修改初译的理由。</p></dd></div>
+          <div><dt>2026 年秋季学期</dt><dd><strong><a href="https://osh3772-star.github.io/ai-debate/">会计职业道德案例讨论</a></strong><p>我开发了会计案例讨论工具，由四个 AI 分别论证研发支出资本化等问题。读者可以对照各方依据、反驳和最终判断。</p></dd></div>
+          <div><dt>2026 年秋季学期</dt><dd><strong>日译韩课程小组项目</strong><p>我对照日语原文修改韩语初译，并在小组汇报中并列展示修改前后的句子，说明用词与表达上的取舍。</p></dd></div>
           <div><dt>2026.10</dt><dd><strong>日语实地访谈</strong><p>在首尔明洞用日语采访了三位日本游客，按问题整理回答并写成报告。</p></dd></div>
-          <div><dt>高中 · 1 年</dt><dd><strong>经济与管理社团社长</strong><p>我收集成员提出的贸易、股票、财务管理等选题，按共同兴趣归类，制定社团活动计划。</p></dd></div>
+          <div><dt>高中 · 1 年</dt><dd><strong>经济与管理社团社长</strong><p>我收集成员的兴趣和建议，据此制定了贸易、股票与财务管理主题的社团活动计划。</p></dd></div>
           <div><dt>2023.08–2025.05</dt><dd><strong>韩国空军行政兵 · 以兵长军衔服役期满退役</strong></dd></div>
         </dl>
       </section>
@@ -138,10 +138,10 @@
         <h2 id="now-title">近况</h2>
         <p class="now-date"><time datetime="2026-11">2026 年 11 月</time></p>
         <dl class="resume-list now-list">
-          <div><dt>力量训练</dt><dd>我的深蹲、卧推和硬拉三项总重量曾达到 500 公斤以上。卧推做过 140 公斤 1 次，双杠臂屈伸负重 40 公斤做了 10 次，引体向上负重 30 公斤做了 5 次。下一个目标是三项总重量达到 600 公斤。</dd></div>
-          <div><dt>日语</dt><dd>我正在准备 12 月的 JLPT N1，把过去背过的词再做一遍，看看哪些还不熟。<a href="https://osh3772-star.github.io/chiikawa-jlpt-vocab/">我做的词汇本</a></dd></div>
+          <div><dt>力量训练</dt><dd>深蹲、卧推和硬拉三项总重量曾达 500 公斤以上。个人记录有卧推 140 公斤 1 次、双杠臂屈伸负重 40 公斤 10 次、引体向上负重 30 公斤 5 次。长期目标是三项合计 600 公斤。</dd></div>
+          <div><dt>日语</dt><dd>我正在准备 12 月的 JLPT N1，用自己开发的词汇本复习学过的词，集中练习还不熟悉的部分。<a href="https://osh3772-star.github.io/chiikawa-jlpt-vocab/">我做的词汇本</a></dd></div>
           <div><dt>备考</dt><dd>我正在准备韩国史能力检定考试和外语口语考试 OPIc。</dd></div>
-          <div><dt>跑步和攀岩</dt><dd>我的 10 公里最好成绩是 43 分钟，接下来的目标是跑进 40 分钟。除了跑步，我也喜欢攀岩。</dd></div>
+          <div><dt>跑步和攀岩</dt><dd>我的 10 公里最好成绩是 43 分钟，接下来的目标是跑进 40 分钟。平时也练习室内攀岩。</dd></div>
         </dl>
       </section>
       <footer><a href="#resume">查看简历</a><a href="#intro">回到顶部 ↑</a></footer>

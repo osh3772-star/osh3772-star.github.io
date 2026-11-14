@@ -31,38 +31,37 @@
     </header>
     <main id="journal" class="journal">
       <h1>An accounting student’s<br>vibe coding journal</h1>
-      <p class="journal-intro">I started making things while helping at my mother’s real estate office, practicing journal entries, and learning Japanese vocabulary. I described the steps I wanted in plain language and worked with AI to turn them into code.</p>
+      <p class="journal-intro">I use AI to build tools for my studies and my mother’s brokerage. I start by deciding which decisions belong to the user. For a listing update, staff choose which values to keep. For a journal entry, a learner decides whether the documents support posting it.</p>
       <nav class="journal-index" aria-label="Journal entries">
         <a class="work-index-link" href="#more-work">Browse more projects ↓</a>
-        <a href="#listings"><time datetime="2026-10-09">Oct 9</time> Moving 70 maintenance fees into a new system</a>
-        <a href="#ledger"><time datetime="2026-10-14">Oct 14</time> An accounting lab that began with a single unposted sale</a>
-        <a href="#words"><time datetime="2026-10-24">Oct 24</time> Giving the Chiikawa characters a personality</a>
+        <a href="#listings"><time datetime="2026-10-09">Oct 9</time> Updating listings in bulk for a Hyangnam brokerage</a>
+        <a href="#ledger"><time datetime="2026-10-14">Oct 14</time> From source documents to the general ledger</a>
+        <a href="#words"><time datetime="2026-10-24">Oct 24</time> A JLPT vocabulary app with personal review lists and Chiikawa characters</a>
       </nav>
 
       <article id="listings">
         <p class="entry-meta"><time datetime="2026-10-09">October 9–11, 2026</time> · Hyangnam real estate office</p>
-        <h2>Moving 70 maintenance fees into a new system</h2>
-        <p>While moving listings to my mother’s office website, I asked Claude to help me avoid copying 70 maintenance fees by hand. On Real Estate Bank, a listing sometimes showed ₩0 in the search results even though its detail page gave an actual fee.</p>
-        <p>The screen we built shows the imported table beside the values already on the website. Staff choose which cells to update. An empty cell or a zero in the import leaves the saved fee in place.</p>
-        <p>Once we had moved the fees, I asked if staff could use them for another property of the same size in the same complex. We stored the fee confirmed for an individual listing separately from the reference amount for that floor area.</p>
+        <h2>Updating listings in bulk for a Hyangnam brokerage</h2>
+        <p>I built a bulk update tool for my mother’s brokerage so staff could reuse listings from Real Estate Bank on the office website.</p>
+        <p>The tool matches each row in the export to a listing on the website by its ID and highlights what has changed. Staff can review several listings on one screen and choose which fields to update.</p>
+        <p>I verified the maintenance fees for 65 listings against the source records. I also compiled separate reference fees for 20 floor-area types across nine apartment complexes so staff could look them up when adding a property.</p>
         <a class="entry-source" href="https://hyangnam-realestate.store/">Visit the office website</a>
       </article>
 
       <article id="ledger">
         <p class="entry-meta"><time datetime="2026-10-14">October 14–19, 2026</time> · Hanbit Trading accounting lab</p>
-        <h2>An accounting lab that began with a single unposted sale</h2>
-        <p>I first asked for an accounting system for a fictional wholesale business. Then I described the lesson I actually wanted. Pick one unposted sale from January, show me the source documents, and explain the choice of account.</p>
-        <p>I wanted to work with the same ledger whether I opened Codex or Claude Code. We connected both apps to one Model Context Protocol (MCP) server. A separate accounting engine calculates the entries and can run without an AI model.</p>
-        <p>The chat explains the evidence and the choice of account. In the web app, a person reviews and approves the entry before it can reach the general ledger.</p>
+        <h2>From source documents to the general ledger</h2>
+        <p>I built an accounting lab using transactions from Hanbit Trading, a fictional wholesaler. In the first exercise, learners examine the documents for a sale and decide which accounts to use.</p>
+        <p>I connected Codex and Claude Code to the same ledger through a shared Model Context Protocol (MCP) server. Either client can retrieve the transaction and its supporting documents. The chat explains the choice of account, while a TypeScript accounting engine prepares the entry and calculates the amounts.</p>
+        <p>Journal entries stay in draft until a learner approves them. Posting an approved entry updates the general ledger and trial balance, so learners can trace one transaction from the original documents to the books.</p>
         <a class="entry-source" href="https://ledgerflow-public-reference-gateway.eric5833.workers.dev/">Open the Hanbit Trading lab</a>
       </article>
 
       <article id="words">
         <p class="entry-meta"><time datetime="2026-10-24">October 24–31, 2026</time> · Japanese vocabulary</p>
-        <h2>Giving the Chiikawa characters a personality</h2>
-        <p>I wanted the Chiikawa characters I like to appear in my JLPT vocabulary app. I started by explaining the study controls to Codex. The left and right keys flip through words. The up and down keys mark the ones I know or need to review.</p>
-        <p>I asked Codex to look up characteristic scenes for Usagi, Hachiware, and Chiikawa, in that order. I supplied the character assets and asked for each character to pick actions at random from a set that suited its personality.</p>
-        <p>Codex gave each character a table of actions and probabilities. Hachiware’s included playing guitar and taking photos. Usagi’s included jumping and eating rice balls. I chose how I wanted each character to come across, and the probability tables translated that choice into behavior.</p>
+        <h2>A JLPT vocabulary app with personal review lists and Chiikawa characters</h2>
+        <p>I built a web app to review 7,180 vocabulary items across JLPT levels N5 through N1. It saves my word-by-word progress in the browser, so I can return to just the words I marked as unfamiliar.</p>
+        <p>I worked with Codex to give six Chiikawa characters distinct behavior during study sessions. The app uses a different set of weighted actions for each character. Hachiware might play guitar, while Usagi might jump.</p>
         <a class="entry-source" href="https://osh3772-star.github.io/chiikawa-jlpt-vocab/">Open the Chiikawa vocabulary app</a>
       </article>
       <section id="more-work" class="more-work" aria-labelledby="more-work-title">
@@ -77,11 +76,11 @@
         </nav>
         <h3 id="work-finance">Accounting and finance</h3>
         <dl class="work-list">
-          <div><dt><a href="https://osh3772-star.github.io/ai-debate/">Accounting ethics debates</a></dt><dd>Several AI models research the same accounting ethics case and challenge each other’s arguments. The results show which view was adopted and why.</dd></div>
-          <div><dt>Sales rebate approvals and cash planning</dt><dd>A simulated finance workflow totals payments to related dealers to determine who can approve them. If cash is short on the due date, staff can select a funding option and assign it to a department.</dd></div>
+          <div><dt><a href="https://osh3772-star.github.io/ai-debate/">Accounting ethics debates</a></dt><dd>Four AI models investigate an accounting ethics case and challenge each other’s arguments. The published results explain why the panel adopted each position.</dd></div>
+          <div><dt>Sales rebate approvals and cash planning</dt><dd>A finance simulation totals each related dealer group’s monthly payments to determine who must approve them. It calculates cash shortfalls by payment date and turns the chosen funding plan into a task for the responsible department.</dd></div>
           <div><dt><a href="./#finance-study">Financial management study sites</a></dt><dd>I built a concept notebook and a workbook with solutions to 95 problems grouped by topic. Readers can star problems for another attempt.</dd></div>
           <div><dt>Financial management lecture transcripts</dt><dd>I transcribed lectures with Google AI Studio and organized explanations and worked problems for chapters 10–14 by class session.</dd></div>
-          <div><dt>Rewind Trader</dt><dd>This web app reveals historical daily prices from NH Namuh PLUG one day at a time. I can practice placing simulated orders using only the data available on that date.</dd></div>
+          <div><dt>Rewind Trader</dt><dd>Replay daily prices from NH Namuh PLUG one trading day at a time and practice placing simulated orders using only the information available that day.</dd></div>
           <div><dt>Stock order controls</dt><dd>I added a limit on the number of holdings to an existing automated trading program. It sends a buy order to the broker after approval in Telegram.</dd></div>
         </dl>
         <h3 id="work-japanese">Japanese study</h3>
@@ -93,36 +92,36 @@
         </dl>
         <h3 id="work-office">Real estate</h3>
         <dl class="work-list">
-          <div><dt>Moving listings to Zigbang</dt><dd>When transferring listings from Real Estate Bank to Zigbang, the workflow skips existing advertisements and compares new listings with their source.</dd></div>
-          <div><dt>Hyangnam listing changes</dt><dd>For three apartment complexes, the PDF and Excel reports show new advertisements, price changes, and advertisements that disappeared since the last survey.</dd></div>
+          <div><dt>Moving listings to Zigbang</dt><dd>When transferring listings from Real Estate Bank to Zigbang, the tool skips existing ads and checks newly created listings against their source.</dd></div>
+          <div><dt>Hyangnam listing changes</dt><dd>For three apartment complexes, the PDF and Excel reports show new advertisements, price changes, and ads no longer found in the latest survey.</dd></div>
           <div><dt>Upcoming lease expirations</dt><dd>I used UnionPlus contract records to create PDF and Excel lists of leases due to expire four calendar months later, so staff can review them in advance.</dd></div>
           <div><dt>Hyangnam listing lookup via MCP</dt><dd>A read-only MCP server lets an AI client look up Naver Real Estate listings by apartment complex and compare them with earlier results.</dd></div>
           <div><dt>Apartment search by criteria</dt><dd>A local search interface filters apartment listings by area, price, net floor area, and floor level.</dd></div>
-          <div><dt>Maintenance fee comparison</dt><dd>I collected listing fees in Excel. The website stores the confirmed fee for each property separately from the reference fee for others of the same size in the same complex.</dd></div>
+          <div><dt>Maintenance fee comparison</dt><dd>An Excel register brings maintenance fees together by listing. The brokerage website keeps each unit’s confirmed fee separate from the reference figure for comparable units.</dd></div>
           <div><dt>Editing local news for Hyangnam</dt><dd>The office can review local news drafts alongside the original sources collected for each story.</dd></div>
           <div><dt>Naver Blog drafts</dt><dd>The tool automatically saves approved office copy as a Naver Blog draft. Staff review it in the editor and decide whether to publish.</dd></div>
           <div><dt>KakaoTalk listing alerts</dt><dd>New listings and price reductions that match a customer’s criteria go into a KakaoTalk notification queue.</dd></div>
-          <div><dt>Matching contracts to advertisements</dt><dd>When a new contract appears in UnionPlus, the workflow finds matching listings on Real Estate Bank and Zigbang for review and closure.</dd></div>
-          <div><dt>Office automation dashboard</dt><dd>I brought task status, approval history, and the split between manual and automated work into one view.</dd></div>
+          <div><dt>Matching contracts to advertisements</dt><dd>When a new contract appears in UnionPlus, the workflow finds matching listings on Real Estate Bank and Zigbang and flags them for staff to review before closing the ads.</dd></div>
+          <div><dt>Office automation dashboard</dt><dd>A prototype dashboard brings six recurring office tasks into one view. Staff can check what each task automates, the evidence from its review, and its approval history.</dd></div>
           <div><dt>Call notes from recordings</dt><dd>I transcribe recorded client calls with Groq Whisper and log the client’s requirements and follow-up actions in Notion.</dd></div>
           <div><dt>Client consultation records</dt><dd>Linked Obsidian templates for clients, consultations, properties, and contracts let me follow each consultation’s history in one place.</dd></div>
         </dl>
         <h3 id="work-games">Games and 3D modeling</h3>
         <dl class="work-list">
           <div><dt><a href="https://rocket-hand-blitz-20261105.osh3772.chatgpt.site">Blitzcrank 3D practice</a></dt><dd>A Three.js browser game where players control Blitzcrank, aim at three types of targets, and fire his rocket grab.</dd></div>
-          <div><dt>First-person rocket fist</dt><dd>I modeled Blitzcrank’s full body and the arms seen from the player’s perspective in Blender, then animated the fist launching.</dd></div>
+          <div><dt>First-person rocket grab animation</dt><dd>I modeled Blitzcrank and his first-person arms in Blender and animated the launch of his mechanical fist.</dd></div>
           <div><dt><a href="https://rocket-hand-blitz-20261105.osh3772.chatgpt.site/map-practice/rift-v49-skill-practice-playable.html?from=main">Summoner’s Rift in 3D</a></dt><dd>I built a Blender map based on Summoner’s Rift from League of Legends. Visitors can explore the blue and red jungle camps and the dragon pit in a browser.</dd></div>
           <div><dt>Ring Vision webcam boxing</dt><dd>Players dodge by moving their head in front of a webcam and counterattack by throwing a punch.</dd></div>
           <div><dt>Wizard of Legend web experiment</dt><dd>I built a personal browser version that uses room layouts and combat data from the Unity game for dungeon exploration and battles.</dd></div>
-          <div><dt>3D scene preview</dt><dd>I rendered characters and scenery in Blender and assembled a 720p preview with FFmpeg.</dd></div>
-          <div><dt><a href="https://github.com/osh3772-star/fubuki-pet">Fubuki desktop pet</a></dt><dd>A Windows desktop character responds to the mouse. A separate chat version lets the conversation unfold in its speech bubble.</dd></div>
-          <div><dt>Live2D upper-body artwork</dt><dd>I separated upper-body artwork into 32 PNG parts, including the arms, torso, and scarf, and prepared a layered PSD for rigging.</dd></div>
+          <div><dt>3D scene preview</dt><dd>I rendered characters and scenery in Blender and assembled the shots into a single preview video with FFmpeg.</dd></div>
+          <div><dt><a href="https://github.com/osh3772-star/fubuki-pet">Fubuki desktop pet</a></dt><dd>A Windows desktop pet reacts to mouse input. A companion chat version displays replies in the character’s speech bubble.</dd></div>
+          <div><dt>Live2D artwork for rigging</dt><dd>I prepared a layered PSD and 32 PNG parts from an upper-body illustration so the arms, torso, and scarf could be rigged independently.</dd></div>
         </dl>
         <h3 id="work-voice">Speech and in-car tools</h3>
         <dl class="work-list">
           <div><dt>Japanese navigation voice</dt><dd>A local speech synthesis tool turns written directions into Japanese audio files. I used GPT-SoVITS to adjust the voice and intonation.</dd></div>
-          <div><dt>Android Auto home screen</dt><dd>I built a character-themed Android Auto home screen with a notification shortcut to return to it from a maps or music app.</dd></div>
-          <div><dt>Gen5W vehicle menu</dt><dd>A menu for the Gen5W head unit lets the user choose a background and launch a mirroring app.</dd></div>
+          <div><dt>Android Auto home screen</dt><dd>I built an Android Auto prototype with a character-themed home screen and a notification shortcut that brings users back from a maps or music app.</dd></div>
+          <div><dt>Gen5W vehicle menu</dt><dd>An Android menu prototype for the Gen5W head unit saves a chosen background and launches an installed mirroring app.</dd></div>
         </dl>
         <h3 id="work-tools">Collaboration and personal tools</h3>
         <dl class="work-list">
@@ -130,7 +129,7 @@
           <div><dt><a href="./#notes">Internship search</a></dt><dd>A scheduled search collects paid internships in Korea every Monday, covering accounting and finance roles and openings that use Japanese.</dd></div>
           <div><dt><a href="https://github.com/osh3772-star/aside-ko-patcher">Aside</a> and <a href="https://github.com/osh3772-star/antigravity-ko-patcher">Antigravity</a> Korean language patches</dt><dd>I built unofficial patches to translate both desktop apps’ menus into Korean and reapply the translations after updates.</dd></div>
           <div><dt><a href="https://github.com/osh3772-star/universal-anti-slop">Reviewing AI-generated work</a></dt><dd>I wrote a skill that applies different review criteria to AI-generated writing, web interfaces, and spreadsheets.</dd></div>
-          <div><dt>Checking property descriptions</dt><dd>I connected the Jev API to flag unsupported guarantees in real estate copy for revision.</dd></div>
+          <div><dt>Checking property descriptions</dt><dd>I connected the Jev API to flag claims in property descriptions that promise results without supporting evidence.</dd></div>
           <div><dt>Exporting KakaoTalk conversations</dt><dd>This Windows tool exports that day’s conversations and leaves unread chat rooms untouched.</dd></div>
           <div><dt><a href="https://eric5-portfolio.osh3772.chatgpt.site">Earlier projects</a></dt><dd>A searchable collection with previews of games and web tools I made previously.</dd></div>
         </dl>

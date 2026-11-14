@@ -17,7 +17,7 @@
   <div class="layout">
     <header>
       <a class="name journal-name" href="./#intro">金相赫</a>
-      <p class="major">主修会计与税务<br>第二专业为日语</p>
+      <p class="major">会计与税务专业<br>第二专业为日语语言文学</p>
       <nav class="language-nav" aria-label="选择语言">
         <a lang="ko" hreflang="ko" href="/">한국어</a>
         <a lang="ja" hreflang="ja" href="/ja/">日本語</a>
@@ -31,38 +31,37 @@
     </header>
     <main id="journal" class="journal">
       <h1>一个会计专业学生的<br>AI 编程手记</h1>
-      <p class="journal-intro">帮母亲整理房源、练习会计分录、背日语单词，这些都是我开始自己做工具的起点。我学的是会计，用日常语言向 AI 说清楚需要什么，再一起把想法写成代码。</p>
+      <p class="journal-intro">我主修会计，和 AI 一起开发了学习工具，也为母亲的房产中介门店编写程序。设计时，我先明确实际使用者需要作哪些决定，例如哪些房源资料可以批量更新、谁来批准一张记账凭证。</p>
       <nav class="journal-index" aria-label="开发手记目录">
         <a class="work-index-link" href="#more-work">浏览其他作品 ↓</a>
-        <a href="#listings"><time datetime="2026-10-09">10.09</time> 迁移 70 条物业管理费记录，哪些值应该自动更新？</a>
-        <a href="#ledger"><time datetime="2026-10-14">10.14</time> 从一笔待处理销售开始做 Hanbit 会计实训平台</a>
-        <a href="#words"><time datetime="2026-10-24">10.24</time> 如何把吉伊卡哇角色的个性放进词汇本？</a>
+        <a href="#listings"><time datetime="2026-10-09">10.09</time> 乡南中介门店的房源批量更新工具</a>
+        <a href="#ledger"><time datetime="2026-10-14">10.14</time> 在 Hanbit 平台上从原始凭证练到过账</a>
+        <a href="#words"><time datetime="2026-10-24">10.24</time> JLPT 词汇本的复习记录与角色动作</a>
       </nav>
 
       <article id="listings">
         <p class="entry-meta"><time datetime="2026-10-09">2026.10.09–11</time> · 乡南（Hyangnam）房产中介门店</p>
-        <h2>迁移 70 条物业管理费记录，哪些值应该自动更新？</h2>
-        <p>把房源迁移到母亲的门店网站时，70 条物业管理费记录得逐条复制。我请 Claude 帮我减少这项重复工作。有些房源在韩国房产网站“房地产银行”的详情页明明列了管理费，在列表里却显示为 0 韩元。</p>
-        <p>我和 AI 做了一个对照界面，把导入的表格和网站现有的数据并排显示。只更新经办人选中的单元格，导入表里的空白或零值不会覆盖原有管理费。</p>
-        <p>迁完每套房的金额，我又问：以后录入同一小区、相同面积的房源时，能不能查到一个参考价？我们把核实过的单套管理费与按面积归类的参考金额分别保存。</p>
+        <h2>乡南中介门店的房源批量更新工具</h2>
+        <p>为了减少母亲的房产中介门店在两个网站上重复录入房源的工作，我开发了房源批量更新工具。</p>
+        <p>导入韩国房源平台“房地产银行”（부동산뱅크）导出的表格后，工具按房源编号匹配门店网站上已有的记录，并标出有变化的项目。经办人可以在同一页面核对多套房源，再选择需要更新的项目。</p>
+        <p>我用原始资料核对了 65 套房源的物业管理费，还为 9 个小区的 20 种面积类型单独整理了参考金额，供登记新房源时查阅。</p>
         <a class="entry-source" href="https://hyangnam-realestate.store/">访问门店网站</a>
       </article>
 
       <article id="ledger">
         <p class="entry-meta"><time datetime="2026-10-14">2026.10.14–19</time> · Hanbit 会计实训平台</p>
-        <h2>从一笔待处理销售开始做 Hanbit 会计实训平台</h2>
-        <p>最初，我只是让 AI 做一个虚构批发公司的会计系统。后来我把想练习的情境写得更具体：从一月份选一笔尚未入账的销售，给我看原始凭证，再解释为什么选用这个科目。</p>
-        <p>我的要求是，无论打开 Codex 还是 Claude Code，练习时都能访问同一本账。我们把两个应用接到同一台 MCP 服务器上，让会计引擎独立完成分录计算，无需调用 AI 模型。</p>
-        <p>我也把解释交易与审批分开。在对话里查看凭证和选用科目的理由；在网页上，由人审核记账凭证，批准后才记入总账。</p>
+        <h2>在 Hanbit 平台上从原始凭证练到过账</h2>
+        <p>我用虚构批发企业 Hanbit 的交易资料搭建了会计实训平台。第一项练习从一笔销售开始，学习者先核对原始凭证，再判断应使用的会计科目。</p>
+        <p>我通过同一个 MCP 服务将 Codex 和 Claude Code 接入同一套账。学习者可以在任一应用中查询交易和凭据，讨论科目选择的依据。分录生成和金额计算由 TypeScript 会计引擎完成。</p>
+        <p>待审核的记账凭证以草稿保存。学习者在网页上批准并过账后，就能在总账和试算平衡表中查看这笔交易，核对原始凭证、分录和账簿之间的对应关系。</p>
         <a class="entry-source" href="https://ledgerflow-public-reference-gateway.eric5833.workers.dev/">打开 Hanbit 会计实训平台</a>
       </article>
 
       <article id="words">
         <p class="entry-meta"><time datetime="2026-10-24">2026.10.24–31</time> · 日语词汇本</p>
-        <h2>如何把吉伊卡哇角色的个性放进词汇本？</h2>
-        <p>我想把喜欢的吉伊卡哇角色放进 JLPT 词汇本。先跟 Codex 说明背词时手上会怎么操作：左右方向键翻词，上下方向键标记认识或不认识。</p>
-        <p>加入角色时，我让它依次找乌萨奇、小八和吉伊的代表场景。我提供角色素材，请它把素材接入词汇本，并让每个角色随机做出符合自己性格的动作。</p>
-        <p>Codex 给每个角色建了一张动作概率表。小八的动作里有弹吉他、拍照，乌萨奇则会跳跃、吃饭团。我决定每个角色要表现出什么样的个性，概率表则把这些差别变成了程序能执行的规则。</p>
+        <h2>JLPT 词汇本的复习记录与角色动作</h2>
+        <p>我开发了一款 JLPT 词汇本，收录 N5 至 N1 共 7,180 个词条。浏览器会保存每个词的熟悉程度，下次打开时可以只复习标记过的生词。</p>
+        <p>我把喜欢的六个吉伊卡哇角色加入词汇本，与 Codex 一起为它们设定各自的动作和出现概率。复习时，小八会弹吉他或拍照，乌萨奇则会跳跃或吃饭团。</p>
         <a class="entry-source" href="https://osh3772-star.github.io/chiikawa-jlpt-vocab/">打开吉伊卡哇词汇本</a>
       </article>
       <section id="more-work" class="more-work" aria-labelledby="more-work-title">
@@ -77,61 +76,61 @@
         </nav>
         <h3 id="work-finance">会计与财务</h3>
         <dl class="work-list">
-          <div><dt><a href="https://osh3772-star.github.io/ai-debate/">会计职业道德 AI 辩论</a></dt><dd>多个 AI 调查同一案例，针对彼此的观点提出反驳。讨论结束后，可以查看最终采纳了哪个判断、依据是什么。</dd></div>
-          <div><dt>销售返利审批与资金计划</dt><dd>这个模拟业务应用按关联交易方汇总应付金额，确定审批人。付款日资金不足时，经办人可以选择筹资方案，并将任务分派给相应部门。</dd></div>
-          <div><dt><a href="./#finance-study">财务管理备考工具</a></dt><dd>一份概念笔记用于复习考点，一本带解析的习题集按题型收录 95 道题。想再做一遍的题可以加星标。</dd></div>
+          <div><dt><a href="https://osh3772-star.github.io/ai-debate/">会计职业道德 AI 辩论</a></dt><dd>多个 AI 分别研究同一会计职业道德案例并相互质询。网站公开讨论结果及采纳各项判断的依据。</dd></div>
+          <div><dt>销售返利审批与资金计划</dt><dd>这款模拟业务应用按月汇总关联经销商的付款额，据此确定审批人。它计算各付款日的资金缺口，并将选定的筹资方案分派给相关部门。</dd></div>
+          <div><dt><a href="./#finance-study">财务管理备考工具</a></dt><dd>我把课堂难点按问题整理成概念笔记，并编制了含解析的 95 道分类练习。需要重做的题目可以单独收藏。</dd></div>
           <div><dt>财务管理课堂录音转写</dt><dd>我用 Google AI Studio 把录音转成文本，按课次整理第 10–14 章的概念讲解和例题解析。</dd></div>
           <div><dt>历史行情模拟交易</dt><dd>这款网页应用按天展示 NH 投资证券 Namuh PLUG 提供的历史日线数据。练习下单时，只能看到模拟交易日及以前的价格。</dd></div>
           <div><dt>股票自动交易订单管理</dt><dd>我在现有的自动交易程序中加入持仓股票数量上限，并接入 Telegram。买入请求获批后，程序才将订单发送给券商。</dd></div>
         </dl>
         <h3 id="work-japanese">日语学习</h3>
         <dl class="work-list">
-          <div><dt>单词怪物讨伐队</dt><dd>选好 JLPT 等级，答对日语单词的读音，就能击败怪物，一路挑战关底首领。</dd></div>
+          <div><dt>单词怪物讨伐队</dt><dd>把 JLPT 词汇读音练习设计成闯关游戏。玩家按级别选词，答对读音即可击败怪物，逐步挑战关底首领。</dd></div>
           <div><dt>N1 每日词汇本</dt><dd>在手机上添加想学的单词，遮住词义复习，并记录今天记住了多少词。</dd></div>
           <div><dt>日语竖排文字识别</dt><dd>我把竖排日语小说按原书的阅读顺序转为电子文本，保留注音假名，并将它们标在对应汉字上方。</dd></div>
           <div><dt>漫画台词汉字练习</dt><dd>我用漫画台词做了一套个人测验，通过答题练习汉字读音。</dd></div>
         </dl>
         <h3 id="work-office">房产中介实务</h3>
         <dl class="work-list">
-          <div><dt>房源迁移到 Zigbang</dt><dd>从房地产银行向 Zigbang 迁移房源时，工具会跳过已经发布的广告，并将新录入的内容与原记录核对。</dd></div>
-          <div><dt>乡南（Hyangnam）三个小区的房源变动报告</dt><dd>将新出现的广告、价格有变化的广告和本次未再看到的广告分别整理成 PDF 和 Excel 报告。</dd></div>
-          <div><dt>租约到期清单</dt><dd>从 UnionPlus 的合同中筛出四个月后到期的租约，生成 PDF 和 Excel 清单，供门店提前跟进。</dd></div>
+          <div><dt>房源迁移到 Zigbang</dt><dd>比对房地产银行的房源记录和 Zigbang 上的广告，避免重复发布，并核对新广告与原始房源资料是否一致。</dd></div>
+          <div><dt>乡南（Hyangnam）三个小区的房源变动报告</dt><dd>将本次调查与上一次的广告逐条比对，按新增、调价和本次未检索到三类生成 PDF 和 Excel 报告。</dd></div>
+          <div><dt>租约到期清单</dt><dd>从 UnionPlus 的合同中筛选四个月后的那个自然月内到期的租约，生成 PDF 和 Excel 清单，供门店提前跟进。</dd></div>
           <div><dt>乡南（Hyangnam）房源查询 MCP</dt><dd>我做了一个只读 MCP 服务器，让 AI 可以按小区查询 Naver 房产的房源，并与上一次的结果比较。</dd></div>
           <div><dt>按条件找房</dt><dd>在本地搜索界面里选择区域、价格、套内面积和楼层，即可查找符合条件的公寓房源。</dd></div>
-          <div><dt>物业管理费对照表</dt><dd>我把各套房源的物业管理费汇成 Excel 表格。网站分别保存单套房的实际费用，以及同小区同面积房源的参考金额。</dd></div>
+          <div><dt>物业管理费对照表</dt><dd>按房源整理核实过的物业管理费，汇成 Excel 表格。按小区和面积归类的参考费用另列，供新房源录入时查阅。</dd></div>
           <div><dt>乡南（Hyangnam）本地资讯编辑</dt><dd>把乡南（Hyangnam）地区的资料连同原始来源一起保存，门店编辑可以一边校对出处，一边审核资讯稿。</dd></div>
           <div><dt>Naver 博客草稿自动化</dt><dd>审核通过的门店稿件会自动存为 Naver 博客草稿，由经办人在编辑器里复核并决定是否发布。</dd></div>
-          <div><dt>KakaoTalk 房源提醒</dt><dd>从新增和降价房源中筛出符合客户条件的广告，放入 KakaoTalk 的待发送队列。</dd></div>
-          <div><dt>核对合同与广告</dt><dd>UnionPlus 出现新合同时，到房地产银行和 Zigbang 搜索同一套房源的广告，筛出需要标记为已成交的条目。</dd></div>
-          <div><dt>门店自动化管理界面</dt><dd>按重复性任务区分人工处理和已自动化的环节，把进度和审批记录放在同一界面。</dd></div>
+          <div><dt>KakaoTalk 房源提醒</dt><dd>将新增和降价广告与客户的找房条件匹配，把符合条件的房源加入 KakaoTalk 待发送队列。</dd></div>
+          <div><dt>核对合同与广告</dt><dd>根据 UnionPlus 的新合同，查找同一房源在房地产银行和 Zigbang 上的广告，列出需要更新成交状态的条目。</dd></div>
+          <div><dt>门店自动化管理界面</dt><dd>我为门店的六项重复性任务设计了管理界面原型，可集中查看各项任务的自动化范围、评审依据和审批记录。</dd></div>
           <div><dt>咨询录音自动整理</dt><dd>用 Groq Whisper 转写门店咨询录音，把客户的找房条件和后续事项记入 Notion 咨询日志。</dd></div>
           <div><dt>咨询记录管理</dt><dd>在 Obsidian 中关联客户、咨询、房源与合同模板，可以从同一处追踪历次咨询。</dd></div>
         </dl>
         <h3 id="work-games">游戏与建模</h3>
         <dl class="work-list">
-          <div><dt><a href="https://rocket-hand-blitz-20261105.osh3772.chatgpt.site">蒸汽机器人 3D 训练场</a></dt><dd>在这个 Three.js 浏览器游戏中，操控《英雄联盟》的布里茨，瞄准三种目标发射机械飞爪。</dd></div>
+          <div><dt><a href="https://rocket-hand-blitz-20261105.osh3772.chatgpt.site">蒸汽机器人 3D 训练场</a></dt><dd>用 Three.js 开发的《英雄联盟》角色训练游戏。玩家在浏览器中操控布里茨，用机械飞爪瞄准三种目标。</dd></div>
           <div><dt>第一人称机械飞爪</dt><dd>我用 Blender 制作了布里茨的全身模型和玩家视角下的双臂，并为拳头发射制作了动画。</dd></div>
           <div><dt><a href="https://rocket-hand-blitz-20261105.osh3772.chatgpt.site/map-practice/rift-v49-skill-practice-playable.html?from=main">召唤师峡谷 3D 地图</a></dt><dd>我参照《英雄联盟》的召唤师峡谷，用 Blender 搭建了一张 3D 地图。在浏览器中可以探索红蓝野区营地和小龙坑。</dd></div>
           <div><dt>RING VISION 摄像头拳击</dt><dd>面对摄像头移动头部闪躲攻击，再挥拳反击，用身体操控拳击游戏。</dd></div>
           <div><dt>《传说法师》网页版实验</dt><dd>我把 Unity 游戏的房间布局和战斗数据接入个人网页版，让玩家在浏览器中探索地牢并进行战斗。</dd></div>
-          <div><dt>3D 场景预览</dt><dd>我用 Blender 渲染角色和背景，再用 FFmpeg 制作 720p 预览视频。</dd></div>
+          <div><dt>3D 场景预览</dt><dd>用 Blender 渲染角色和背景，再用 FFmpeg 把画面剪接成场景预览视频。</dd></div>
           <div><dt><a href="https://github.com/osh3772-star/fubuki-pet">Fubuki 桌面宠物</a></dt><dd>这个 Windows 桌面角色会回应鼠标操作。聊天版本还可以在角色的对话气泡里继续交谈。</dd></div>
-          <div><dt>Live2D 半身角色拆件</dt><dd>我将半身原画的手臂、躯干和围巾等拆分为 32 张 PNG 部件，并整理为 PSD 文件，为后续绑定做准备。</dd></div>
+          <div><dt>Live2D 半身角色拆件</dt><dd>为在 Live2D 中分别控制手臂、躯干等部位，我把半身原画拆分为 32 个 PNG 部件，并整理为分层 PSD 文件。</dd></div>
         </dl>
         <h3 id="work-voice">语音与车载</h3>
         <dl class="work-list">
           <div><dt>日语导航语音</dt><dd>这个本地语音合成工具能将路线提示转成日语音频文件。我用 GPT-SoVITS 调整声音和语调。</dd></div>
-          <div><dt>Android Auto 启动界面</dt><dd>我制作了带角色的 Android Auto 主页，并加入通知快捷入口，可从地图或音乐应用重新打开主页。</dd></div>
-          <div><dt>Gen5W 车载菜单</dt><dd>在 Gen5W 车载菜单中可以选择背景，并直接打开屏幕镜像应用。</dd></div>
+          <div><dt>Android Auto 启动界面</dt><dd>我设计了带角色主页的 Android Auto 原型。用户可以通过通知栏快捷入口，从地图或音乐应用返回主页。</dd></div>
+          <div><dt>Gen5W 车载菜单</dt><dd>为 Gen5W 开发的 Android 菜单原型，可选择并保存背景，也能从菜单直接打开已安装的屏幕镜像应用。</dd></div>
         </dl>
         <h3 id="work-tools">协作与个人工具</h3>
         <dl class="work-list">
-          <div><dt><a href="./#notes">Slack 智能体协作</a></dt><dd>多个智能体在同一个 Slack 讨论串里对照试验结果、提出反例，最后由一个智能体汇总并报告。</dd></div>
+          <div><dt><a href="./#notes">Slack 智能体协作</a></dt><dd>我为多个智能体分配评审和汇报职责。它们在同一 Slack 讨论串中对照测试结果、提出反例，最后由一名智能体汇总结论。</dd></div>
           <div><dt><a href="./#notes">实习职位提醒</a></dt><dd>每周一自动汇总韩国境内的带薪实习职位，涵盖会计、财务以及需要使用日语的岗位。</dd></div>
           <div><dt><a href="https://github.com/osh3772-star/aside-ko-patcher">Aside</a> · <a href="https://github.com/osh3772-star/antigravity-ko-patcher">Antigravity</a> 韩语补丁</dt><dd>我给这两个桌面应用做了非官方补丁，用于把菜单切换为韩语，也能在更新后重新应用翻译。</dd></div>
-          <div><dt><a href="https://github.com/osh3772-star/universal-anti-slop">AI 成品检查技能</a></dt><dd>它会根据成品类型，选取相应的标准检查 AI 生成的文章、网页和电子表格。</dd></div>
+          <div><dt><a href="https://github.com/osh3772-star/universal-anti-slop">AI 成品检查技能</a></dt><dd>我编写了一套评审技能，可按成果类型调用相应的检查标准，分别审阅文章、网页界面和电子表格。</dd></div>
           <div><dt>房产文案措辞检查</dt><dd>我接入 Jev API，帮助编辑找出房产介绍里缺乏依据的保证性表述并修改。</dd></div>
-          <div><dt>导出 KakaoTalk 聊天记录</dt><dd>这个 Windows 工具跳过未读聊天室，只选取当天的对话并导出。</dd></div>
+          <div><dt>导出 KakaoTalk 聊天记录</dt><dd>这个 Windows 工具可筛选并导出当天的对话，同时保留未读聊天室的未读状态。</dd></div>
           <div><dt><a href="https://eric5-portfolio.osh3772.chatgpt.site">早期作品集</a></dt><dd>这个网站可以搜索和预览我过去制作的游戏与网页工具。</dd></div>
         </dl>
         <ul class="work-titles">

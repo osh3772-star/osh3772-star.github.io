@@ -32,30 +32,30 @@
     <main>
       <section id="intro" aria-label="소개">
         <p class="lead">회계세무를 전공하고 일본어를 복수전공하는 <strong>김상혁</strong>입니다.</p>
-        <p>재무관리 시험을 준비하며 <a href="#finance-study">개념 노트와 문제집</a>을 만들었습니다. 학교 밖에서는 어머니의 중개사무소 일을 도우며 <a href="#estate">향남 매물 검색 화면</a>을 만들었습니다.</p>
+        <p>대학 강의를 복습하려고 <a href="#finance-study">재무관리 개념 노트와 문제집</a>을 만들었습니다. 어머니의 중개사무소에서는 손님에게 조건에 맞는 집을 소개할 수 있도록 <a href="#estate">향남 매물 검색 사이트</a>를 만들었습니다.</p>
       </section>
       <section id="work">
         <h2>회계 공부</h2>
         <article>
-          <h3>회계 자격을 준비하며</h3>
+          <h3>회계·세무 자격</h3>
           <p>재경관리사, 전산회계 1급, 전산세무 2급을 취득했습니다. <a href="#resume">전체 자격·어학 보기</a></p>
         </article>
         <article class="study" id="finance-study">
-          <h3>재무관리 중간고사를 준비하며</h3>
-          <p>연금을 오늘 받는 경우와 1년 뒤에 받는 경우는 계산이 어떻게 달라질까요? 강의에서 헷갈렸던 질문은 개념 노트에 모았습니다. 같은 범위의 문제를 다시 풀 때는 별표로 표시한 문항을 골라 볼 수 있게 했습니다.</p>
+          <h3>대학 강의로 만든 재무관리 학습 사이트</h3>
+          <p>중간고사를 준비하며 시험 범위인 3~9장의 내용을 두 사이트로 정리했습니다. 개념 노트에서는 연금의 첫 지급일에 따라 현재가치가 어떻게 달라지는지 설명합니다. 문제집에는 강의 예제와 기출문제 등 95문항을 담아 유형별로 풀고 복습할 수 있게 했습니다.</p>
           <div class="books" aria-label="재무관리 학습 사이트 두 개">
-            <a class="book concept" href="https://claude.ai/artifact/LwPtp9A5DPK2k8vTVn2WAL"><small>재무관리 · 3–9장</small><strong>개념 노트</strong><span>헷갈리는 질문 8개 ↗</span></a>
-            <a class="book practice" href="https://claude.ai/artifact/7F24hGEVFYis9CiTzjHPvu"><small>재무관리 · 3–9장</small><strong>문제집</strong><span>유형별 문제 95개 ↗</span></a>
+            <a class="book concept" href="https://claude.ai/artifact/LwPtp9A5DPK2k8vTVn2WAL"><small>재무관리 · 3–9장</small><strong>개념 노트</strong><span>핵심 질문 8개 ↗</span></a>
+            <a class="book practice" href="https://claude.ai/artifact/7F24hGEVFYis9CiTzjHPvu"><small>재무관리 · 3–9장</small><strong>문제집</strong><span>유형별 문제 95문항 ↗</span></a>
           </div>
           <p class="access">두 학습 사이트를 열려면 Claude에 로그인해야 합니다.</p>
         </article>
         <article>
-          <h3><a href="https://ledgerflow-public-reference-gateway.eric5833.workers.dev/">회계 자동화 공부 <span aria-hidden="true">↗</span></a></h3>
-          <p>수업에서 배우는 분개가 장부에 반영되기까지의 과정을 따라가고 싶었습니다. 가상회사 한빛유통의 거래로 전표를 검토하고 승인하는 실습을 만들었습니다.</p>
+          <h3><a href="https://ledgerflow-public-reference-gateway.eric5833.workers.dev/">한빛유통 회계 학습실 <span aria-hidden="true">↗</span></a></h3>
+          <p>분개가 장부와 재무제표에 어떻게 반영되는지 실습하려고 가상회사 한빛유통의 회계 학습실을 만들었습니다. 학습자는 매출 증빙을 읽고 전표를 검토한 뒤, 승인한 전표가 원장에 어떻게 반영됐는지 확인합니다.</p>
           <details class="mechanism">
             <summary>매출 한 건이 장부에 오르는 과정</summary>
-            <p>AI 앱이 MCP로 거래와 증빙을 조회하면 회계 엔진이 분개 초안을 만듭니다. 매출을 기록할 때는 출고 수량과 단위원가를 곱해 매출원가도 계산합니다.</p>
-            <p>차변·대변과 증빙을 검사한 뒤 사람이 전표를 승인합니다. 장부에 올릴 때 승인받은 버전과 내용이 일치해야 원장에 반영됩니다.</p>
+            <p>AI 앱과 회계 엔진을 MCP로 연결했습니다. 앱에서 매출 거래를 선택하면 엔진이 세금계산서와 인도 기록을 대조해 전표 초안을 만듭니다. 이때 출고 수량과 단위원가로 매출원가도 함께 계산합니다.</p>
+            <p>엔진이 차변과 대변의 합계, 증빙을 확인하면 학습자가 전표를 승인하거나 반려합니다. 원장에는 승인 당시와 내용이 일치하는 전표만 반영합니다.</p>
             <a href="vibe-coding.html#ledger">한빛유통을 만든 과정 읽기</a>
           </details>
           <details><summary>회계 실습 화면 보기</summary><img loading="lazy" src="portfolio-images/ledger.webp" alt="LedgerFlow 회계 실습 화면"></details>
@@ -64,16 +64,16 @@
       <section id="estate">
         <h2>중개사무소</h2>
         <article>
-          <h3><a href="https://hyangnam-realestate.store/">어머니의 중개사무소에서 쓰는 매물 검색 <span aria-hidden="true">↗</span></a></h3>
-          <p>어머니가 일하는 중개사무소에서 향남 매물을 찾아볼 수 있도록 검색 화면을 만들었습니다. 어머니가 직접 써 보고 요청한 내용을 받아 화면을 수정했습니다.</p>
+          <h3><a href="https://hyangnam-realestate.store/">향남신영지웰공인중개사사무소 매물 검색 <span aria-hidden="true">↗</span></a></h3>
+          <p>어머니의 중개사무소 일을 도우며 공개 매물을 거래 유형과 매물 종류로 찾는 홈페이지를 만들었습니다. 상담 중에는 손님에게 조건이 담긴 링크를 건네 매물 목록을 함께 볼 수 있습니다.</p>
           <figure class="estate-screen">
             <img loading="lazy" width="1000" height="666" src="portfolio-images/estate.webp" alt="향남신영지웰공인중개사사무소의 매물 빠른 검색. 거래유형과 매물종류를 고르는 두 선택란이 있다.">
-            <figcaption>매매·전세·월세 중 하나를 고른 뒤, 찾고 있는 매물 종류로 범위를 좁힐 수 있습니다.</figcaption>
+            <figcaption>거래 유형과 매물 종류를 함께 선택하는 빠른 검색 화면입니다.</figcaption>
           </figure>
           <details class="mechanism">
-            <summary>전세 아파트를 검색하면 어떤 일이 일어날까?</summary>
-            <p>사무소 주소를 Cloudflare Workers에 연결했습니다. 방문자가 전세와 아파트를 고르면 두 조건이 검색 주소에 담깁니다. Astro가 그 조건을 읽고 Supabase에서 공개된 매물만 조회해 목록을 보여줍니다.</p>
-            <p>같은 주소를 다시 열면 그때 공개된 매물로 결과가 갱신됩니다. 가격을 입력하면 전세와 월세는 보증금을 기준으로 검색합니다.</p>
+            <summary>검색 조건을 링크로 공유하는 원리</summary>
+            <p>사무소 전용 도메인을 Cloudflare Workers에 연결했습니다. 거래 유형과 매물 종류는 검색 주소에 저장합니다. Astro는 주소에서 조건을 읽어 Supabase에 등록된 공개 매물만 조회합니다.</p>
+            <p>같은 링크를 나중에 열어도 검색 조건은 유지됩니다. 결과에는 조회 시점의 매물이 표시됩니다. 가격 범위는 매매의 경우 매매가, 전세·월세의 경우 보증금을 기준으로 적용합니다.</p>
             <a href="https://hyangnam-realestate.store/properties?transaction=%EC%A0%84%EC%84%B8&amp;category=%EC%95%84%ED%8C%8C%ED%8A%B8">전세 아파트로 검색해 보기</a>
           </details>
         </article>
@@ -82,21 +82,21 @@
         <h2>일본어</h2>
         <article>
           <h3><a href="https://osh3772-star.github.io/chiikawa-jlpt-vocab/">치이카와 JLPT 단어장 <span aria-hidden="true">↗</span></a></h3>
-          <p>JLPT N2를 취득했습니다. 일본어 공부를 이어가면서 한 번 틀린 단어를 다시 풀고 싶었습니다. 모르는 단어에 표시를 남기고, 지난번에 멈춘 곳부터 이어서 공부할 수 있게 했습니다.</p>
+          <p>일본어 공부를 하며 급수별 어휘를 복습할 수 있는 단어장을 만들었습니다. 공부하면서 모르는 단어에 표시를 남기면 그 단어만 모아 다시 볼 수 있습니다. 학습 위치를 저장해 다음에 같은 자리에서 이어갑니다.</p>
           <details><summary>단어장 화면 보기</summary><img loading="lazy" src="portfolio-images/chiikawa.webp" alt="치이카와 JLPT 단어장의 학습 화면"></details>
         </article>
       </section>
       <section id="notes">
         <h2>자동화 노트</h2>
         <article>
-          <h3>Slack에서 AI 에이전트와 도구 검토하기</h3>
-          <p>Slack에서 서로의 제안을 검토하고, 합의한 내용은 각자 작업 문서에 반영한 뒤 한 명이 대표로 보고하도록 정했습니다.</p>
-          <p>비슷한 거래처명을 찾는 도구도 이 방식으로 검토했습니다. 오탈자를 찾는 데 쓰되, 같은 거래처인지는 사람이 후보 목록을 보고 판단하기로 했습니다.</p>
+          <h3>Slack에서 운영하는 AI 에이전트 공동 검토</h3>
+          <p>AI 에이전트들이 서로의 제안을 검토하는 절차를 설계했습니다. 각자 근거와 반례를 제시하고, 합의한 결론을 작업 문서에 남깁니다. 최종 보고는 한 에이전트가 맡습니다.</p>
+          <p>거래처명 대조 도구를 검토할 때는 철자가 비슷한 이름을 어디까지 같은 거래처로 볼지가 쟁점이었습니다. 도구는 확인할 후보를 추리고, 실제로 같은 거래처인지는 담당자가 판단하도록 기준을 정했습니다.</p>
         </article>
         <article>
         <div class="note"><p class="time">월요일 <strong>08:00</strong></p>
-        <div><h3>내가 지원할 수 있는 인턴 찾기</h3>
-        <p>회계를 전공하고 일본어도 공부하다 보니, 채용 공고를 찾는 기준이 두 가지입니다. 국내 유급 인턴 중 회계·재무 직무와 일본어를 쓰는 직무를 매주 월요일 아침에 찾아보도록 설정했습니다. 공고마다 근무지와 지원 요건, 마감일을 같은 순서로 정리해 비교합니다.</p></div></div>
+        <div><h3>회계·재무와 일본어 인턴 공고 수집</h3>
+        <p>국내 유급 인턴 중 회계·재무 직무와 일본어를 활용하는 직무를 매주 찾아보는 작업을 자동화했습니다. 공고별 근무지와 지원 요건, 마감일을 한눈에 비교하고 지원할 곳을 고릅니다.</p></div></div>
         </article>
       </section>
       <section id="resume" class="resume" aria-labelledby="resume-title">
@@ -104,7 +104,7 @@
           <h2 id="resume-title">이력서</h2>
           <a class="resume-pdf" href="resume.pdf" download="김상혁_이력서.pdf">PDF 내려받기</a>
         </div>
-        <p class="resume-summary">회계세무학을 전공하고 일어일문학을 복수전공하고 있습니다. 회계를 공부하며 거래 증빙과 전표를 다루는 도구를 만들었고, 어머니의 중개사무소에서는 매물 관리와 상담 기록을 자동화했습니다.</p>
+        <p class="resume-summary">회계세무학 전공, 일어일문학 복수전공입니다. 회계 프로젝트에서는 증빙 검토와 지급 심사를 다뤘습니다. 가족이 운영하는 중개사무소에서는 매물 검색 사이트를 만들고 상담 녹음을 일지로 정리하는 업무를 자동화했습니다.</p>
         <h3>학력·교환학생</h3>
         <dl class="resume-list">
           <div><dt>2022.03 입학 · 재학</dt><dd><strong>경기대학교 경영학부 회계세무학전공</strong><p>일어일문학과 복수전공</p><p>누적 평점 4.3/4.5 <span class="resume-asof">(2026년 10월 기준)</span></p></dd></div>
@@ -119,18 +119,18 @@
         <h3>실무·프로젝트 경험</h3>
         <dl class="resume-list">
           <div><dt>2026.04–07</dt><dd><strong>돈키호테 미조노쿠치역앞점 · 일본</strong><p>신선식품 매장에서 상품 진열과 재고 관리를 담당했습니다.</p></dd></div>
-          <div><dt>중개사무소 업무 지원</dt><dd><strong><a href="#estate">향남 매물 검색과 상담 기록 자동화</a></strong><p>어머니의 중개사무소에서 쓰는 매물 검색 사이트와 상담일지를 만들었습니다. 11월 9일에는 향남 세 단지의 광고 291건을 조사해 신규 광고와 가격 변동을 PDF·엑셀로 정리했습니다.</p></dd></div>
+          <div><dt>중개사무소 업무 지원</dt><dd><strong><a href="#estate">향남 매물 검색과 상담 기록 자동화</a></strong><p>매물 검색 사이트를 만들고 상담 녹음을 전사·요약해 Notion 상담일지에 저장하도록 연결했습니다. 11월 9일에는 향남 3개 단지의 광고 291건을 조사해 신규 광고와 가격 변동을 PDF·엑셀로 정리했습니다.</p></dd></div>
           <div><dt>회계 실습</dt><dd><strong><a href="vibe-coding.html#ledger">한빛유통 회계 학습실</a></strong><p>가상 도매회사의 거래 증빙을 MCP로 조회하고, 전표 초안을 검토·승인해 원장에 반영하는 분개 실습을 구현했습니다.</p></dd></div>
-          <div><dt>자금 계획</dt><dd><strong><a href="vibe-coding.html#work-finance">판매장려금 지급 심사</a></strong><p>가상 대리점 50곳의 명부와 정산 자료 240건을 분석했습니다. 관련 거래처 세 곳의 월 지급액을 합산하자 여섯 달 모두 전결 한도인 200만 원을 넘었습니다. 이 기준을 지급 심사에 적용하고 자금이 부족한 날은 조달 계획을 세우게 했습니다.</p></dd></div>
-          <div><dt>학습 도구 제작</dt><dd><strong><a href="#finance-study">재무관리 개념 노트·95문제 문제집</a> · <a href="#japanese">JLPT 단어장</a></strong><p>재무관리 문제를 유형별로 다시 풀 수 있게 구성했습니다. 일본어 단어장은 급수별 학습과 모르는 단어 복습을 지원합니다.</p></dd></div>
-          <div><dt>협업</dt><dd><strong><a href="#notes">Slack 에이전트 공동 검토</a></strong><p>여러 AI 에이전트가 같은 제안을 검토하고 반례를 제시하도록 역할을 정했습니다. 합의한 결과는 공동 작업 기록에 남겼습니다.</p></dd></div>
+          <div><dt>자금 계획</dt><dd><strong><a href="vibe-coding.html#work-finance">판매장려금 지급 심사·자금계획</a></strong><p>가상 대리점 50곳의 정산 자료 240건을 분석했습니다. 관련 거래처 3곳의 월 지급액을 합산해 6개월 연속 전결 한도 200만 원을 초과한 사실을 확인했습니다. 합산액에 따라 승인권자를 정하고, 지급 자금이 부족하면 조달안을 담당 부서에 배정하는 모의 업무 앱을 구현했습니다.</p></dd></div>
+          <div><dt>학습 도구 제작</dt><dd><strong><a href="#finance-study">재무관리 개념 노트·95문항 문제집</a> · <a href="#japanese">JLPT 단어장</a></strong><p>재무관리 문제를 유형별로 다시 풀 수 있게 구성했습니다. 일본어 단어장은 급수별 학습과 모르는 단어 복습을 지원합니다.</p></dd></div>
+          <div><dt>협업</dt><dd><strong><a href="#notes">Slack 에이전트 공동 검토</a></strong><p>에이전트 간 교차 검토, 결정 사항 기록, 대표 보고 절차를 설계했습니다. 거래처명 대조 도구의 적용 범위를 정할 때 이 절차를 사용했습니다.</p></dd></div>
         </dl>
         <h3>교과·동아리 활동 및 병역</h3>
         <dl class="resume-list">
-          <div><dt>2026년 2학기</dt><dd><strong><a href="https://osh3772-star.github.io/ai-debate/">회계윤리 사례 토론</a></strong><p>연구개발비를 자산으로 인식할 수 있는지 등 회계처리 사례를 놓고, 네 AI의 판단 근거와 반론을 비교해 읽는 토론 도구를 만들었습니다.</p></dd></div>
-          <div><dt>2026년 2학기</dt><dd><strong>일한번역연습 팀 프로젝트</strong><p>담당한 원문의 일본어와 한국어 번역을 나란히 정리하고, 초벌 번역을 고친 이유를 발표 자료에 담았습니다.</p></dd></div>
+          <div><dt>2026년 2학기</dt><dd><strong><a href="https://osh3772-star.github.io/ai-debate/">회계윤리 사례 토론</a></strong><p>연구개발비의 자산 인식 등 회계처리 사례를 주제로 토론 도구를 만들었습니다. 같은 사례에 대한 AI 에이전트 네 개의 판단 근거와 반론을 비교할 수 있습니다.</p></dd></div>
+          <div><dt>2026년 2학기</dt><dd><strong>일한번역연습 팀 프로젝트</strong><p>일본어 원문과 한국어 초벌 번역을 대조해 표현을 다듬고, 수정 전후의 문장과 선택 근거를 팀 발표 자료로 정리했습니다.</p></dd></div>
           <div><dt>2026.10</dt><dd><strong>일본어 현장 인터뷰</strong><p>서울 명동에서 일본인 관광객 세 명을 일본어로 인터뷰하고, 질문별 답변을 보고서로 정리했습니다.</p></dd></div>
-          <div><dt>고등학교 · 1년</dt><dd><strong>경제·경영 동아리 회장</strong><p>부원들이 제안한 무역·주식·재무관리 주제를 모아 공통 관심사별로 묶고, 동아리 활동 계획을 세웠습니다.</p></dd></div>
+          <div><dt>고등학교 · 1년</dt><dd><strong>경제·경영 동아리 회장</strong><p>부원들의 관심사를 조사해 무역·주식·재무관리 주제로 활동 계획을 세웠습니다.</p></dd></div>
           <div><dt>2023.08–2025.05</dt><dd><strong>대한민국 공군 행정병 복무 · 병장 만기 전역</strong></dd></div>
         </dl>
       </section>
@@ -139,9 +139,9 @@
         <p class="now-date"><time datetime="2026-11">2026년 11월</time></p>
         <dl class="resume-list now-list">
           <div><dt>헬스</dt><dd>스쿼트·벤치프레스·데드리프트 3대 합계로 500kg 이상을 들었습니다. 벤치프레스는 140kg 1회, 중량 딥스는 +40kg 10회, 중량 풀업은 +30kg 5회를 기록했습니다. 다음 목표는 3대 합계 600kg입니다.</dd></div>
-          <div><dt>일본어</dt><dd>12월 JLPT N1을 준비하고 있습니다. 예전에 외운 단어를 다시 풀며 어느 단어에서 막히는지 살펴봅니다. <a href="https://osh3772-star.github.io/chiikawa-jlpt-vocab/">내가 만든 단어장</a></dd></div>
-          <div><dt>시험 준비</dt><dd>한국사능력검정시험과 외국어 말하기 시험인 OPIc을 준비하고 있습니다.</dd></div>
-          <div><dt>러닝·클라이밍</dt><dd>10km 개인 기록은 43분입니다. 다음 목표는 40분 안에 들어오는 것이고, 달리기와 함께 클라이밍도 즐깁니다.</dd></div>
+          <div><dt>일본어</dt><dd>12월 JLPT N1을 준비하고 있습니다. 직접 만든 단어장으로 복습할 어휘를 골라 연습합니다. <a href="https://osh3772-star.github.io/chiikawa-jlpt-vocab/">내가 만든 단어장</a></dd></div>
+          <div><dt>시험 준비</dt><dd>한국사능력검정시험과 외국어 말하기 시험 OPIc을 준비하고 있습니다.</dd></div>
+          <div><dt>러닝·클라이밍</dt><dd>10km 개인 기록은 43분이고, 다음 목표는 40분 이내 완주입니다. 달리기와 함께 실내 클라이밍도 즐깁니다.</dd></div>
         </dl>
       </section>
       <footer><a href="#resume">이력서 보기</a><a href="#intro">처음으로 ↑</a></footer>
