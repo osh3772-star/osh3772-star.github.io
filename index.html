@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="김상혁의 개인 포트폴리오. 회계와 일본어를 공부하고, 중개사무소 업무와 공부에 쓰는 도구를 만듭니다.">
   <title>김상혁 · 개인 포트폴리오</title>
-  <link rel="stylesheet" href="portfolio.css?v=journal-1">
+  <link rel="stylesheet" href="portfolio.css?v=resume-1">
 </head>
 <body>
   <a class="skip" href="#intro">본문으로 이동</a>
@@ -14,9 +14,9 @@
       <a class="name" href="#intro"><h1>김상혁</h1></a>
       <p class="major">회계세무 전공<br>일본어 복수전공</p>
       <nav aria-label="페이지 목차">
-        <a href="#intro">소개</a><a href="#work">회계 공부</a><a href="#estate">중개사무소</a><a href="#japanese">일본어</a><a href="vibe-coding.html">바이브 코딩</a><a href="#notes">자동화 노트</a><a href="#now">요즘</a>
+        <a href="#intro">소개</a><a href="#resume">이력서</a><a href="#work">회계 공부</a><a href="#estate">중개사무소</a><a href="#japanese">일본어</a><a href="vibe-coding.html">바이브 코딩</a><a href="#notes">자동화 노트</a><a href="#now">요즘</a>
       </nav>
-      <div class="links"><a href="resume.pdf">이력서 PDF</a><a href="https://github.com/osh3772-star">GitHub</a></div>
+      <div class="links"><a href="https://github.com/osh3772-star">GitHub</a></div>
     </header>
     <main>
       <section id="intro" aria-label="소개">
@@ -27,7 +27,7 @@
         <h2>회계 공부</h2>
         <article>
           <h3>회계 자격을 준비하며</h3>
-          <p>재경관리사, 전산회계 1급, 전산세무 2급을 취득했습니다.</p>
+          <p>재경관리사, 전산회계 1급, 전산세무 2급을 취득했습니다. <a href="#resume">전체 자격·어학 보기</a></p>
         </article>
         <article class="study" id="finance-study">
           <h3>재무관리 중간고사를 준비하며</h3>
@@ -88,8 +88,40 @@
         <p>회계를 전공하고 일본어도 공부하다 보니, 채용 공고를 찾는 기준이 두 가지입니다. 국내 유급 인턴 중 회계·재무 직무와 일본어를 쓰는 직무를 매주 월요일 아침에 찾아보도록 설정했습니다. 공고마다 근무지와 지원 요건, 마감일을 같은 순서로 정리해 비교합니다.</p></div></div>
         </article>
       </section>
+      <section id="resume" class="resume" aria-labelledby="resume-title">
+        <div class="resume-heading">
+          <h2 id="resume-title">이력서</h2>
+          <a class="resume-pdf" href="resume.pdf" download="김상혁_이력서.pdf">PDF 내려받기</a>
+        </div>
+        <p class="resume-summary">회계세무학을 전공하고 일어일문학을 복수전공하고 있습니다. 회계를 공부하며 거래 증빙과 전표를 다루는 도구를 만들었고, 어머니의 중개사무소에서는 매물 관리와 상담 기록을 자동화했습니다.</p>
+        <h3>학력·교환학생</h3>
+        <dl class="resume-list">
+          <div><dt>2022.03 입학 · 재학</dt><dd><strong>경기대학교 경영학부 회계세무학전공</strong><p>일어일문학과 복수전공</p><p>누적 평점 4.3/4.5 <span class="resume-asof">(2026년 10월 기준)</span></p></dd></div>
+          <div><dt>2026년 1학기</dt><dd><strong>일본 고쿠가쿠인대학(國學院大學) 교환학생 수료</strong></dd></div>
+        </dl>
+        <h3>자격·어학</h3>
+        <dl class="resume-list resume-qual">
+          <div><dt>회계·세무</dt><dd>재경관리사 · 회계관리 1급<br>전산회계 1급 · 전산세무 2급 · 전산회계운용사 2급</dd></div>
+          <div><dt>ERP·사무</dt><dd>ERP정보관리사(인사) 1급 · 컴퓨터활용능력 1급</dd></div>
+          <div><dt>어학</dt><dd>일본어능력시험(JLPT) N2 · TOEIC 750점</dd></div>
+        </dl>
+        <h3>실무·프로젝트 경험</h3>
+        <dl class="resume-list">
+          <div><dt>중개사무소 업무 지원</dt><dd><strong><a href="#estate">향남 매물 검색과 상담 기록 자동화</a></strong><p>어머니의 중개사무소에서 쓰는 매물 검색 사이트를 만들었습니다. 상담 녹음에서 문의 조건과 후속 조치를 추려 Notion 상담일지에 남깁니다.</p></dd></div>
+          <div><dt>회계 실습</dt><dd><strong><a href="vibe-coding.html#ledger">한빛유통 회계 학습실</a></strong><p>가상 도매회사의 거래 증빙을 MCP로 조회하고, 전표 초안을 검토·승인해 원장에 반영하는 분개 실습을 구현했습니다.</p></dd></div>
+          <div><dt>자금 계획</dt><dd><strong><a href="vibe-coding.html#work-finance">판매장려금 지급 심사</a></strong><p>관련 거래처의 월 지급액을 합산해 승인권자를 정하는 모의 업무 앱을 만들었습니다. 지급일의 가용 자금이 부족하면 조달안을 골라 담당 부서 업무로 연결합니다.</p></dd></div>
+          <div><dt>학습 도구 제작</dt><dd><strong><a href="#finance-study">재무관리 개념 노트·95문제 문제집</a> · <a href="#japanese">JLPT 단어장</a></strong><p>재무관리 문제를 유형별로 다시 풀 수 있게 구성했습니다. 일본어 단어장은 급수별 학습과 모르는 단어 복습을 지원합니다.</p></dd></div>
+          <div><dt>협업</dt><dd><strong><a href="#notes">Slack 에이전트 공동 검토</a></strong><p>여러 AI 에이전트가 같은 제안을 검토하고 반례를 제시하도록 역할을 정했습니다. 합의한 결과는 공동 작업 기록에 남겼습니다.</p></dd></div>
+        </dl>
+        <h3>교과 활동·병역</h3>
+        <dl class="resume-list">
+          <div><dt>2026년 2학기</dt><dd><strong>일한번역연습 팀 프로젝트</strong><p>담당한 원문의 일본어와 한국어 번역을 나란히 정리하고, 초벌 번역을 고친 이유를 발표 자료에 담았습니다.</p></dd></div>
+          <div><dt>2026.10</dt><dd><strong>일본어 현장 인터뷰</strong><p>서울 명동에서 일본인 관광객 세 명을 일본어로 인터뷰하고, 질문별 답변을 보고서로 정리했습니다.</p></dd></div>
+          <div><dt>2023.08–2025.05</dt><dd><strong>대한민국 공군 행정병 복무 · 병장 만기 전역</strong></dd></div>
+        </dl>
+      </section>
       <section id="now"><h2>요즘</h2><p>공부를 마치면 달리거나 클라이밍을 합니다. 러닝에서는 10km 40분에 도전하고 있습니다.</p></section>
-      <footer><a href="resume.pdf">이력서 PDF 열기</a><a href="#intro">처음으로 ↑</a></footer>
+      <footer><a href="#resume">이력서 보기</a><a href="#intro">처음으로 ↑</a></footer>
     </main>
   </div>
 </body>

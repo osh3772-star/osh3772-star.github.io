@@ -125,3 +125,19 @@ nav a[aria-current="page"] { color: var(--blue); font-weight: 700; text-decorati
 .more-work h3:target { color: var(--blue); }
 .work-titles { list-style: none; margin: 0; padding: 0; }
 .work-titles li { border-top: 1px solid var(--line); padding: 9px 0; font-size: 15px; line-height: 1.55; font-weight: 650; }
+
+.resume-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.resume-heading h2 { margin-bottom: 0; }
+.resume-pdf { font-size: 15px; white-space: nowrap; }
+.resume-summary { margin: 18px 0 26px; }
+.resume h3 { margin: 28px 0 8px; font-size: 18px; }
+.resume-list { margin: 0; }
+.resume-list > div { display: grid; grid-template-columns: 128px minmax(0,1fr); gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); }
+.resume-list dt, .resume-list dd, .resume-list p { margin: 0; font-size: 15px; line-height: 1.65; }
+.resume-list dt, .resume-asof { color: var(--muted); }
+.resume-list dd p { margin-top: 3px; }
+.resume-list dd strong { font-weight: 650; }
+@media (max-width: 520px) {
+  .resume-list > div { grid-template-columns: 1fr; gap: 2px; }
+  .resume-list dt { font-size: 13px; }
+}
