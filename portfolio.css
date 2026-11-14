@@ -76,3 +76,11 @@ section:target h2 { color: var(--blue); }
   .book { padding: 11px; min-height: 144px; }
   .book small, .book span { font-size: 12px; }
 }
+
+.lead strong { color: var(--blue); font-weight: 750; }
+#intro p a { text-decoration-thickness: 1px; }
+.study { scroll-margin-top: 24px; }
+#notes article > p + p { margin-top: 10px; }
+.estate-screen { margin: 20px 0 0; }
+.estate-screen img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+.estate-screen figcaption { margin-top: 10px; font-size: 14px; line-height: 1.6; color: var(--muted); }
