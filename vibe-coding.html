@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="김상혁의 바이브 코딩 일지. 회계세무 전공자가 AI와 매물 관리 도구, 회계 학습실, 일본어 단어장을 만들며 배운 것을 기록합니다.">
+  <title>바이브 코딩 · 김상혁의 개발 일지</title>
+  <link rel="stylesheet" href="portfolio.css?v=journal-1">
+</head>
+<body>
+  <a class="skip" href="#journal">본문으로 이동</a>
+  <div class="layout">
+    <header>
+      <a class="name journal-name" href="./#intro">김상혁</a>
+      <p class="major">회계세무 전공<br>일본어 복수전공</p>
+      <nav aria-label="포트폴리오 목차">
+        <a href="./#intro">소개</a><a href="./#work">회계 공부</a><a href="./#estate">중개사무소</a><a href="./#japanese">일본어</a><a href="vibe-coding.html" aria-current="page">바이브 코딩</a><a href="./#notes">자동화 노트</a><a href="./#now">요즘</a>
+      </nav>
+      <div class="links"><a href="resume.pdf">이력서 PDF</a><a href="https://github.com/osh3772-star">GitHub</a></div>
+    </header>
+    <main id="journal" class="journal">
+      <h1>회계 전공자의<br>바이브 코딩 일지</h1>
+      <p class="journal-intro">어머니가 매물을 정리하는 일, 분개를 공부하는 일, 일본어 단어를 외우는 일에서 만들 거리를 찾았습니다. 필요한 동작을 말로 설명하고 AI와 함께 코드로 옮겼습니다. 만들면서 가장 많이 배운 순간은 “이럴 때는 어떻게 되지?” 하고 다시 들여다볼 때였습니다.</p>
+      <nav class="journal-index" aria-label="개발 일지 글 목록">
+        <a href="#listings"><time datetime="2026-10-09">10.09</time> 매물표의 빈칸도 수정 사항일까?</a>
+        <a href="#ledger"><time datetime="2026-10-19">10.19</time> AI가 읽은 장부와 내가 연 장부가 같을까?</a>
+        <a href="#words"><time datetime="2026-10-31">10.31</time> 단어장으로 돌아오면 어떤 급수가 보여야 할까?</a>
+      </nav>
+
+      <article id="listings">
+        <p class="entry-meta"><time datetime="2026-10-09">2026.10.09</time> · 향남 중개사무소</p>
+        <h2>매물표의 빈칸도 수정 사항일까?</h2>
+        <p>어머니의 중개사무소에서 쓰는 매물표를 다시 가져오면 화면에 ‘내용 달라짐’이라고 떴습니다. 가격이 바뀌었는지 입주일이 바뀌었는지 알려면 매물 편집창에서 원래 값과 일일이 비교해야 했습니다.</p>
+        <p>다시 가져온 표의 값과 사이트에 저장된 값을 나란히 놓았습니다. 관리자가 바꿀 항목을 고르면 그 값만 반영하도록 했습니다. 새 표에서 입주일이 비어 있다면 기존 입주일은 그대로 둡니다.</p>
+        <p class="lesson"><strong>배운 점</strong> 자동으로 두 표를 비교하려면 ‘값이 없음’의 뜻부터 정해야 했습니다. 그래서 값이 있는 항목을 직접 골랐을 때만 기존 기록을 바꾸도록 했습니다.</p>
+        <a class="entry-source" href="https://hyangnam-realestate.store/">사무소 공개 사이트</a>
+      </article>
+
+      <article id="ledger">
+        <p class="entry-meta"><time datetime="2026-10-19">2026.10.18–19</time> · 한빛유통 회계 학습실</p>
+        <h2>AI가 읽은 장부와 내가 연 장부가 같을까?</h2>
+        <p>가상회사 한빛유통의 거래를 대화창에서 조회하고, 그 장부를 웹에서도 보고 싶었습니다. AI 앱이 회계 기능을 호출할 수 있게 연결하는 데 MCP를 썼습니다.</p>
+        <p>18일에는 별도 테스트 환경에서 회계 도구 41개를 불러왔습니다. 다음 날에는 제가 쓰는 Codex 대화에서 회사 정보를 요청했습니다. 대화에 돌아온 회사 ID와 웹 장부 상단의 ID가 같았습니다. 웹의 조회 기록에도 방금 요청한 작업이 남았습니다.</p>
+        <p class="lesson"><strong>배운 점</strong> 도구 목록이 뜬 뒤에도 확인할 게 있었습니다. 제가 보는 장부를 실제로 읽었는지는 양쪽의 회사 ID와 조회 기록으로 확인할 수 있었습니다.</p>
+        <a class="entry-source" href="https://github.com/osh3772-star/ledgerflow-ai/commit/acb3f95a67c174355869c1b59bff5740e7a8cc38">10월 19일 연결 검증 기록</a>
+      </article>
+
+      <article id="words">
+        <p class="entry-meta"><time datetime="2026-10-31">2026.10.31</time> · 일본어 단어장</p>
+        <h2>단어장으로 돌아오면 어떤 급수가 보여야 할까?</h2>
+        <p>틀린 단어만 모아 다시 풀고 싶어서 JLPT 단어장을 만들었습니다. 공부 화면과 ‘모르는 단어’ 목록을 나누면서, 화면을 오갈 때 어떤 선택을 기억해야 하는지가 문제였습니다.</p>
+        <p>예를 들어 N2 단어 목록을 보다가 다른 화면에 다녀오면 다시 N2 목록이 보여야 합니다. 그런데 목록의 급수와 진행 중인 복습의 급수가 같은 값에 의존했습니다. 두 선택을 따로 기록하고, 목록에 돌아올 때는 거기서 마지막으로 고른 급수를 복원하도록 고쳤습니다.</p>
+        <p class="lesson"><strong>배운 점</strong> ‘급수를 기억해 줘’라는 요청에는 두 가지 뜻이 있었습니다. 어느 화면에서 고른 급수를 어디로 돌아왔을 때 쓸지까지 설명해야 원하는 동작이 됐습니다.</p>
+        <a class="entry-source" href="https://github.com/osh3772-star/chiikawa-jlpt-vocab/commit/f829fb9dd9dfc2cf411fb6348aca8dbb7966932f">급수 선택을 고친 기록</a>
+      </article>
+      <footer><a href="./#intro">포트폴리오로 돌아가기</a><a href="#journal">처음으로 ↑</a></footer>
+    </main>
+  </div>
+</body>
+</html>
