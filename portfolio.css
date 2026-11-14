@@ -141,6 +141,7 @@ nav a[aria-current="page"] { color: var(--blue); font-weight: 700; text-decorati
   .resume-list > div { grid-template-columns: 1fr; gap: 2px; }
   .resume-list dt { font-size: 13px; }
 }
+#now:target { min-height: calc(100vh - 20px); min-height: calc(100dvh - 20px); }
 #now h2 { margin-bottom: 5px; }
 .now-date { margin-bottom: 14px; color: var(--muted); font-size: 14px; }
 .now-list dt { color: var(--ink); font-weight: 650; }
