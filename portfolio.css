@@ -118,3 +118,8 @@ nav a[aria-current="page"] { color: var(--blue); font-weight: 700; text-decorati
 @media (max-width: 520px) {
   .work-list > div { grid-template-columns: 1fr; gap: 2px; }
 }
+
+.work-groups { display: flex; flex-flow: row wrap; gap: 4px 18px; margin: -6px 0 24px; }
+.work-groups a { display: inline-block; padding: 4px 0; color: var(--blue); font-size: 14px; text-decoration: underline; }
+.more-work h3[id] { scroll-margin-top: 20px; }
+.more-work h3:target { color: var(--blue); }
