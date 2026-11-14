@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="金相赫的个人作品集，收录会计实训平台、房源管理工具、日语学习应用及个人简历。">
   <title>金相赫 · 个人作品集</title>
-  <link rel="stylesheet" href="../portfolio.css?v=now-gym-1">
+  <link rel="stylesheet" href="../portfolio.css?v=featured-1">
   <link rel="alternate" hreflang="ko" href="https://osh3772-star.github.io/">
   <link rel="alternate" hreflang="ja" href="https://osh3772-star.github.io/ja/">
   <link rel="alternate" hreflang="zh-Hans" href="https://osh3772-star.github.io/zh/">
   <link rel="alternate" hreflang="en" href="https://osh3772-star.github.io/en/">
   <link rel="alternate" hreflang="x-default" href="https://osh3772-star.github.io/">
 </head>
-<body>
+<body class="portfolio-home">
   <a class="skip" href="#intro">跳至正文</a>
   <div class="layout">
     <header>
@@ -24,15 +24,42 @@
         <a lang="zh-Hans" hreflang="zh-Hans" href="/zh/" aria-current="true">简体中文</a>
         <a lang="en" hreflang="en" href="/en/">English</a>
       </nav>
-      <nav aria-label="页面导航">
-        <a href="#intro">自我介绍</a><a href="#resume">简历</a><a href="#work">会计学习</a><a href="#estate">房产中介实务</a><a href="#japanese">日语</a><a href="vibe-coding.html">AI 编程手记</a><a href="#notes">自动化笔记</a><a href="#now">近况</a>
+      <nav class="desktop-nav" aria-label="页面导航">
+        <a href="#intro">自我介绍</a><a href="#featured">代表项目</a><a href="#resume">简历</a><a href="#work">会计学习</a><a href="#estate">房产中介实务</a><a href="#japanese">日语</a><a href="vibe-coding.html">AI 编程手记</a><a href="#notes">自动化笔记</a><a href="#now">近况</a>
       </nav>
-      <div class="links"><a href="https://github.com/osh3772-star">GitHub</a></div>
+      <div class="links desktop-links"><a href="https://github.com/osh3772-star">GitHub</a></div>
+      <details class="mobile-menu">
+        <summary>全部栏目</summary>
+        <nav aria-label="页面导航">
+          <a href="#intro">自我介绍</a><a href="#featured">代表项目</a><a href="#resume">简历</a><a href="#work">会计学习</a><a href="#estate">房产中介实务</a><a href="#japanese">日语</a><a href="vibe-coding.html">AI 编程手记</a><a href="#notes">自动化笔记</a><a href="#now">近况</a><a href="https://github.com/osh3772-star">GitHub</a>
+        </nav>
+      </details>
     </header>
     <main>
       <section id="intro" aria-label="自我介绍">
-        <p class="lead">我是<strong>金相赫</strong>，主修会计与税务，同时修读日语语言文学。</p>
-        <p>为了复习大学课程，我把考点和习题整理成在线<a href="#finance-study">财务管理笔记与题库</a>。在母亲的房产中介门店，我开发了<a href="#estate">乡南（Hyangnam）房源搜索网站</a>，方便经纪人向客户推荐符合条件的房子。</p>
+        <p class="lead">我用交易凭证和结算资料学习会计。</p>
+        <p>我开发了会计分录练习工具和销售返利审批应用。我也在母亲的房产中介门店帮忙管理房源和客户咨询记录。</p>
+        <div class="intro-actions">
+          <a class="case-link" href="sales-incentives.html">销售返利审批案例</a>
+          <a href="resume.pdf" download="金相赫_简历.pdf">简历 PDF</a>
+        </div>
+      </section>
+      <section id="featured" aria-labelledby="featured-title">
+        <h2 id="featured-title">代表项目</h2>
+        <ul class="featured-list">
+          <li>
+            <h3><a href="sales-incentives.html">销售返利审批与资金计划</a></h3>
+            <p>在模拟业务中，我汇总三家关联经销商的六月付款金额以确定审批人，并把应对资金缺口的筹款方案转为相关部门的任务。</p>
+          </li>
+          <li>
+            <h3><a href="#hanbit">Hanbit 批发企业会计实训平台</a></h3>
+            <p>学习者可根据销售凭据编制记账凭证，再查看审批后的分录如何反映在总账和试算平衡表中。</p>
+          </li>
+          <li>
+            <h3><a href="vibe-coding.html#listings">乡南房产中介的房源管理工具</a></h3>
+            <p>工具按房源编号比对房源平台导出的资料与门店网站的现有记录，由经办人选择需要更新的项目。</p>
+          </li>
+        </ul>
       </section>
       <section id="work">
         <h2>会计学习</h2>
@@ -49,7 +76,7 @@
           </div>
           <p class="access">访问这两个学习网站需要登录 Claude。</p>
         </article>
-        <article>
+        <article id="hanbit">
           <h3><a href="https://ledgerflow-public-reference-gateway.eric5833.workers.dev/">Hanbit 批发企业会计实训平台 <span aria-hidden="true">↗</span></a></h3>
           <p>我以虚构的批发企业 Hanbit 为背景，设计了一套会计实训平台。学习者从一笔销售的原始凭证入手，核对分录，再查看经审核批准的记账凭证如何记入总账。</p>
           <details class="mechanism">
@@ -121,7 +148,7 @@
           <div><dt>2026.04–07</dt><dd><strong>日本唐吉诃德 · 沟之口站前店</strong><p>在生鲜部门负责商品陈列和库存管理。</p></dd></div>
           <div><dt>房产中介业务支持</dt><dd><strong><a href="#estate">乡南（Hyangnam）房源搜索与咨询记录自动化</a></strong><p>我开发了房源搜索网站，并将咨询录音转写、提炼要点后存入 Notion。11 月 9 日，我核查了乡南三个小区的 291 条房源广告，将新增广告和价格变动汇总成 PDF 和 Excel 报告。</p></dd></div>
           <div><dt>会计实训</dt><dd><strong><a href="vibe-coding.html#ledger">Hanbit 会计实训平台</a></strong><p>我设计了虚构批发企业的账务实训流程。学习者通过 MCP 查询原始凭证，在网页上审核分录，批准后记入总账。</p></dd></div>
-          <div><dt>资金计划</dt><dd><strong><a href="vibe-coding.html#work-finance">销售返利审批与资金计划</a></strong><p>我分析了 50 家虚构经销商的 240 条结算记录，发现三家关联经销商的月度付款合计连续六个月超过 200 万韩元的审批限额。我据此开发了模拟审批应用，按汇总金额确定审批人，并将资金不足时选定的筹款任务分派给相关部门。</p></dd></div>
+          <div><dt>资金计划</dt><dd><strong><a href="sales-incentives.html">销售返利审批与资金计划</a></strong><p>我分析了 50 家虚构经销商的 240 条结算记录，发现三家关联经销商的月度付款合计连续六个月超过 200 万韩元的审批限额。我据此开发了模拟审批应用，按汇总金额确定审批人，并将资金不足时选定的筹款任务分派给相关部门。</p></dd></div>
           <div><dt>学习工具开发</dt><dd><strong><a href="#finance-study">财务管理概念笔记与 95 道习题</a> · <a href="#japanese">JLPT 词汇本</a></strong><p>财务管理习题集可以按题型重做。日语词汇本支持按 JLPT 级别学习，也可以只复习标记过的生词。</p></dd></div>
           <div><dt>团队协作</dt><dd><strong><a href="#notes">Slack 多智能体评审</a></strong><p>我设计了交叉评审、决策记录和统一汇报的流程，并用它确定往来单位名称匹配工具的适用范围。</p></dd></div>
         </dl>

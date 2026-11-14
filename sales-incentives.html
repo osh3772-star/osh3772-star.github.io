@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="김상혁이 가상 대리점 정산 자료로 만든 지급 심사 앱. 관련 거래처를 합산해 승인권자를 정하고, 지급일의 자금 부족에 대응하는 과정을 소개합니다.">
+  <title>판매장려금 지급 심사와 자금계획 · 김상혁</title>
+  <link rel="stylesheet" href="portfolio.css?v=featured-1">
+  <link rel="canonical" href="https://osh3772-star.github.io/sales-incentives.html">
+  <link rel="alternate" hreflang="ko" href="https://osh3772-star.github.io/sales-incentives.html">
+  <link rel="alternate" hreflang="ja" href="https://osh3772-star.github.io/ja/sales-incentives.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://osh3772-star.github.io/zh/sales-incentives.html">
+  <link rel="alternate" hreflang="en" href="https://osh3772-star.github.io/en/sales-incentives.html">
+  <link rel="alternate" hreflang="x-default" href="https://osh3772-star.github.io/sales-incentives.html">
+</head>
+<body>
+  <a class="skip" href="#case-study">본문으로 이동</a>
+  <div class="layout">
+    <header>
+      <a class="name journal-name" href="./">김상혁</a>
+      <p class="major">회계세무 전공<br>일본어 복수전공</p>
+      <nav class="language-nav" aria-label="언어 선택">
+        <a lang="ko" hreflang="ko" href="/" aria-current="true">한국어</a>
+        <a lang="ja" hreflang="ja" href="/ja/">日本語</a>
+        <a lang="zh-Hans" hreflang="zh-Hans" href="/zh/">简体中文</a>
+        <a lang="en" hreflang="en" href="/en/">English</a>
+      </nav>
+      <nav aria-label="포트폴리오 메뉴">
+        <a href="./">포트폴리오</a>
+        <a href="resume.pdf" download="김상혁_이력서.pdf">이력서 PDF</a>
+      </nav>
+    </header>
+    <main id="case-study" class="journal case-study">
+      <p class="entry-meta">회계 프로젝트 · 모의 업무</p>
+      <h1>판매장려금 지급 심사와 자금계획</h1>
+      <p class="journal-intro">가상 대리점 50곳의 정산 자료 240건으로 판매장려금 심사 앱을 만들었습니다. 같은 관련 거래처 그룹에 속하면 그달의 지급액을 합산해야 합니다. 저는 이 규칙을 결재 흐름에 반영하고, 승인 후 지급일까지 필요한 자금을 계획하는 기능을 추가했습니다.</p>
+      <section id="review" aria-labelledby="review-heading">
+        <h2 id="review-heading">세 대리점의 결재선이 달라진 이유</h2>
+        <p>과제에서 정한 영업지원팀의 월 전결 한도는 200만 원입니다. 대표자·사업장 주소·정산계좌 중 두 항목 이상이 일치하는 대리점을 연결해 같은 그룹으로 묶었습니다.</p>
+        <table class="case-ledger">
+          <caption>6월 판매장려금 · 모의 정산 자료</caption>
+          <thead><tr><th scope="col">대리점</th><th scope="col">지급 예정액(원)</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">D-011</th><td>1,373,515</td></tr>
+            <tr><th scope="row">D-024</th><td>1,189,046</td></tr>
+            <tr><th scope="row">D-037</th><td>1,325,536</td></tr>
+          </tbody>
+          <tfoot><tr><th scope="row">그룹 합계</th><td>3,888,097</td></tr></tfoot>
+        </table>
+        <p class="case-summary">세 곳은 각각 한도 이내였지만 합산액은 한도를 1,888,097원 넘었습니다. 앱은 세 건을 묶어 영업임원에게 상신합니다. 이 그룹은 조사한 여섯 달 모두 임원 승인이 필요했습니다.</p>
+      </section>
+      <section id="cash-plan" aria-labelledby="cash-heading">
+        <h2 id="cash-heading">내가 추가한 기능 · 지급일별 자금계획</h2>
+        <p>지급이 승인되면 회계 담당자는 지급일에 쓸 수 있는 금액을 확인합니다. 자금이 부족하면 AI가 조달안을 제안합니다. 담당자가 대금 회수안을 선택하면 앱은 영업지원에 회수 일정 확인을, 회계·자금에 입금 대사를 업무로 배정합니다.</p>
+        <table class="case-ledger">
+          <caption>7월 10일 지급계획 · 시연 조건</caption>
+          <thead><tr><th scope="col">확인한 자금</th><th scope="col">남은 부족액(원)</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">가용자금 300만 원으로 시작</th><td>888,097</td></tr>
+            <tr><th scope="row">50만 원 입금 확인</th><td>388,097</td></tr>
+            <tr><th scope="row">40만 원 추가 입금 확인</th><td>0</td></tr>
+          </tbody>
+        </table>
+        <p>조달안을 선택해도 예정 입금은 가용자금에 포함하지 않습니다. 이 시연에서는 두 입금을 확인한 뒤 남은 지시에도 전액을 배정할 수 있습니다. 배정과 송금은 별도 단계입니다.</p>
+      </section>
+      <footer class="case-back"><a href="./#featured">대표 작업 보기</a></footer>
+    </main>
+  </div>
+</body>
+</html>

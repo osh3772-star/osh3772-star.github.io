@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="キム・サンヒョクのポートフォリオ。会計と日本語を学び、不動産仲介の現場や自分の勉強に使うツールを作っています。">
   <title>キム・サンヒョク｜ポートフォリオ</title>
-  <link rel="stylesheet" href="../portfolio.css?v=now-gym-1">
+  <link rel="stylesheet" href="../portfolio.css?v=featured-1">
   <link rel="alternate" hreflang="ko" href="https://osh3772-star.github.io/">
   <link rel="alternate" hreflang="ja" href="https://osh3772-star.github.io/ja/">
   <link rel="alternate" hreflang="zh-Hans" href="https://osh3772-star.github.io/zh/">
   <link rel="alternate" hreflang="en" href="https://osh3772-star.github.io/en/">
   <link rel="alternate" hreflang="x-default" href="https://osh3772-star.github.io/">
 </head>
-<body>
+<body class="portfolio-home">
   <a class="skip" href="#intro">本文へ</a>
   <div class="layout">
     <header>
@@ -24,15 +24,42 @@
         <a lang="zh-Hans" hreflang="zh-Hans" href="/zh/">简体中文</a>
         <a lang="en" hreflang="en" href="/en/">English</a>
       </nav>
-      <nav aria-label="ページ内の目次">
-        <a href="#intro">自己紹介</a><a href="#resume">履歴書</a><a href="#work">会計の学び</a><a href="#estate">不動産仲介</a><a href="#japanese">日本語</a><a href="vibe-coding.html">バイブコーディング</a><a href="#notes">自動化ノート</a><a href="#now">近況</a>
+      <nav class="desktop-nav" aria-label="ページ内の目次">
+        <a href="#intro">自己紹介</a><a href="#featured">主な制作事例</a><a href="#resume">履歴書</a><a href="#work">会計の学び</a><a href="#estate">不動産仲介</a><a href="#japanese">日本語</a><a href="vibe-coding.html">バイブコーディング</a><a href="#notes">自動化ノート</a><a href="#now">近況</a>
       </nav>
-      <div class="links"><a href="https://github.com/osh3772-star">GitHub</a></div>
+      <div class="links desktop-links"><a href="https://github.com/osh3772-star">GitHub</a></div>
+      <details class="mobile-menu">
+        <summary>メニュー</summary>
+        <nav aria-label="ページ内の目次">
+          <a href="#intro">自己紹介</a><a href="#featured">主な制作事例</a><a href="#resume">履歴書</a><a href="#work">会計の学び</a><a href="#estate">不動産仲介</a><a href="#japanese">日本語</a><a href="vibe-coding.html">バイブコーディング</a><a href="#notes">自動化ノート</a><a href="#now">近況</a><a href="https://github.com/osh3772-star">GitHub</a>
+        </nav>
+      </details>
     </header>
     <main>
       <section id="intro" aria-label="自己紹介">
-        <p class="lead">会計・税務と日本語・日本文学を専攻する<strong>キム・サンヒョク</strong>です。</p>
-        <p>大学では授業の復習用に<a href="#finance-study">財務管理の要点ノートと問題集</a>を制作しました。学外では母の不動産仲介の仕事を手伝い、お客様に希望条件に合う住まいを案内できるよう、<a href="#estate">香南（ヒャンナム）の物件検索サイト</a>を開発しました。</p>
+        <p class="lead">取引の証憑や精算データを使って会計を学んでいます。</p>
+        <p>仕訳を練習するツールと、販売奨励金の支払いを審査するアプリを作りました。母の不動産仲介事務所では、物件情報と相談記録の管理を手伝っています。</p>
+        <div class="intro-actions">
+          <a class="case-link" href="sales-incentives.html">販売奨励金の審査事例</a>
+          <a href="resume.pdf" download="キム・サンヒョク_履歴書.pdf">履歴書PDF</a>
+        </div>
+      </section>
+      <section id="featured" aria-labelledby="featured-title">
+        <h2 id="featured-title">主な制作事例</h2>
+        <ul class="featured-list">
+          <li>
+            <h3><a href="sales-incentives.html">販売奨励金の支払審査と資金計画</a></h3>
+            <p>関連する代理店3社への6月の支払額を合算して決裁者を決め、資金不足時には調達案を担当部門の業務として登録する模擬アプリを作りました。</p>
+          </li>
+          <li>
+            <h3><a href="#hanbit">ハンビット流通の会計実習</a></h3>
+            <p>売上の証憑から伝票を作成し、承認した仕訳が元帳と試算表にどう反映されるかを確認できます。</p>
+          </li>
+          <li>
+            <h3><a href="vibe-coding.html#listings">香南の不動産仲介事務所の物件管理</a></h3>
+            <p>不動産バンクと事務所のサイトの情報を物件番号で照合し、担当者が変更項目を選んで更新できるツールを作りました。</p>
+          </li>
+        </ul>
       </section>
       <section id="work">
         <h2>会計の学び</h2>
@@ -49,7 +76,7 @@
           </div>
           <p class="access">どちらの学習サイトも、閲覧にはClaudeへのログインが必要です。</p>
         </article>
-        <article>
+        <article id="hanbit">
           <h3><a href="https://ledgerflow-public-reference-gateway.eric5833.workers.dev/">ハンビット流通の会計実習 <span aria-hidden="true">↗</span></a></h3>
           <p>架空の卸売会社「ハンビット流通」の取引を題材に、証憑から仕訳を起こし、承認した伝票を総勘定元帳に転記するまでを学べる実習システムを作りました。</p>
           <details class="mechanism">
@@ -121,7 +148,7 @@
           <div><dt>2026年4月〜7月</dt><dd><strong>ドン・キホーテ 溝ノ口駅前店</strong><p>生鮮食品売場で商品の品出しと在庫管理を担当しました。</p></dd></div>
           <div><dt>不動産仲介の業務支援</dt><dd><strong><a href="#estate">香南の物件検索と相談記録の自動化</a></strong><p>物件検索サイトを開発し、相談の録音を文字に起こして要約をNotionに保存する仕組みを作りました。11月9日の調査では香南の3団地で広告291件を確認し、新着広告と価格の変化をPDFとExcelにまとめました。</p></dd></div>
           <div><dt>会計実習</dt><dd><strong><a href="vibe-coding.html#ledger">ハンビット流通 会計学習室</a></strong><p>架空の卸売会社の取引証憑をMCP経由で取得し、伝票案を確認・承認して元帳に転記する仕訳実習を作りました。</p></dd></div>
-          <div><dt>資金計画</dt><dd><strong><a href="vibe-coding.html#work-finance">販売奨励金の支払審査・資金計画</a></strong><p>架空の代理店50社の精算データ240件を分析しました。関連する取引先3社への月間支払額は、合算すると6か月連続で決裁上限の200万ウォンを超えていました。この結果をもとに、合算額に応じて決裁者を決め、資金不足時には調達案を担当部門に割り当てる模擬業務アプリを作りました。</p></dd></div>
+          <div><dt>資金計画</dt><dd><strong><a href="sales-incentives.html">販売奨励金の支払審査・資金計画</a></strong><p>架空の代理店50社の精算データ240件を分析しました。関連する取引先3社への月間支払額は、合算すると6か月連続で決裁上限の200万ウォンを超えていました。この結果をもとに、合算額に応じて決裁者を決め、資金不足時には調達案を担当部門に割り当てる模擬業務アプリを作りました。</p></dd></div>
           <div><dt>学習ツールの制作</dt><dd><strong><a href="#finance-study">財務管理の要点ノートと95問の問題集</a> ・ <a href="#japanese">JLPT単語帳</a></strong><p>財務管理の問題を分野別に解き直せるようにしました。日本語の単語帳では、級別の学習と、わからなかった単語の復習ができます。</p></dd></div>
           <div><dt>共同作業</dt><dd><strong><a href="#notes">Slackでのエージェント間レビュー</a></strong><p>各エージェントによる相互レビュー、判断根拠の記録、代表による報告の手順を設計し、取引先名の照合ツールの適用範囲を決める際に使いました。</p></dd></div>
         </dl>

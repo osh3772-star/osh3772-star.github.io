@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kim Sanghyeok’s accounting project groups related dealers for rebate approval and turns projected cash shortfalls into funding tasks.">
+  <title>Sales rebate review and cash planning · Kim Sanghyeok</title>
+  <link rel="stylesheet" href="../portfolio.css?v=featured-1">
+  <link rel="canonical" href="https://osh3772-star.github.io/en/sales-incentives.html">
+  <link rel="alternate" hreflang="ko" href="https://osh3772-star.github.io/sales-incentives.html">
+  <link rel="alternate" hreflang="ja" href="https://osh3772-star.github.io/ja/sales-incentives.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://osh3772-star.github.io/zh/sales-incentives.html">
+  <link rel="alternate" hreflang="en" href="https://osh3772-star.github.io/en/sales-incentives.html">
+  <link rel="alternate" hreflang="x-default" href="https://osh3772-star.github.io/sales-incentives.html">
+</head>
+<body>
+  <a class="skip" href="#case-study">Skip to content</a>
+  <div class="layout">
+    <header>
+      <a class="name journal-name" href="./">Kim Sanghyeok</a>
+      <p class="major">Accounting and Taxation<br>Japanese Language and Literature</p>
+      <nav class="language-nav" aria-label="Select language">
+        <a lang="ko" hreflang="ko" href="/">한국어</a>
+        <a lang="ja" hreflang="ja" href="/ja/">日本語</a>
+        <a lang="zh-Hans" hreflang="zh-Hans" href="/zh/">简体中文</a>
+        <a lang="en" hreflang="en" href="/en/" aria-current="true">English</a>
+      </nav>
+      <nav aria-label="Portfolio navigation">
+        <a href="./">Portfolio</a>
+        <a href="resume.pdf" download="Kim_Sanghyeok_Resume.pdf">Résumé PDF</a>
+      </nav>
+    </header>
+    <main id="case-study" class="journal case-study">
+      <p class="entry-meta">Accounting project · Simulated workflow</p>
+      <h1>Sales rebate review and cash planning</h1>
+      <p class="journal-intro">I built a rebate review app using 240 settlement records from 50 fictional dealers. The approval rule applies to each related group’s monthly total. I implemented that rule and added a way to plan for cash shortfalls between approval and payment.</p>
+      <section id="review" aria-labelledby="review-heading">
+        <h2 id="review-heading">Why three dealers needed a different approver</h2>
+        <p>Sales support could approve up to KRW 2 million per month under the rules of the exercise. I compared dealers’ registered representatives, business addresses and settlement accounts. I linked dealers that matched on at least two of the three and grouped the connected records.</p>
+        <table class="case-ledger">
+          <caption>June sales rebates · Simulated records</caption>
+          <thead><tr><th scope="col">Dealer</th><th scope="col">Amount due (KRW)</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">D-011</th><td>1,373,515</td></tr>
+            <tr><th scope="row">D-024</th><td>1,189,046</td></tr>
+            <tr><th scope="row">D-037</th><td>1,325,536</td></tr>
+          </tbody>
+          <tfoot><tr><th scope="row">Group total</th><td>3,888,097</td></tr></tfoot>
+        </table>
+        <p class="case-summary">Each dealer fell within the limit. Together they exceeded it by KRW 1,888,097, so the app routes the group to a sales executive for approval. The same group required executive approval in all six months reviewed.</p>
+      </section>
+      <section id="cash-plan" aria-labelledby="cash-heading">
+        <h2 id="cash-heading">The cash planning feature I added</h2>
+        <p>After a rebate is approved, the finance team checks the funds available on the payment date. If cash falls short, AI suggests funding options. When a user selects a collections plan, the app assigns sales support to confirm the collection date and finance to reconcile the deposit.</p>
+        <table class="case-ledger">
+          <caption>July 10 payment plan · Worked example</caption>
+          <thead><tr><th scope="col">Funds confirmed</th><th scope="col">Remaining shortfall (KRW)</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Start with KRW 3 million available</th><td>888,097</td></tr>
+            <tr><th scope="row">Confirm a KRW 500,000 deposit</th><td>388,097</td></tr>
+            <tr><th scope="row">Confirm another KRW 400,000</th><td>0</td></tr>
+          </tbody>
+        </table>
+        <p>Selecting a funding plan leaves the shortfall unchanged until finance verifies the deposits. With both deposits confirmed, the team can allocate funds to the final payment instruction. Sending the payment is a separate step.</p>
+      </section>
+      <footer class="case-back"><a href="./#featured">View featured work</a></footer>
+    </main>
+  </div>
+</body>
+</html>

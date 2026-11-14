@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Kim Sanghyeok’s portfolio. Accounting, Japanese, and tools I build for coursework and for my mother’s real estate office.">
   <title>Kim Sanghyeok · Portfolio</title>
-  <link rel="stylesheet" href="../portfolio.css?v=now-gym-1">
+  <link rel="stylesheet" href="../portfolio.css?v=featured-1">
   <link rel="alternate" hreflang="ko" href="https://osh3772-star.github.io/">
   <link rel="alternate" hreflang="ja" href="https://osh3772-star.github.io/ja/">
   <link rel="alternate" hreflang="zh-Hans" href="https://osh3772-star.github.io/zh/">
   <link rel="alternate" hreflang="en" href="https://osh3772-star.github.io/en/">
   <link rel="alternate" hreflang="x-default" href="https://osh3772-star.github.io/">
 </head>
-<body>
+<body class="portfolio-home">
   <a class="skip" href="#intro">Skip to content</a>
   <div class="layout">
     <header>
@@ -24,15 +24,42 @@
         <a lang="zh-Hans" hreflang="zh-Hans" href="/zh/">简体中文</a>
         <a lang="en" hreflang="en" href="/en/" aria-current="true">English</a>
       </nav>
-      <nav aria-label="Portfolio sections">
-        <a href="#intro">About</a><a href="#resume">Résumé</a><a href="#work">Accounting</a><a href="#estate">Real estate</a><a href="#japanese">Japanese</a><a href="vibe-coding.html">Vibe coding</a><a href="#notes">Automation notes</a><a href="#now">Now</a>
+      <nav class="desktop-nav" aria-label="Portfolio sections">
+        <a href="#intro">About</a><a href="#featured">Selected projects</a><a href="#resume">Résumé</a><a href="#work">Accounting</a><a href="#estate">Real estate</a><a href="#japanese">Japanese</a><a href="vibe-coding.html">Vibe coding</a><a href="#notes">Automation notes</a><a href="#now">Now</a>
       </nav>
-      <div class="links"><a href="https://github.com/osh3772-star">GitHub</a></div>
+      <div class="links desktop-links"><a href="https://github.com/osh3772-star">GitHub</a></div>
+      <details class="mobile-menu">
+        <summary>All sections</summary>
+        <nav aria-label="Portfolio sections">
+          <a href="#intro">About</a><a href="#featured">Selected projects</a><a href="#resume">Résumé</a><a href="#work">Accounting</a><a href="#estate">Real estate</a><a href="#japanese">Japanese</a><a href="vibe-coding.html">Vibe coding</a><a href="#notes">Automation notes</a><a href="#now">Now</a><a href="https://github.com/osh3772-star">GitHub</a>
+        </nav>
+      </details>
     </header>
     <main>
       <section id="intro" aria-label="About">
-        <p class="lead">I’m <strong>Kim Sanghyeok</strong>. I’m studying for a double major in Accounting and Taxation and Japanese Language and Literature.</p>
-        <p>I turned my financial management coursework into <a href="#finance-study">concept notes and a practice workbook</a>. For my mother’s real estate office, I built a <a href="#estate">searchable directory of Hyangnam properties</a>.</p>
+        <p class="lead">I study accounting through source documents and settlement records.</p>
+        <p>I built tools to practice journal entries and review sales rebate payments. I also help my mother’s real estate office manage property listings and client consultation records.</p>
+        <div class="intro-actions">
+          <a class="case-link" href="sales-incentives.html">Sales rebate case study</a>
+          <a href="resume.pdf" download="Kim_Sanghyeok_Resume.pdf">Résumé PDF</a>
+        </div>
+      </section>
+      <section id="featured" aria-labelledby="featured-title">
+        <h2 id="featured-title">Selected projects</h2>
+        <ul class="featured-list">
+          <li>
+            <h3><a href="sales-incentives.html">Sales rebate review and cash planning</a></h3>
+            <p>I built a simulation that combines June payments for three related dealers to find the required approver and assigns funding tasks when cash is short.</p>
+          </li>
+          <li>
+            <h3><a href="#hanbit">Hanbit Trading accounting lab</a></h3>
+            <p>Learners prepare a journal entry from sales documents and trace its effect on the general ledger and trial balance after approval.</p>
+          </li>
+          <li>
+            <h3><a href="vibe-coding.html#listings">Listing updates for a Hyangnam brokerage</a></h3>
+            <p>The tool matches a Real Estate Bank export to the office website by listing ID. Staff choose which changes to apply.</p>
+          </li>
+        </ul>
       </section>
       <section id="work">
         <h2>Accounting</h2>
@@ -49,7 +76,7 @@
           </div>
           <p class="access">Both study sites require you to sign in to Claude.</p>
         </article>
-        <article>
+        <article id="hanbit">
           <h3><a href="https://ledgerflow-public-reference-gateway.eric5833.workers.dev/">Hanbit Trading accounting lab <span aria-hidden="true">↗</span></a></h3>
           <p>I built a practice ledger for a fictional wholesaler. Learners follow a sale from its invoice and delivery record through approval and posting, so they can see how the evidence supports each journal entry.</p>
           <details class="mechanism">
@@ -121,7 +148,7 @@
           <div><dt>Apr–Jul 2026</dt><dd><strong>Don Quijote · Mizonokuchi Station store, Japan</strong><p>Stocked fresh food displays and managed inventory.</p></dd></div>
           <div><dt>Real estate operations</dt><dd><strong><a href="#estate">Property search and consultation records</a></strong><p>Built a listing search website and connected call transcription and summaries to the brokerage’s consultation log in Notion. On November 9, I surveyed 291 listing ads across three apartment complexes in Hyangnam and reported new ads and price changes in PDF and Excel.</p></dd></div>
           <div><dt>Accounting practice</dt><dd><strong><a href="vibe-coding.html#ledger">Hanbit Trading accounting lab</a></strong><p>Built an accounting lab for a fictional wholesaler. Learners retrieve source documents through MCP, review draft entries, and approve them for posting to the ledger.</p></dd></div>
-          <div><dt>Cash planning</dt><dd><strong><a href="vibe-coding.html#work-finance">Sales rebate approval</a></strong><p>Analyzed 240 settlement records for 50 simulated dealers. One group of three related dealers exceeded the ₩2 million approval threshold for six consecutive months when their monthly payments were combined. I built an app that applies the approval rule and assigns funding tasks when cash is short.</p></dd></div>
+          <div><dt>Cash planning</dt><dd><strong><a href="sales-incentives.html">Sales rebate approval</a></strong><p>Analyzed 240 settlement records for 50 simulated dealers. One group of three related dealers exceeded the ₩2 million approval threshold for six consecutive months when their monthly payments were combined. I built an app that applies the approval rule and assigns funding tasks when cash is short.</p></dd></div>
           <div><dt>Study tools</dt><dd><strong><a href="#finance-study">Financial management notes and 95 practice problems</a> · <a href="#japanese">JLPT vocabulary</a></strong><p>Created concept notes, a workbook with 95 worked problems, and a Japanese vocabulary app with level-based study and a personal review list.</p></dd></div>
           <div><dt>Collaboration</dt><dd><strong><a href="#notes">AI agent reviews in Slack</a></strong><p>Set up cross-reviews, a decision log, and a single reporting role. We used the process to decide when a business-name match needed human review.</p></dd></div>
         </dl>

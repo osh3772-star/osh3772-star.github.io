@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="キム・サンヒョクが架空の販売代理店の精算資料を使って制作したアプリです。関連先の合算による決裁と、支払日に向けた資金計画を紹介します。">
+  <title>販売奨励金の支払審査と資金計画 · キム・サンヒョク</title>
+  <link rel="stylesheet" href="../portfolio.css?v=featured-1">
+  <link rel="canonical" href="https://osh3772-star.github.io/ja/sales-incentives.html">
+  <link rel="alternate" hreflang="ko" href="https://osh3772-star.github.io/sales-incentives.html">
+  <link rel="alternate" hreflang="ja" href="https://osh3772-star.github.io/ja/sales-incentives.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://osh3772-star.github.io/zh/sales-incentives.html">
+  <link rel="alternate" hreflang="en" href="https://osh3772-star.github.io/en/sales-incentives.html">
+  <link rel="alternate" hreflang="x-default" href="https://osh3772-star.github.io/sales-incentives.html">
+</head>
+<body>
+  <a class="skip" href="#case-study">本文へ</a>
+  <div class="layout">
+    <header>
+      <a class="name journal-name" href="./">キム・サンヒョク</a>
+      <p class="major">会計・税務／日本語・日本文学<br>ダブルメジャー</p>
+      <nav class="language-nav" aria-label="言語を選択">
+        <a lang="ko" hreflang="ko" href="/">한국어</a>
+        <a lang="ja" hreflang="ja" href="/ja/" aria-current="true">日本語</a>
+        <a lang="zh-Hans" hreflang="zh-Hans" href="/zh/">简体中文</a>
+        <a lang="en" hreflang="en" href="/en/">English</a>
+      </nav>
+      <nav aria-label="ポートフォリオのメニュー">
+        <a href="./">ポートフォリオ</a>
+        <a href="resume.pdf" download="キム・サンヒョク_履歴書.pdf">履歴書 PDF</a>
+      </nav>
+    </header>
+    <main id="case-study" class="journal case-study">
+      <p class="entry-meta">会計プロジェクト · 模擬業務</p>
+      <h1>販売奨励金の支払審査と資金計画</h1>
+      <p class="journal-intro">架空の販売代理店50社の精算データ240件を使い、販売奨励金の支払審査アプリを作りました。関連する代理店の月額を合算して決裁者を決めるルールを実装し、承認後に支払日までの資金を確保する機能を加えました。</p>
+      <section id="review" aria-labelledby="review-heading">
+        <h2 id="review-heading">3社をまとめると決裁者が変わる理由</h2>
+        <p>課題で定められた営業支援チームの決裁限度額は月200万ウォンです。代表者・事業所の住所・精算口座のうち2項目以上が一致する代理店を結び、関連先をグループにまとめました。</p>
+        <table class="case-ledger">
+          <caption>6月の販売奨励金 · 模擬データ</caption>
+          <thead><tr><th scope="col">代理店</th><th scope="col">支払予定額（ウォン）</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">D-011</th><td>1,373,515</td></tr>
+            <tr><th scope="row">D-024</th><td>1,189,046</td></tr>
+            <tr><th scope="row">D-037</th><td>1,325,536</td></tr>
+          </tbody>
+          <tfoot><tr><th scope="row">グループ合計</th><td>3,888,097</td></tr></tfoot>
+        </table>
+        <p class="case-summary">各社の金額は限度内ですが、合計は限度額を1,888,097ウォン上回ります。アプリは3社分をまとめて営業担当役員に回付します。このグループは確認した6か月すべてで役員決裁が必要でした。</p>
+      </section>
+      <section id="cash-plan" aria-labelledby="cash-heading">
+        <h2 id="cash-heading">追加した機能 · 支払日ごとの資金計画</h2>
+        <p>支払承認後、経理担当者は支払日に使える資金を確認します。不足があればAIが資金確保の案を提示します。担当者が代金回収案を選ぶと、営業支援には回収日の確認、経理・財務には入金の照合を割り当てます。</p>
+        <table class="case-ledger">
+          <caption>7月10日の支払計画 · シミュレーション例</caption>
+          <thead><tr><th scope="col">確認済みの資金</th><th scope="col">不足額（ウォン）</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">利用可能額300万ウォンで開始</th><td>888,097</td></tr>
+            <tr><th scope="row">50万ウォンの入金を確認</th><td>388,097</td></tr>
+            <tr><th scope="row">さらに40万ウォンの入金を確認</th><td>0</td></tr>
+          </tbody>
+        </table>
+        <p>計画を採用した段階では、入金予定額は支払に使える資金に含めません。この例では2件の入金を確認した後、残った支払指示にも全額を割り当てられます。送金はその後の別の手続きです。</p>
+      </section>
+      <footer class="case-back"><a href="./#featured">主な制作物へ</a></footer>
+    </main>
+  </div>
+</body>
+</html>

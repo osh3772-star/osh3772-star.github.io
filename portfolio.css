@@ -153,3 +153,47 @@ html[lang="zh-Hans"] body, html[lang="ja"] body { word-break: normal; line-break
 @media (max-width: 760px) {
   header .language-nav { margin: 0 0 15px; gap: 2px 16px; }
 }
+
+/* First-screen navigation and selected work */
+.mobile-menu { display: none; }
+.portfolio-home .lead { max-width: 22em; font-size: clamp(29px, 3.3vw, 42px); line-height: 1.3; }
+.intro-actions { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 22px; margin-top: 24px; }
+.intro-actions a { display: inline-block; padding: 7px 0; font-size: 16px; }
+.intro-actions .case-link { font-weight: 700; text-decoration-thickness: 2px; }
+.featured-list { padding: 0; margin: 0; list-style: none; border-top: 1px solid var(--ink); }
+.featured-list li { padding: 18px 0; border-bottom: 1px solid var(--line); }
+.featured-list h3 { margin: 0 0 4px; font-size: 20px; }
+.featured-list h3 a { text-decoration: underline; text-decoration-color: var(--line); }
+.featured-list h3 a:hover, .featured-list h3 a:focus-visible { text-decoration-color: currentColor; }
+.featured-list p { color: var(--muted); font-size: 16px; line-height: 1.55; }
+
+/* Keep each decision and its supporting numbers together. */
+.case-study { font-variant-numeric: tabular-nums; }
+.case-study section p + p { margin-top: 12px; }
+.case-ledger { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 16px; line-height: 1.5; }
+.case-ledger caption { padding-bottom: 8px; text-align: start; font-weight: 650; }
+.case-ledger th, .case-ledger td { padding: 9px 6px; text-align: start; border-bottom: 1px solid var(--line); }
+.case-ledger th:first-child, .case-ledger td:first-child { padding-inline-start: 0; }
+.case-ledger th:last-child, .case-ledger td:last-child { text-align: end; padding-inline-end: 0; }
+.case-ledger thead { border-top: 1px solid var(--ink); }
+.case-ledger thead th { font-weight: 550; color: var(--muted); }
+.case-ledger tfoot { font-weight: 700; color: var(--ink); border-top: 2px solid var(--ink); }
+.case-summary { margin-top: 14px; font-weight: 600; }
+.case-back { gap: 14px; flex-wrap: wrap; }
+@media (max-width: 760px) {
+  .portfolio-home .desktop-nav, .portfolio-home .desktop-links { display: none; }
+  .mobile-menu { display: block; border-block: 1px solid var(--line); }
+  .mobile-menu summary { margin: 0; padding: 8px 0; color: var(--ink); font-weight: 600; }
+  .mobile-menu nav { padding: 0 0 12px; }
+  .portfolio-home #intro { margin-top: 24px; }
+  .portfolio-home .intro-actions { margin-top: 14px; }
+  .featured-list li { padding: 14px 0; }
+  .case-ledger { font-size: 15px; }
+}
+
+@media (max-width: 360px) {
+  .portfolio-home .layout { margin-inline: 16px; padding-top: 20px; }
+  .portfolio-home #intro { margin-top: 18px; }
+  .portfolio-home .lead { font-size: 27px; margin-bottom: 16px; }
+  .portfolio-home .intro-actions { gap: 4px 14px; }
+}

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="金相赫的会计项目使用模拟经销商结算记录，按关联经销商月度合计金额确定审批人，并为付款日的资金缺口制定计划。">
+  <title>销售返利审批与付款资金计划 · 金相赫</title>
+  <link rel="stylesheet" href="../portfolio.css?v=featured-1">
+  <link rel="canonical" href="https://osh3772-star.github.io/zh/sales-incentives.html">
+  <link rel="alternate" hreflang="ko" href="https://osh3772-star.github.io/sales-incentives.html">
+  <link rel="alternate" hreflang="ja" href="https://osh3772-star.github.io/ja/sales-incentives.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://osh3772-star.github.io/zh/sales-incentives.html">
+  <link rel="alternate" hreflang="en" href="https://osh3772-star.github.io/en/sales-incentives.html">
+  <link rel="alternate" hreflang="x-default" href="https://osh3772-star.github.io/sales-incentives.html">
+</head>
+<body>
+  <a class="skip" href="#case-study">跳至正文</a>
+  <div class="layout">
+    <header>
+      <a class="name journal-name" href="./">金相赫</a>
+      <p class="major">会计与税务专业<br>第二专业为日语语言文学</p>
+      <nav class="language-nav" aria-label="选择语言">
+        <a lang="ko" hreflang="ko" href="/">한국어</a>
+        <a lang="ja" hreflang="ja" href="/ja/">日本語</a>
+        <a lang="zh-Hans" hreflang="zh-Hans" href="/zh/" aria-current="true">简体中文</a>
+        <a lang="en" hreflang="en" href="/en/">English</a>
+      </nav>
+      <nav aria-label="作品集导航">
+        <a href="./">作品集首页</a>
+        <a href="resume.pdf" download="金相赫_简历.pdf">简历 PDF</a>
+      </nav>
+    </header>
+    <main id="case-study" class="journal case-study">
+      <p class="entry-meta">会计项目 · 模拟业务</p>
+      <h1>销售返利审批与付款资金计划</h1>
+      <p class="journal-intro">我用 50 家虚拟经销商的 240 条结算记录开发了销售返利审批工具。我把关联经销商按月合并审批的规则写入系统，还增加了资金计划功能，供财务人员在审批通过后安排付款。</p>
+      <section id="review" aria-labelledby="review-heading">
+        <h2 id="review-heading">三家经销商为什么需要上报审批</h2>
+        <p>题目规定，销售支持团队每月的审批权限为 200 万韩元。我按登记代表人、营业地址和结算账户匹配经销商。其中至少两项一致，就将两家经销商关联起来，再按关联关系分组。</p>
+        <table class="case-ledger">
+          <caption>6 月销售返利 · 模拟结算记录</caption>
+          <thead><tr><th scope="col">经销商</th><th scope="col">应付金额（韩元）</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">D-011</th><td>1,373,515</td></tr>
+            <tr><th scope="row">D-024</th><td>1,189,046</td></tr>
+            <tr><th scope="row">D-037</th><td>1,325,536</td></tr>
+          </tbody>
+          <tfoot><tr><th scope="row">关联组合计</th><td>3,888,097</td></tr></tfoot>
+        </table>
+        <p class="case-summary">三家各自的金额均在权限之内，合计却超出限额 1,888,097 韩元。系统因此把三笔返利合并上报分管销售的高管审批。在审查的六个月中，这个关联组每月都需要上报。</p>
+      </section>
+      <section id="cash-plan" aria-labelledby="cash-heading">
+        <h2 id="cash-heading">我增加的功能 · 按付款日安排资金</h2>
+        <p>返利获批后，财务人员需要确认付款日有多少资金可用。出现缺口时，AI 会提出筹资方案。经办人选择回款方案后，系统将确认回款日期的任务分配给销售支持团队，将核对实际到账的任务分配给财务团队。</p>
+        <table class="case-ledger">
+          <caption>7 月 10 日付款计划 · 模拟示例</caption>
+          <thead><tr><th scope="col">已确认的资金</th><th scope="col">剩余缺口（韩元）</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">起始可用资金为 300 万韩元</th><td>888,097</td></tr>
+            <tr><th scope="row">确认 50 万韩元到账</th><td>388,097</td></tr>
+            <tr><th scope="row">再确认 40 万韩元到账</th><td>0</td></tr>
+          </tbody>
+        </table>
+        <p>选择筹资方案后，预计回款只有在财务核实到账后才计入可用资金。本例中，两笔回款都确认后，财务即可为最后一笔付款指令足额分配资金。实际转账另行执行。</p>
+      </section>
+      <footer class="case-back"><a href="./#featured">查看代表项目</a></footer>
+    </main>
+  </div>
+</body>
+</html>
