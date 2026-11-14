@@ -123,3 +123,5 @@ nav a[aria-current="page"] { color: var(--blue); font-weight: 700; text-decorati
 .work-groups a { display: inline-block; padding: 4px 0; color: var(--blue); font-size: 14px; text-decoration: underline; }
 .more-work h3[id] { scroll-margin-top: 20px; }
 .more-work h3:target { color: var(--blue); }
+.work-titles { list-style: none; margin: 0; padding: 0; }
+.work-titles li { border-top: 1px solid var(--line); padding: 9px 0; font-size: 15px; line-height: 1.55; font-weight: 650; }
