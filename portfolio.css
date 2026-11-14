@@ -141,3 +141,14 @@ nav a[aria-current="page"] { color: var(--blue); font-weight: 700; text-decorati
   .resume-list > div { grid-template-columns: 1fr; gap: 2px; }
   .resume-list dt { font-size: 13px; }
 }
+#now h2 { margin-bottom: 5px; }
+.now-date { margin-bottom: 14px; color: var(--muted); font-size: 14px; }
+.now-list dt { color: var(--ink); font-weight: 650; }
+
+header .language-nav { display: flex; flex-flow: row wrap; align-items: center; gap: 2px 12px; margin: -26px 0 26px; }
+.language-nav a { display: inline-block; padding: 4px 0; font-size: 14px; line-height: 1.5; color: var(--muted); }
+.language-nav a[aria-current="true"] { font-weight: 700; color: var(--ink); text-decoration: underline; text-decoration-color: currentColor; }
+html[lang="zh-Hans"] body, html[lang="ja"] body { word-break: normal; line-break: strict; }
+@media (max-width: 760px) {
+  header .language-nav { margin: 0 0 15px; gap: 2px 16px; }
+}

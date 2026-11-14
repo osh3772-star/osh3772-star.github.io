@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="キム・サンヒョクのポートフォリオ。会計と日本語を学び、不動産仲介の現場や自分の勉強に使うツールを作っています。">
+  <title>キム・サンヒョク｜ポートフォリオ</title>
+  <link rel="stylesheet" href="../portfolio.css?v=languages-1">
+  <link rel="alternate" hreflang="ko" href="https://osh3772-star.github.io/">
+  <link rel="alternate" hreflang="ja" href="https://osh3772-star.github.io/ja/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://osh3772-star.github.io/zh/">
+  <link rel="alternate" hreflang="en" href="https://osh3772-star.github.io/en/">
+  <link rel="alternate" hreflang="x-default" href="https://osh3772-star.github.io/">
+  <script defer src="../language-nav.js"></script>
+</head>
+<body>
+  <a class="skip" href="#intro">本文へ</a>
+  <div class="layout">
+    <header>
+      <a class="name" href="#intro"><h1>キム・サンヒョク</h1></a>
+      <p class="major">会計税務学専攻<br>日本語日本文学を複数専攻</p>
+      <nav class="language-nav" aria-label="言語を選択">
+        <a lang="ko" hreflang="ko" href="../">한국어</a>
+        <a lang="ja" hreflang="ja" href="../ja/" aria-current="true">日本語</a>
+        <a lang="zh-Hans" hreflang="zh-Hans" href="../zh/">简体中文</a>
+        <a lang="en" hreflang="en" href="../en/">English</a>
+      </nav>
+      <nav aria-label="ページ内の目次">
+        <a href="#intro">自己紹介</a><a href="#resume">履歴書</a><a href="#work">会計の学び</a><a href="#estate">不動産仲介</a><a href="#japanese">日本語</a><a href="vibe-coding.html">バイブコーディング</a><a href="#notes">自動化ノート</a><a href="#now">近況</a>
+      </nav>
+      <div class="links"><a href="https://github.com/osh3772-star">GitHub</a></div>
+    </header>
+    <main>
+      <section id="intro" aria-label="自己紹介">
+        <p class="lead">会計税務学と日本語日本文学を学んでいる<strong>キム・サンヒョク</strong>です。</p>
+        <p>財務管理の試験対策に、<a href="#finance-study">要点ノートと問題集</a>を作りました。学外では母の不動産仲介の仕事を手伝い、<a href="#estate">香南（ヒャンナム）の物件検索サイト</a>を作りました。</p>
+      </section>
+      <section id="work">
+        <h2>会計の学び</h2>
+        <article>
+          <h3>会計資格の取得</h3>
+          <p>韓国の財経管理士、電算会計1級、電算税務2級を取得しました。<a href="#resume">資格・語学の一覧</a></p>
+        </article>
+        <article class="study" id="finance-study">
+          <h3>財務管理の中間試験に向けて</h3>
+          <p>年金の初回受取日が今日の場合と、1年後の場合。現在価値の計算はどう変わるでしょうか。授業で迷ったこうした問いをノートにまとめました。問題集では、もう一度解きたい問題に星を付けておけます。</p>
+          <div class="books" aria-label="財務管理の学習サイト2種">
+            <a class="book concept" href="https://claude.ai/artifact/LwPtp9A5DPK2k8vTVn2WAL"><small>財務管理・第3〜9章</small><strong>要点ノート</strong><span>授業で迷った8つの問い ↗</span></a>
+            <a class="book practice" href="https://claude.ai/artifact/7F24hGEVFYis9CiTzjHPvu"><small>財務管理・第3〜9章</small><strong>問題集</strong><span>分野別に解ける95問 ↗</span></a>
+          </div>
+          <p class="access">どちらの学習サイトも、閲覧にはClaudeへのログインが必要です。</p>
+        </article>
+        <article>
+          <h3><a href="https://ledgerflow-public-reference-gateway.eric5833.workers.dev/">会計自動化の実習 <span aria-hidden="true">↗</span></a></h3>
+          <p>授業で習う仕訳が帳簿に反映されるまでをたどりたくて、架空の卸売会社「ハンビット流通」の取引を題材に、伝票の確認と承認を体験できる実習を作りました。</p>
+          <details class="mechanism">
+            <summary>売上1件が元帳に載るまで</summary>
+            <p>AIアプリがMCPを通じて取引と証憑を取得し、会計エンジンが仕訳案を作成します。売上の記録時には、出庫数量に単位原価を掛けて売上原価も計算します。</p>
+            <p>借方・貸方と証憑を照合し、担当者が伝票を承認します。元帳に転記できるのは、承認時の版と内容が一致する伝票です。</p>
+            <a href="vibe-coding.html#ledger">ハンビット流通の制作記を読む</a>
+          </details>
+          <details><summary>会計実習の画面を見る</summary><img loading="lazy" src="../portfolio-images/ledger.webp" alt="LedgerFlowの会計実習画面"></details>
+        </article>
+      </section>
+      <section id="estate">
+        <h2>不動産仲介</h2>
+        <article>
+          <h3><a href="https://hyangnam-realestate.store/">母の仲介事務所で使う物件検索 <span aria-hidden="true">↗</span></a></h3>
+          <p>母が働く仲介事務所で香南の物件を探せるよう、検索画面を作りました。実際に使った母の要望を聞き、画面を改良しました。</p>
+          <figure class="estate-screen">
+            <img loading="lazy" width="1000" height="666" src="../portfolio-images/estate.webp" alt="香南のシニョン・ジウェル不動産仲介事務所の検索画面。取引の種類と物件種別を選べる。">
+            <figcaption>売買・チョンセ（保証金一括払いの賃貸）・月払い賃貸を選び、物件種別で絞り込めます。</figcaption>
+          </figure>
+          <details class="mechanism">
+            <summary>チョンセのマンションを検索すると？</summary>
+            <p>事務所のドメインをCloudflare Workersに接続しました。利用者が「チョンセ」と「マンション」を選ぶと、その条件がURLに入ります。Astroが条件を読み取り、Supabaseから公開中の物件だけを取得して表示します。</p>
+            <p>同じURLを開き直すと、その時点で公開中の物件が表示されます。チョンセと月払い賃貸では、金額を指定すると保証金で絞り込みます。</p>
+            <a href="https://hyangnam-realestate.store/properties?transaction=%EC%A0%84%EC%84%B8&amp;category=%EC%95%84%ED%8C%8C%ED%8A%B8">チョンセのマンションを探す</a>
+          </details>
+        </article>
+      </section>
+      <section id="japanese">
+        <h2>日本語</h2>
+        <article>
+          <h3><a href="https://osh3772-star.github.io/chiikawa-jlpt-vocab/">ちいかわのJLPT単語帳 <span aria-hidden="true">↗</span></a></h3>
+          <p>日本語能力試験N2に合格しました。勉強を続けるうちに、一度間違えた単語だけをもう一度解きたいと思うようになりました。わからない単語に印を付け、前回の続きから学べる単語帳を作りました。</p>
+          <details><summary>単語帳の画面を見る</summary><img loading="lazy" src="../portfolio-images/chiikawa.webp" alt="ちいかわJLPT単語帳の学習画面"></details>
+        </article>
+      </section>
+      <section id="notes">
+        <h2>自動化ノート</h2>
+        <article>
+          <h3>SlackでAIエージェントとツールを検討する</h3>
+          <p>Slackで各エージェントが互いの提案を検討します。合意事項をそれぞれの作業記録に反映し、ひとつの報告にまとめる運用にしました。</p>
+          <p>似た名前の取引先を見つけるツールもこの方法で検討しました。ツールで表記の誤りを拾い、同じ取引先かどうかは候補一覧を見て人が判断します。</p>
+        </article>
+        <article>
+        <div class="note"><p class="time">毎週月曜日 <strong>08:00</strong></p>
+        <div><h3>自分が応募できるインターンを探す</h3>
+        <p>会計と日本語を学ぶ自分に合う募集を探すため、毎週月曜の朝に韓国内の有給インターンを検索しています。対象は会計・財務職と、日本語を使う職種です。勤務地・応募条件・締切を同じ順序で並べて比較します。</p></div></div>
+        </article>
+      </section>
+      <section id="resume" class="resume" aria-labelledby="resume-title">
+        <div class="resume-heading">
+          <h2 id="resume-title">履歴書</h2>
+          <a class="resume-pdf" href="resume.pdf" download="キム・サンヒョク_履歴書.pdf">PDFをダウンロード</a>
+        </div>
+        <p class="resume-summary">会計税務学と日本語日本文学を専攻しています。会計を学ぶ中で、取引の証憑と伝票を扱うツールを作りました。母の不動産仲介事務所では、物件管理と相談記録の作成を自動化しています。</p>
+        <h3>学歴・交換留学</h3>
+        <dl class="resume-list">
+          <div><dt>2022年3月入学・在学中</dt><dd><strong>京畿大学校 経営学部 会計税務学専攻</strong><p>日本語日本文学科を複数専攻</p><p>通算GPA 4.3/4.5 <span class="resume-asof">（2026年10月時点）</span></p></dd></div>
+          <div><dt>2026年度前期</dt><dd><strong>國學院大學 交換留学修了</strong></dd></div>
+        </dl>
+        <h3>資格・語学</h3>
+        <dl class="resume-list resume-qual">
+          <div><dt>会計・税務（韓国）</dt><dd>財経管理士・会計管理1級<br>電算会計1級・電算税務2級・電算会計運用士2級</dd></div>
+          <div><dt>ERP・事務（韓国）</dt><dd>ERP情報管理士（人事）1級・コンピュータ活用能力1級</dd></div>
+          <div><dt>語学</dt><dd>日本語能力試験（JLPT）N2・TOEIC 750点</dd></div>
+        </dl>
+        <h3>職務・プロジェクト経験</h3>
+        <dl class="resume-list">
+          <div><dt>2026年4月〜7月</dt><dd><strong>ドン・キホーテ 溝ノ口駅前店</strong><p>生鮮食品売場で商品の品出しと在庫管理を担当しました。</p></dd></div>
+          <div><dt>不動産仲介の業務支援</dt><dd><strong><a href="#estate">香南の物件検索と相談記録の自動化</a></strong><p>母の仲介事務所で使う物件検索サイトと相談記録の仕組みを作りました。11月9日には香南の集合住宅3団地で物件広告291件を調べ、新着広告と価格の変動をPDFとExcelにまとめました。</p></dd></div>
+          <div><dt>会計実習</dt><dd><strong><a href="vibe-coding.html#ledger">ハンビット流通 会計学習室</a></strong><p>架空の卸売会社の取引証憑をMCP経由で取得し、伝票案を確認・承認して元帳に転記する仕訳実習を作りました。</p></dd></div>
+          <div><dt>資金計画</dt><dd><strong><a href="vibe-coding.html#work-finance">販売奨励金の支払審査</a></strong><p>架空の代理店50社の一覧と精算データ240件を分析しました。関係のある取引先3社の月間支払額を合算すると、6か月すべてで担当部門の決裁上限200万ウォンを超えました。この合算ルールを審査に組み込み、支払日の資金が足りない場合には調達計画を立てられるようにしました。</p></dd></div>
+          <div><dt>学習ツールの制作</dt><dd><strong><a href="#finance-study">財務管理の要点ノートと95問の問題集</a> ・ <a href="#japanese">JLPT単語帳</a></strong><p>財務管理の問題を分野別に解き直せるようにしました。日本語の単語帳では、級別の学習と、わからなかった単語の復習ができます。</p></dd></div>
+          <div><dt>共同作業</dt><dd><strong><a href="#notes">Slackでのエージェント間レビュー</a></strong><p>複数のAIエージェントが同じ提案を検討して反例を挙げるように役割を割り振り、合意した内容を共同作業記録に残しました。</p></dd></div>
+        </dl>
+        <h3>授業・部活動・兵役</h3>
+        <dl class="resume-list">
+          <div><dt>2026年度後期</dt><dd><strong><a href="https://osh3772-star.github.io/ai-debate/">会計倫理のケース討論</a></strong><p>研究開発費を資産として認識できるかといった会計上の論点について、4つのAIの判断根拠と反論を読み比べられる討論ツールを作りました。</p></dd></div>
+          <div><dt>2026年度後期</dt><dd><strong>日韓翻訳演習のグループ課題</strong><p>担当箇所の日本語原文と韓国語訳を対照できる形にまとめ、初訳をどう直したか、その理由を発表資料に記しました。</p></dd></div>
+          <div><dt>2026年10月</dt><dd><strong>日本語での街頭インタビュー</strong><p>ソウル・明洞で日本人観光客3人に日本語でインタビューし、質問ごとに回答を整理して報告書にまとめました。</p></dd></div>
+          <div><dt>高校時代・1年間</dt><dd><strong>経済・経営部 部長</strong><p>部員から募った貿易、株式、財務管理に関する提案を共通の関心ごとにまとめ、部の活動計画を立てました。</p></dd></div>
+          <div><dt>2023年8月〜2025年5月</dt><dd><strong>韓国空軍の行政兵として勤務。兵長で満期除隊</strong></dd></div>
+        </dl>
+      </section>
+      <section id="now" aria-labelledby="now-title">
+        <h2 id="now-title">近況</h2>
+        <p class="now-date"><time datetime="2026-11">2026年11月</time></p>
+        <dl class="resume-list now-list">
+          <div><dt>日本語</dt><dd>12月のJLPT N1に向けて勉強しています。以前覚えた単語をもう一度解き、どの言葉でつまずくかを確かめています。<a href="https://osh3772-star.github.io/chiikawa-jlpt-vocab/">自作の単語帳</a></dd></div>
+          <div><dt>財務管理</dt><dd>企業が借入や株式発行で資金を調達するときのコストを学んでいます。授業の設問にある負債と自己資本の比率を使い、加重平均資本コスト（WACC）を計算しています。</dd></div>
+          <div><dt>運動</dt><dd>10kmの自己ベストは43分です。次は40分切りを目指しています。ランニングのほかに、クライミングも楽しんでいます。</dd></div>
+        </dl>
+      </section>
+      <footer><a href="#resume">履歴書を見る</a><a href="#intro">ページの先頭へ ↑</a></footer>
+    </main>
+  </div>
+</body>
+</html>

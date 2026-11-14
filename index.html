@@ -5,7 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="김상혁의 개인 포트폴리오. 회계와 일본어를 공부하고, 중개사무소 업무와 공부에 쓰는 도구를 만듭니다.">
   <title>김상혁 · 개인 포트폴리오</title>
-  <link rel="stylesheet" href="portfolio.css?v=resume-1">
+  <link rel="stylesheet" href="portfolio.css?v=languages-1">
+  <link rel="alternate" hreflang="ko" href="https://osh3772-star.github.io/">
+  <link rel="alternate" hreflang="ja" href="https://osh3772-star.github.io/ja/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://osh3772-star.github.io/zh/">
+  <link rel="alternate" hreflang="en" href="https://osh3772-star.github.io/en/">
+  <link rel="alternate" hreflang="x-default" href="https://osh3772-star.github.io/">
+  <script defer src="language-nav.js"></script>
 </head>
 <body>
   <a class="skip" href="#intro">본문으로 이동</a>
@@ -13,6 +19,12 @@
     <header>
       <a class="name" href="#intro"><h1>김상혁</h1></a>
       <p class="major">회계세무 전공<br>일본어 복수전공</p>
+      <nav class="language-nav" aria-label="언어 선택">
+        <a lang="ko" hreflang="ko" href="./" aria-current="true">한국어</a>
+        <a lang="ja" hreflang="ja" href="./ja/">日本語</a>
+        <a lang="zh-Hans" hreflang="zh-Hans" href="./zh/">简体中文</a>
+        <a lang="en" hreflang="en" href="./en/">English</a>
+      </nav>
       <nav aria-label="페이지 목차">
         <a href="#intro">소개</a><a href="#resume">이력서</a><a href="#work">회계 공부</a><a href="#estate">중개사무소</a><a href="#japanese">일본어</a><a href="vibe-coding.html">바이브 코딩</a><a href="#notes">자동화 노트</a><a href="#now">요즘</a>
       </nav>
@@ -107,20 +119,31 @@
         </dl>
         <h3>실무·프로젝트 경험</h3>
         <dl class="resume-list">
-          <div><dt>중개사무소 업무 지원</dt><dd><strong><a href="#estate">향남 매물 검색과 상담 기록 자동화</a></strong><p>어머니의 중개사무소에서 쓰는 매물 검색 사이트를 만들었습니다. 상담 녹음에서 문의 조건과 후속 조치를 추려 Notion 상담일지에 남깁니다.</p></dd></div>
+          <div><dt>2026.04–07</dt><dd><strong>돈키호테 미조노쿠치역앞점 · 일본</strong><p>신선식품 매장에서 상품 진열과 재고 관리를 담당했습니다.</p></dd></div>
+          <div><dt>중개사무소 업무 지원</dt><dd><strong><a href="#estate">향남 매물 검색과 상담 기록 자동화</a></strong><p>어머니의 중개사무소에서 쓰는 매물 검색 사이트와 상담일지를 만들었습니다. 11월 9일에는 향남 세 단지의 광고 291건을 조사해 신규 광고와 가격 변동을 PDF·엑셀로 정리했습니다.</p></dd></div>
           <div><dt>회계 실습</dt><dd><strong><a href="vibe-coding.html#ledger">한빛유통 회계 학습실</a></strong><p>가상 도매회사의 거래 증빙을 MCP로 조회하고, 전표 초안을 검토·승인해 원장에 반영하는 분개 실습을 구현했습니다.</p></dd></div>
-          <div><dt>자금 계획</dt><dd><strong><a href="vibe-coding.html#work-finance">판매장려금 지급 심사</a></strong><p>관련 거래처의 월 지급액을 합산해 승인권자를 정하는 모의 업무 앱을 만들었습니다. 지급일의 가용 자금이 부족하면 조달안을 골라 담당 부서 업무로 연결합니다.</p></dd></div>
+          <div><dt>자금 계획</dt><dd><strong><a href="vibe-coding.html#work-finance">판매장려금 지급 심사</a></strong><p>가상 대리점 50곳의 명부와 정산 자료 240건을 분석했습니다. 관련 거래처 세 곳의 월 지급액을 합산하자 여섯 달 모두 전결 한도인 200만 원을 넘었습니다. 이 기준을 지급 심사에 적용하고 자금이 부족한 날은 조달 계획을 세우게 했습니다.</p></dd></div>
           <div><dt>학습 도구 제작</dt><dd><strong><a href="#finance-study">재무관리 개념 노트·95문제 문제집</a> · <a href="#japanese">JLPT 단어장</a></strong><p>재무관리 문제를 유형별로 다시 풀 수 있게 구성했습니다. 일본어 단어장은 급수별 학습과 모르는 단어 복습을 지원합니다.</p></dd></div>
           <div><dt>협업</dt><dd><strong><a href="#notes">Slack 에이전트 공동 검토</a></strong><p>여러 AI 에이전트가 같은 제안을 검토하고 반례를 제시하도록 역할을 정했습니다. 합의한 결과는 공동 작업 기록에 남겼습니다.</p></dd></div>
         </dl>
-        <h3>교과 활동·병역</h3>
+        <h3>교과·동아리 활동 및 병역</h3>
         <dl class="resume-list">
+          <div><dt>2026년 2학기</dt><dd><strong><a href="https://osh3772-star.github.io/ai-debate/">회계윤리 사례 토론</a></strong><p>연구개발비를 자산으로 인식할 수 있는지 등 회계처리 사례를 놓고, 네 AI의 판단 근거와 반론을 비교해 읽는 토론 도구를 만들었습니다.</p></dd></div>
           <div><dt>2026년 2학기</dt><dd><strong>일한번역연습 팀 프로젝트</strong><p>담당한 원문의 일본어와 한국어 번역을 나란히 정리하고, 초벌 번역을 고친 이유를 발표 자료에 담았습니다.</p></dd></div>
           <div><dt>2026.10</dt><dd><strong>일본어 현장 인터뷰</strong><p>서울 명동에서 일본인 관광객 세 명을 일본어로 인터뷰하고, 질문별 답변을 보고서로 정리했습니다.</p></dd></div>
+          <div><dt>고등학교 · 1년</dt><dd><strong>경제·경영 동아리 회장</strong><p>부원들이 제안한 무역·주식·재무관리 주제를 모아 공통 관심사별로 묶고, 동아리 활동 계획을 세웠습니다.</p></dd></div>
           <div><dt>2023.08–2025.05</dt><dd><strong>대한민국 공군 행정병 복무 · 병장 만기 전역</strong></dd></div>
         </dl>
       </section>
-      <section id="now"><h2>요즘</h2><p>공부를 마치면 달리거나 클라이밍을 합니다. 러닝에서는 10km 40분에 도전하고 있습니다.</p></section>
+      <section id="now" aria-labelledby="now-title">
+        <h2 id="now-title">요즘</h2>
+        <p class="now-date"><time datetime="2026-11">2026년 11월</time></p>
+        <dl class="resume-list now-list">
+          <div><dt>일본어</dt><dd>12월 JLPT N1을 준비하고 있습니다. 예전에 외운 단어를 다시 풀며 어느 단어에서 막히는지 살펴봅니다. <a href="https://osh3772-star.github.io/chiikawa-jlpt-vocab/">내가 만든 단어장</a></dd></div>
+          <div><dt>재무관리</dt><dd>기업이 빚을 내거나 주식을 발행할 때 드는 비용을 공부하고 있습니다. 수업 문제에 나온 부채와 자기자본의 비중으로 가중평균자본비용(WACC)을 계산해 봅니다.</dd></div>
+          <div><dt>운동</dt><dd>10km 개인 기록은 43분입니다. 다음 목표는 40분 안에 들어오는 것이고, 달리기와 함께 클라이밍도 즐깁니다.</dd></div>
+        </dl>
+      </section>
       <footer><a href="#resume">이력서 보기</a><a href="#intro">처음으로 ↑</a></footer>
     </main>
   </div>

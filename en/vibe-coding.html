@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kim Sanghyeok’s vibe coding journal. How I used AI to build property management tools, an accounting lab, and a Japanese vocabulary app.">
+  <title>Vibe coding · Kim Sanghyeok’s journal</title>
+  <link rel="stylesheet" href="../portfolio.css?v=languages-1">
+  <link rel="alternate" hreflang="ko" href="https://osh3772-star.github.io/vibe-coding.html">
+  <link rel="alternate" hreflang="ja" href="https://osh3772-star.github.io/ja/vibe-coding.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://osh3772-star.github.io/zh/vibe-coding.html">
+  <link rel="alternate" hreflang="en" href="https://osh3772-star.github.io/en/vibe-coding.html">
+  <link rel="alternate" hreflang="x-default" href="https://osh3772-star.github.io/vibe-coding.html">
+  <script defer src="../language-nav.js"></script>
+</head>
+<body>
+  <a class="skip" href="#journal">Skip to content</a>
+  <div class="layout">
+    <header>
+      <a class="name journal-name" href="./#intro">Kim Sanghyeok</a>
+      <p class="major">Accounting and Taxation<br>Japanese Language and Literature</p>
+      <nav class="language-nav" aria-label="Select language">
+        <a lang="ko" hreflang="ko" href="../vibe-coding.html">한국어</a>
+        <a lang="ja" hreflang="ja" href="../ja/vibe-coding.html">日本語</a>
+        <a lang="zh-Hans" hreflang="zh-Hans" href="../zh/vibe-coding.html">简体中文</a>
+        <a lang="en" hreflang="en" href="../en/vibe-coding.html" aria-current="true">English</a>
+      </nav>
+      <nav aria-label="Portfolio sections">
+        <a href="./#intro">About</a><a href="./#resume">Résumé</a><a href="./#work">Accounting</a><a href="./#estate">Real estate</a><a href="./#japanese">Japanese</a><a href="vibe-coding.html" aria-current="page">Vibe coding</a><a href="./#notes">Automation notes</a><a href="./#now">Now</a>
+      </nav>
+      <div class="links"><a href="https://github.com/osh3772-star">GitHub</a></div>
+    </header>
+    <main id="journal" class="journal">
+      <h1>An accounting student’s<br>vibe coding journal</h1>
+      <p class="journal-intro">I started making things while helping at my mother’s real estate office, practicing journal entries, and learning Japanese vocabulary. I described the steps I wanted in plain language and worked with AI to turn them into code.</p>
+      <nav class="journal-index" aria-label="Journal entries">
+        <a class="work-index-link" href="#more-work">Browse more projects ↓</a>
+        <a href="#listings"><time datetime="2026-10-09">Oct 9</time> Moving 70 maintenance fees into a new system</a>
+        <a href="#ledger"><time datetime="2026-10-14">Oct 14</time> An accounting lab that began with a single unposted sale</a>
+        <a href="#words"><time datetime="2026-10-24">Oct 24</time> Giving the Chiikawa characters a personality</a>
+      </nav>
+
+      <article id="listings">
+        <p class="entry-meta"><time datetime="2026-10-09">October 9–11, 2026</time> · Hyangnam real estate office</p>
+        <h2>Moving 70 maintenance fees into a new system</h2>
+        <p>While moving listings to my mother’s office website, I asked Claude to help me avoid copying 70 maintenance fees by hand. On Real Estate Bank, a listing sometimes showed ₩0 in the search results even though its detail page gave an actual fee.</p>
+        <p>The screen we built shows the imported table beside the values already on the website. Staff choose which cells to update. An empty cell or a zero in the import leaves the saved fee in place.</p>
+        <p>Once we had moved the fees, I asked if staff could use them for another property of the same size in the same complex. We stored the fee confirmed for an individual listing separately from the reference amount for that floor area.</p>
+        <a class="entry-source" href="https://hyangnam-realestate.store/">Visit the office website</a>
+      </article>
+
+      <article id="ledger">
+        <p class="entry-meta"><time datetime="2026-10-14">October 14–19, 2026</time> · Hanbit Trading accounting lab</p>
+        <h2>An accounting lab that began with a single unposted sale</h2>
+        <p>I first asked for an accounting system for a fictional wholesale business. Then I described the lesson I actually wanted. Pick one unposted sale from January, show me the source documents, and explain the choice of account.</p>
+        <p>I wanted to work with the same ledger whether I opened Codex or Claude Code. We connected both apps to one Model Context Protocol (MCP) server. A separate accounting engine calculates the entries and can run without an AI model.</p>
+        <p>The chat explains the evidence and the choice of account. In the web app, a person reviews and approves the entry before it can reach the general ledger.</p>
+        <a class="entry-source" href="https://ledgerflow-public-reference-gateway.eric5833.workers.dev/">Open the Hanbit Trading lab</a>
+      </article>
+
+      <article id="words">
+        <p class="entry-meta"><time datetime="2026-10-24">October 24–31, 2026</time> · Japanese vocabulary</p>
+        <h2>Giving the Chiikawa characters a personality</h2>
+        <p>I wanted the Chiikawa characters I like to appear in my JLPT vocabulary app. I started by explaining the study controls to Codex. The left and right keys flip through words. The up and down keys mark the ones I know or need to review.</p>
+        <p>I asked Codex to look up characteristic scenes for Usagi, Hachiware, and Chiikawa, in that order. I supplied the character assets and asked for each character to pick actions at random from a set that suited its personality.</p>
+        <p>Codex gave each character a table of actions and probabilities. Hachiware’s included playing guitar and taking photos. Usagi’s included jumping and eating rice balls. I chose how I wanted each character to come across, and the probability tables translated that choice into behavior.</p>
+        <a class="entry-source" href="https://osh3772-star.github.io/chiikawa-jlpt-vocab/">Open the Chiikawa vocabulary app</a>
+      </article>
+      <section id="more-work" class="more-work" aria-labelledby="more-work-title">
+        <h2 id="more-work-title">More projects</h2>
+        <nav class="work-groups" aria-label="Project categories">
+          <a href="#work-finance">Accounting and finance</a>
+          <a href="#work-japanese">Japanese study</a>
+          <a href="#work-office">Real estate</a>
+          <a href="#work-games">Games and 3D modeling</a>
+          <a href="#work-voice">Speech and in-car tools</a>
+          <a href="#work-tools">Collaboration and personal tools</a>
+        </nav>
+        <h3 id="work-finance">Accounting and finance</h3>
+        <dl class="work-list">
+          <div><dt><a href="https://osh3772-star.github.io/ai-debate/">Accounting ethics debates</a></dt><dd>Several AI models research the same accounting ethics case and challenge each other’s arguments. The results show which view was adopted and why.</dd></div>
+          <div><dt>Sales rebate approvals and cash planning</dt><dd>A simulated finance workflow totals payments to related dealers to determine who can approve them. If cash is short on the due date, staff can select a funding option and assign it to a department.</dd></div>
+          <div><dt><a href="./#finance-study">Financial management study sites</a></dt><dd>I built a concept notebook and a workbook with solutions to 95 problems grouped by topic. Readers can star problems for another attempt.</dd></div>
+          <div><dt>Financial management lecture transcripts</dt><dd>I transcribed lectures with Google AI Studio and organized explanations and worked problems for chapters 10–14 by class session.</dd></div>
+          <div><dt>Rewind Trader</dt><dd>This web app reveals historical daily prices from NH Namuh PLUG one day at a time. I can practice placing simulated orders using only the data available on that date.</dd></div>
+          <div><dt>Stock order controls</dt><dd>I added a limit on the number of holdings to an existing automated trading program. It sends a buy order to the broker after approval in Telegram.</dd></div>
+        </dl>
+        <h3 id="work-japanese">Japanese study</h3>
+        <dl class="work-list">
+          <div><dt>Vocabulary Monster Hunt</dt><dd>Players choose a JLPT level and defeat monsters and bosses by entering the readings of Japanese words.</dd></div>
+          <div><dt>Daily N1 vocabulary</dt><dd>A mobile vocabulary notebook lets me add words, hide the definitions, and track how many I learned that day.</dd></div>
+          <div><dt>OCR for vertical Japanese text</dt><dd>I converted a vertically printed Japanese novel into a digital document that keeps the reading order and displays furigana pronunciation guides above the kanji.</dd></div>
+          <div><dt>Kanji in manga dialogue</dt><dd>A personal quiz for practicing how kanji are read in lines of manga dialogue.</dd></div>
+        </dl>
+        <h3 id="work-office">Real estate</h3>
+        <dl class="work-list">
+          <div><dt>Moving listings to Zigbang</dt><dd>When transferring listings from Real Estate Bank to Zigbang, the workflow skips existing advertisements and compares new listings with their source.</dd></div>
+          <div><dt>Hyangnam listing changes</dt><dd>For three apartment complexes, the PDF and Excel reports show new advertisements, price changes, and advertisements that disappeared since the last survey.</dd></div>
+          <div><dt>Upcoming lease expirations</dt><dd>I used UnionPlus contract records to create PDF and Excel lists of leases due to expire four calendar months later, so staff can review them in advance.</dd></div>
+          <div><dt>Hyangnam listing lookup via MCP</dt><dd>A read-only MCP server lets an AI client look up Naver Real Estate listings by apartment complex and compare them with earlier results.</dd></div>
+          <div><dt>Apartment search by criteria</dt><dd>A local search interface filters apartment listings by area, price, net floor area, and floor level.</dd></div>
+          <div><dt>Maintenance fee comparison</dt><dd>I collected listing fees in Excel. The website stores the confirmed fee for each property separately from the reference fee for others of the same size in the same complex.</dd></div>
+          <div><dt>Editing local news for Hyangnam</dt><dd>The office can review local news drafts alongside the original sources collected for each story.</dd></div>
+          <div><dt>Naver Blog drafts</dt><dd>The tool automatically saves approved office copy as a Naver Blog draft. Staff review it in the editor and decide whether to publish.</dd></div>
+          <div><dt>KakaoTalk listing alerts</dt><dd>New listings and price reductions that match a customer’s criteria go into a KakaoTalk notification queue.</dd></div>
+          <div><dt>Matching contracts to advertisements</dt><dd>When a new contract appears in UnionPlus, the workflow finds matching listings on Real Estate Bank and Zigbang for review and closure.</dd></div>
+          <div><dt>Office automation dashboard</dt><dd>I brought task status, approval history, and the split between manual and automated work into one view.</dd></div>
+          <div><dt>Call notes from recordings</dt><dd>I transcribe recorded client calls with Groq Whisper and log the client’s requirements and follow-up actions in Notion.</dd></div>
+          <div><dt>Client consultation records</dt><dd>Linked Obsidian templates for clients, consultations, properties, and contracts let me follow each consultation’s history in one place.</dd></div>
+        </dl>
+        <h3 id="work-games">Games and 3D modeling</h3>
+        <dl class="work-list">
+          <div><dt><a href="https://rocket-hand-blitz-20261105.osh3772.chatgpt.site">Blitzcrank 3D practice</a></dt><dd>A Three.js browser game where players control Blitzcrank, aim at three types of targets, and fire his rocket grab.</dd></div>
+          <div><dt>First-person rocket fist</dt><dd>I modeled Blitzcrank’s full body and the arms seen from the player’s perspective in Blender, then animated the fist launching.</dd></div>
+          <div><dt><a href="https://rocket-hand-blitz-20261105.osh3772.chatgpt.site/map-practice/rift-v49-skill-practice-playable.html?from=main">Summoner’s Rift in 3D</a></dt><dd>I built a Blender map based on Summoner’s Rift from League of Legends. Visitors can explore the blue and red jungle camps and the dragon pit in a browser.</dd></div>
+          <div><dt>Ring Vision webcam boxing</dt><dd>Players dodge by moving their head in front of a webcam and counterattack by throwing a punch.</dd></div>
+          <div><dt>Wizard of Legend web experiment</dt><dd>I built a personal browser version that uses room layouts and combat data from the Unity game for dungeon exploration and battles.</dd></div>
+          <div><dt>3D scene preview</dt><dd>I rendered characters and scenery in Blender and assembled a 720p preview with FFmpeg.</dd></div>
+          <div><dt><a href="https://github.com/osh3772-star/fubuki-pet">Fubuki desktop pet</a></dt><dd>A Windows desktop character responds to the mouse. A separate chat version lets the conversation unfold in its speech bubble.</dd></div>
+          <div><dt>Live2D upper-body artwork</dt><dd>I separated upper-body artwork into 32 PNG parts, including the arms, torso, and scarf, and prepared a layered PSD for rigging.</dd></div>
+        </dl>
+        <h3 id="work-voice">Speech and in-car tools</h3>
+        <dl class="work-list">
+          <div><dt>Japanese navigation voice</dt><dd>A local speech synthesis tool turns written directions into Japanese audio files. I used GPT-SoVITS to adjust the voice and intonation.</dd></div>
+          <div><dt>Android Auto home screen</dt><dd>I built a character-themed Android Auto home screen with a notification shortcut to return to it from a maps or music app.</dd></div>
+          <div><dt>Gen5W vehicle menu</dt><dd>A menu for the Gen5W head unit lets the user choose a background and launch a mirroring app.</dd></div>
+        </dl>
+        <h3 id="work-tools">Collaboration and personal tools</h3>
+        <dl class="work-list">
+          <div><dt><a href="./#notes">AI agent collaboration in Slack</a></dt><dd>Several agents compare test results and counterexamples in a Slack thread. One agent compiles their findings and reports back.</dd></div>
+          <div><dt><a href="./#notes">Internship search</a></dt><dd>A scheduled search collects paid internships in Korea every Monday, covering accounting and finance roles and openings that use Japanese.</dd></div>
+          <div><dt><a href="https://github.com/osh3772-star/aside-ko-patcher">Aside</a> and <a href="https://github.com/osh3772-star/antigravity-ko-patcher">Antigravity</a> Korean language patches</dt><dd>I built unofficial patches to translate both desktop apps’ menus into Korean and reapply the translations after updates.</dd></div>
+          <div><dt><a href="https://github.com/osh3772-star/universal-anti-slop">Reviewing AI-generated work</a></dt><dd>I wrote a skill that applies different review criteria to AI-generated writing, web interfaces, and spreadsheets.</dd></div>
+          <div><dt>Checking property descriptions</dt><dd>I connected the Jev API to flag unsupported guarantees in real estate copy for revision.</dd></div>
+          <div><dt>Exporting KakaoTalk conversations</dt><dd>This Windows tool exports that day’s conversations and leaves unread chat rooms untouched.</dd></div>
+          <div><dt><a href="https://eric5-portfolio.osh3772.chatgpt.site">Earlier projects</a></dt><dd>A searchable collection with previews of games and web tools I made previously.</dd></div>
+        </dl>
+        <ul class="work-titles">
+          <li>Batch photo placement for Word interview reports</li>
+          <li>Windows build and launcher for the open-source voxl project</li>
+        </ul>
+      </section>
+      <footer><a href="./#intro">Back to portfolio</a><a href="#journal">Back to top ↑</a></footer>
+    </main>
+  </div>
+</body>
+</html>
